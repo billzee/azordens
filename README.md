@@ -1,1 +1,4 @@
-em construcao...
+O projeto AZORDENS é responsável pela entrega de uma aplicação cliente-servidor web com o objetivo de fornecer um ambiente de cadastro, consulta e gestão de ordens de serviço, clientes e equipamentos.
+O sistema foi imaginado para suprir as necessidades de criação de ordens de serviço personalizáveis para empresas de pequeno-médio porte. Idealizando atingir, principalmente, àquelas que trabalham na manutenção de equipamentos de informática e afins.
+Considerando que é de finalidade essencial a comunicação com o cliente final durante todo o processo de criação e fechamento de uma ordem de serviço, a aplicação visa também estabelecer a conexão empresa-cliente através de rotinas de e-mail responsáveis pela comunicação do status das etapas do processo ao cliente final.
+A aplicação também apresentará um módulo de promoções para envio de promoções voltadas a grupo de clientes cadastrados no sistema.
