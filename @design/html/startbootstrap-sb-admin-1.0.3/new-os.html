@@ -148,14 +148,14 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                 <ul class="nav navbar-nav side-nav">
-                    <li>
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
                         <a href="new-os.html"><i class="fa fa-fw fa-edit"></i> Cadastrar OS</a>
                     </li>
 		    <li>
                         <a href="new-os.html"><i class="fa fa-fw fa-table"></i> Consultar OS</a>
                     </li>
-		    <li class="active">
+		    <li>
                         <a href="new-customer.html"><i class="fa fa-fw fa-edit"></i> Cadastrar Cliente</a>
                     </li>
 		    <li>
@@ -189,7 +189,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                           Novo Cliente
+                           Nova OS
                         </h1>
                     </div>
                 </div>
@@ -201,45 +201,56 @@
                         <form role="form">
 
                             <div class="form-group">
-                                <label>Nome</label>
+                                <label>Cliente</label>
                                 <input class="form-control">
+								<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>Novo Cliente</a>
                             </div>
 
-			    <div class="form-group">
-                                <label>E-mail</label>
-                                <input class="form-control">
+							<div class="form-group">
+								<label>Equipamento</label>
+								<input value="Notebook Vaio VJF153B0411W" class="form-control">
+							</div>
+							
+							<div class="form-group">
+                                <label>Marca</label>
+                                <p class="form-control-static">Sony</p>
                             </div>
-
-			    <div class="form-group">
-                                <label>Tipo</label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>Pessoa Física
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">Pessoa Jurídica
+							
+							<div class="form-group">
+                                <label>Defeito</label>
+                                <textarea class="form-control" rows="3"></textarea>
                             </div>
-
-  			    <div class="form-group">
-                                <label>CPF</label>
-                                <input class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Telefone</label>
-                                <input class="form-control">
-                            </div>
-
- 			    <div class="form-group">
-                                <label>Grupo</label>
+							
+							<div class="form-group">
+								<label>Número de Serie</label>
+								<input class="form-control">
+							</div>
+							
+							<div class="form-group">
+								<label>Acessórios</label>
+								<a style="margin-top: 25px; float:right;" href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+								<input class="form-control" style="width: 92%;">
+								<input class="form-control">
+							</div>
+							
+							<div class="form-group">
+                                <label>Status</label>
                                 <select class="form-control">
-                                    <option>Clientes de longa data</option>
-                                    <option>Clientes novos</option>
-                                    <option>Cientes que compram bastante</option>
+                                    <option>ABERTO</option>
+                                    <option>EM PROGRESSO</option>
+                                    <option>CONCLUÍDO</option>
+                                    <option>ENTREGUE</option>
+                                    <option>FECHADO</option>
                                 </select>
                             </div>
+							
+							<div class="form-group">
+                                <label>Observação</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
 
-                            <button type="submit" class="btn btn-default">Salvar</button>
-                            <button type="reset" class="btn btn-default">Cancelar</button>
+							<button type="submit" class="btn btn-default">Salvar</button>
+							<button type="reset" class="btn btn-default">Cancelar</button>
 
                         </form>
 
