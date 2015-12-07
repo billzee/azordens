@@ -1,11 +1,20 @@
+create table organizations(
+id int unsigned auto_increment primary key,
+name varchar(60) not null,
+active boolean not null default false,
+cnpj char(18) not null
+);
+
 create table users(
 id int unsigned auto_increment primary key,
+organization_id int unsigned,
 first_name varchar(40) not null,
 last_name varchar(40) not null,
 creation timestamp default current_timestamp,
 last_modified timestamp on update current_timestamp,
 email varchar(120) not null,
-pw varchar(32) not null
+pw varchar(32) not null,
+foreign key (organization_id) references organizations(id)
 );
 
 create table brands (
