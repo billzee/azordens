@@ -9667,3 +9667,343 @@ Processing by BrandsController#index as HTML
 Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:06:27 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020750470840'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:11:24 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_46481960'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.0ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:11:40 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:14:31 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:14:49 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020741116440'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.8ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:14:58 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bower_components/angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020483586520'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:17:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bower_components/angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_49289040'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:17:40 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020742614500'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:17:41 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020749742980'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:17:41 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'angular' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4036380126377792520_70020747803640'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:19:11 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-08-29 22:19:23 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 240ms (Views: 239.4ms | ActiveRecord: 0.0ms)
+
+
