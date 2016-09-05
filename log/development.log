@@ -10007,3 +10007,76 @@ Processing by BrandsController#index as HTML
 Completed 200 OK in 240ms (Views: 239.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-09-04 23:01:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 27ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-04 23:01:57 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+Started GET "/brands" for 127.0.0.1 at 2016-09-04 23:01:57 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1394ms (Views: 1392.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1062ms (Views: 1061.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-04 23:02:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'ui.router' with type 'application/javascript'
+Checked in these paths: 
+  /home/guilherme/projects/azordens/app/assets/config
+  /home/guilherme/projects/azordens/app/assets/images
+  /home/guilherme/projects/azordens/app/assets/javascripts
+  /home/guilherme/projects/azordens/app/assets/stylesheets
+  /home/guilherme/projects/azordens/vendor/assets/bower_resources
+  /home/guilherme/projects/azordens/vendor/assets/javascripts
+  /home/guilherme/projects/azordens/vendor/assets/stylesheets
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/guilherme/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /home/guilherme/projects/azordens/lib/assets/bower_components
+  /home/guilherme/projects/azordens/vendor/assets/bower_components
+  /home/guilherme/projects/azordens/vendor/assets/bower_components):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4400374097728061526_69873044728260'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.1ms)
+Started GET "/brands" for 127.0.0.1 at 2016-09-04 23:03:03 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 276ms (Views: 275.4ms | ActiveRecord: 0.0ms)
+
+
