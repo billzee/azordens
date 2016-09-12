@@ -1,1 +1,1 @@
-angular.module('azordens', []);
+/*angular.module('azordens', []);*/
