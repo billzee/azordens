@@ -5,16 +5,23 @@ class BrandsController < ApplicationController
 	end
 
 	def create
-    @client = Client.new(params[:client])
-    if @client.save
-      redirect_to @client
+    @brand = Brand.new(brand_params)
+    if @brand.save
+      redirect_to "index"
     else
       render "new"
     end
   end
 
   def new
+    @brand = Brand.new
     render "new"
+  end
+
+  private
+
+  def brand_params
+    params.require(:brand).permit(:name)
   end
 end
 
