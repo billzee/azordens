@@ -7,7 +7,7 @@ class BrandsController < ApplicationController
 	def create
     @brand = Brand.new(brand_params)
     if @brand.save
-      redirect_to "index"
+      redirect_to index
     else
       render "new"
     end

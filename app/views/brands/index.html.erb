@@ -1,3 +1,26 @@
 <%= link_to new_brand_path do %>
   <i class="fa fa-fw fa-edit"></i> Nova Marca
 <% end %>
+
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @brands.each do |brand| -%>
+        <tr>
+          <td><%= brand.name %></td>
+          <td>
+          	<button class="btn btn-danger">
+          		<i class="fa fa-fw fa-trash"></i>
+        		</button>
+      		</td>
+        </tr>
+      <% end -%>
+    </tbody>
+	</table>
+</div>
