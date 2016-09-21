@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160822234306) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "brand_id"
+    t.integer  "brand_id",    null: false
     t.index ["brand_id"], name: "index_equipment_on_brand_id", using: :btree
   end
 

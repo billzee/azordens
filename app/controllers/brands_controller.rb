@@ -9,10 +9,12 @@ class BrandsController < ApplicationController
     if @client.save
       redirect_to @client
     else
-      # This line overrides the default rendering behavior, which
-      # would have been to render the "create" view.
       render "new"
     end
+  end
+
+  def new
+    render "new"
   end
 end
 

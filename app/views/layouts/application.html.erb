@@ -138,8 +138,9 @@
               <a href="tables.html"><i class="fa fa-fw fa-users"></i> Clientes</a>
             </li>
             <li>
-            <%= link_to('<i class="fa fa-fw fa-edit"></i> Marcas') %>
-              <a href="forms.html"></a>
+              <%= link_to brands_path do %>
+                <i class="fa fa-fw fa-edit"></i> Marcas
+              <% end %>
             </li>
 <!--             <li>
   <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>

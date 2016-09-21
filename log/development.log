@@ -17034,3 +17034,549 @@ Processing by BrandsController#index as HTML
 Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-09-21 16:34:12 -0300
+  
+ActiveRecord::NoDatabaseError (Unknown database 'azordens_development'):
+  
+activerecord (5.0.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:29:in `rescue in mysql2_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:12:in `mysql2_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.1ms)
+Started GET "/" for 127.0.0.1 at 2016-09-21 16:34:38 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+Started GET "/" for 127.0.0.1 at 2016-09-21 16:34:39 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+Started GET "/" for 127.0.0.1 at 2016-09-21 16:34:41 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+  [1m[35m (322.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (325.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCustomers (20160822230018)
+  [1m[35m (334.6ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230018')[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBrands (20160822230216)
+  [1m[35m (424.2ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230216')[0m
+  [1m[35m (187.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEquipment (20160822230223)
+  [1m[35m (442.7ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230223')[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20160822230227)
+  [1m[35m (577.2ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230227')[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBrandToEquipment (20160822232621)
+  [1m[35m (825.6ms)[0m  [1m[35mALTER TABLE `equipment` ADD `brand_id` int NOT NULL[0m
+  [1m[35m (388.0ms)[0m  [1m[35mCREATE  INDEX `index_equipment_on_brand_id`  ON `equipment` (`brand_id`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822232621')[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEquipmentToOrder (20160822233650)
+  [1m[35m (681.5ms)[0m  [1m[35mALTER TABLE `orders` ADD `equipment_id` int NOT NULL[0m
+  [1m[35m (333.1ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_equipment_id`  ON `orders` (`equipment_id`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233650')[0m
+  [1m[35m (42.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerToOrder (20160822233904)
+  [1m[35m (623.5ms)[0m  [1m[35mALTER TABLE `orders` ADD `customer_id` int NOT NULL[0m
+  [1m[35m (354.9ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_customer_id`  ON `orders` (`customer_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233904')[0m
+  [1m[35m (52.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (912.6ms)[0m  [1m[35mALTER TABLE `orders` ADD `status` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822234306')[0m
+  [1m[35m (56.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-09-21 19:35:04', '2016-09-21 19:35:04')[0m
+  [1m[35m (56.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+Started GET "/" for 127.0.0.1 at 2016-09-21 16:47:30 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 58ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:47:33 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 750ms (Views: 746.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charts.html" for 127.0.0.1 at 2016-09-21 16:47:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/charts.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (91.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (72.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (280.9ms)
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:47:45 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:49:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:49:23 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:49:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:49:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:49:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 78ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:50:36 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:50:38 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:50:38 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:50:38 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:50:39 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:57:00 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    1: <%= link_to new_or_edit_brands_path do %>
+    2:   <i class="fa fa-fw fa-edit"></i> Nova Marca
+    3: <% end %>
+  
+app/helpers/brands_helper.rb:3:in `new_or_edit_brands_path'
+app/views/brands/index.html.erb:1:in `_app_views_brands_index_html_erb___4207319121513693606_38529600'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:57:22 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (84.7ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_brands_path' for #<#<Class:0x000000049a2848>:0x007fbc2e2d4168>):
+    1: <%= link_to new_brands_path do %>
+    2:   <i class="fa fa-fw fa-edit"></i> Nova Marca
+    3: <% end %>
+  
+app/views/brands/index.html.erb:1:in `_app_views_brands_index_html_erb___4207319121513693606_70223102629580'
+app/controllers/brands_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:57:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-21 16:57:28 -0300
+Processing by BrandsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template brands/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/guilherme/projects/azordens/app/views"
+):
+  
+app/controllers/brands_controller.rb:17:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (27.5ms)
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-21 16:57:46 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-21 16:57:48 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendered brands/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-21 16:57:49 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
