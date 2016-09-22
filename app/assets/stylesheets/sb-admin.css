@@ -11,11 +11,23 @@
 /* generic classes */
 
 .m-20 {
-    margin: 20px !important;
+  margin: 20px !important;
 }
 
 .m-b-20 {
-    margin-bottom: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.c-white{
+  color: white;
+}
+
+.bg-orange {
+  background-color: orange;
 }
 
 body {
