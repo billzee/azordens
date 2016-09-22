@@ -1,0 +1,23 @@
+{
+  "name": "azordens",
+  "authors": [
+    "billzee <guilhermezordan@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  },
+  "resolutions": {
+    "bootstrap": "^3.3.7"
+  }
+}
