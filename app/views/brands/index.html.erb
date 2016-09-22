@@ -1,26 +1,50 @@
-<%= link_to new_brand_path do %>
-  <i class="fa fa-fw fa-edit"></i> Nova Marca
-<% end %>
+<div class="row">
+  <div class="col-xs-12">
+      <h1 class="page-header">
+        Marcas
+      </h1>
+  </div>
+</div>
 
-<div class="table-responsive">
-	<table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Excluir</th>
-      </tr>
-    </thead>
-    <tbody>
-    	<% @brands.each do |brand| -%>
-        <tr>
-          <td><%= brand.name %></td>
-          <td>
-          	<button class="btn btn-danger">
-          		<i class="fa fa-fw fa-trash"></i>
-        		</button>
-      		</td>
-        </tr>
-      <% end -%>
-    </tbody>
-	</table>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert alert-info alert-dismissable">
+      <i class="fa fa-info-circle"></i>  Clique em uma Marca para editar
+    </div>
+  </div>
+</div>
+
+<div class="row m-b-20">
+  <div class="col-xs-12 text-right">
+    <%= link_to new_brand_path, class: "btn btn-primary" do %>
+      <i class="fa fa-plus-square-o"></i> Nova Marca
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="table-responsive">
+    	<table class="table table-bordered table-hover table-reflow">
+        <thead>
+          <tr>
+            <th class="col-md-11">Nome</th>
+            <th class="col-md-1" >Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        	<% @brands.each do |brand| -%>
+            <tr>
+              <td class="col-md-11"><%= brand.name %></td>
+              <td class="col-md-1">
+              	<button class="btn btn-danger">
+              		<i class="fa fa-fw fa-trash"></i>
+            		</button>
+          		</td>
+            </tr>
+          <% end -%>
+        </tbody>
+    	</table>
+    </div>
+  </div>
 </div>

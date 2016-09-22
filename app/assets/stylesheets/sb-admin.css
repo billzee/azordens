@@ -8,6 +8,16 @@
 
 @import "font-awesome";
 
+/* generic classes */
+
+.m-20 {
+    margin: 20px !important;
+}
+
+.m-b-20 {
+    margin-bottom: 20px !important;
+}
+
 body {
     margin-top: 100px;
     background-color: #222;
