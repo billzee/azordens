@@ -5,9 +5,9 @@ class BrandsController < ApplicationController
 	end
 
 	def create
-    @brand = Brand.new(brand_params)  
+    @brand = Brand.new(brand_params)
     if @brand.save
-      render "index"
+      index
     else
       render "new"
     end
@@ -16,6 +16,10 @@ class BrandsController < ApplicationController
   def new
     @brand = Brand.new
     render "new"
+  end
+
+  def edit
+    @brand = Brand.find(params[:id])
   end
 
   private
