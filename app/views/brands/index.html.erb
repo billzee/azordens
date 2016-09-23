@@ -16,7 +16,7 @@
 
 <div class="row m-b-20">
   <div class="col-xs-12 text-right">
-    <%= link_to new_brand_path, class: "btn btn-success" do %>
+    <%= link_to new_brand_path, class: "btn btn-success btn-lg" do %>
       <i class="fa fa-plus-square-o"></i> Nova Marca
     <% end %>
   </div>
@@ -25,7 +25,7 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="table-responsive">
-    	<table class="table table-bordered table-hover table-inverse">
+    	<table class="table table-hover table-inverse">
         <thead class="c-white bg-orange">
           <tr>
             <th class="col-md-11">Nome</th>
@@ -34,16 +34,14 @@
         </thead>
         <tbody>
         	<% @brands.each do |brand| %>
-          <%= link_to new_or_edit_brands_path(brand) do %>
             <tr>
-              <td class="col-md-11"><%= brand.name %></td>
+              <td class="col-md-11"><%= link_to brand.name, brand %></td>
               <td class="col-md-1 text-center">
-              	<button class="btn btn-danger">
-              		<i class="fa fa-fw fa-trash"></i>
-            		</button>
-          		</td>
+                <button class="btn btn-danger">
+                  <i class="fa fa-fw fa-trash"></i>
+                </button>
+              </td>
             </tr>
-            <% end %>
           <% end %>
         </tbody>
     	</table>
