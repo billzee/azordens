@@ -20,7 +20,7 @@ class BrandsController < ApplicationController
 
   def edit
     @brand = Brand.find(params[:id])
-    render "new"
+    render "edit"
   end
 
   private
