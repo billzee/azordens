@@ -1,4 +1,5 @@
 class BrandsController < ApplicationController
+
 	def index
 		@brands = Brand.order :name
   	render "index"
@@ -30,7 +31,6 @@ class BrandsController < ApplicationController
 	end
 
 	def destroy
-		skip_before_action :verify_authenticity_token
 		brand = Brand.find(params[:id])
 		brand.destroy
 		index
