@@ -23,10 +23,22 @@ class BrandsController < ApplicationController
     render "edit"
   end
 
+	def update
+		brand = Brand.find(params[:id])
+    brand.update(brand_params)
+    index
+	end
+
+	def destroy
+		skip_before_action :verify_authenticity_token
+		brand = Brand.find(params[:id])
+		brand.destroy
+		index
+	end
+
   private
 
   def brand_params
-    params.require(:brand).permit(:name)
+    params.require(:brand).permit(:id, :name)
   end
 end
-

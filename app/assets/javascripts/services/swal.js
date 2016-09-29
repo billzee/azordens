@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('azordens')
-.service('swalService', function() {
+.service('swalService', function($http) {
 
-  this.delete = function() {
+  this.delete = function(id, path) {
     swal(
       {
         title: "Tem certeza?",
@@ -16,6 +16,7 @@ angular.module('azordens')
         closeOnConfirm: false
       },
       function(){
+        $http.delete('/'+ path + '/' + id).error(function(error){console.log(error);});
         swal("Excluído!", "", "success");
       }
     );

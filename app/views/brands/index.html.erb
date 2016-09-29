@@ -36,7 +36,9 @@
           <tbody>
           	<% @brands.each do |brand| %>
               <tr>
-                <td class="col-md-11"><%= link_to brand.name, edit_brand_path(brand.id) %></td>
+                <td class="col-md-11">
+                  <%= link_to brand.name, edit_brand_path(brand.id) %>
+                </td>
                 <td class="col-md-1 text-center">
                   <button ng-click="delete(<%= brand.id %>)" class="btn btn-danger">
                     <i class="fa fa-fw fa-trash"></i>
