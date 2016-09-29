@@ -12,6 +12,7 @@ angular.module('azordens')
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
         confirmButtonText: "Sim, excluir",
+        cancelButtonText: "Cancelar",
         closeOnConfirm: false
       },
       function(){
