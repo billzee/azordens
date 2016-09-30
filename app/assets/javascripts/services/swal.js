@@ -24,7 +24,7 @@ angular.module('azordens')
           });
         })
         .error(function(){
-          swal('Ocorreu algum problema', 'O registro não foi excluído', 'error');
+          swal('Erro', 'O registro não foi excluído', 'error');
         });
       }
     );

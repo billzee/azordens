@@ -36254,3 +36254,1359 @@ Processing by BrandsController#index as HTML
 Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:49:48 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 19:49:49 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:49:50 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/1/edit" for 127.0.0.1 at 2016-09-30 19:49:51 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/brands/1" for 127.0.0.1 at 2016-09-30 19:49:52 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMG7YiWY77RkYZcHzI+QtDDzXkGYsiiNEjibujRAYmjUL0+ZYFMpotCR4ZSUIYIsUELxFkIazawnruYF31xZ/A==", "brand"=>{"name"=>"Samsung"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/brands/1/edit" for 127.0.0.1 at 2016-09-30 19:49:53 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/brands/1" for 127.0.0.1 at 2016-09-30 19:49:55 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSkC8Uv6rgd3pJzvEvLWCdYUBaPGfw/ljJU38Z2ntNEBx/YKDjFoEcNU6nxKXMSRtqWq9BzX6sS5A0pOdruPRQ==", "brand"=>{"name"=>"Samsungaa"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'Samsungaa', `updated_at` = '2016-09-30 22:49:55' WHERE `brands`.`id` = 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 66ms (Views: 54.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/brands/tables.html" for 127.0.0.1 at 2016-09-30 19:50:07 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"tables"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:50:10 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/tables.html" for 127.0.0.1 at 2016-09-30 19:50:11 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"tables"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-09-30 19:50:12 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=2):
+  
+app/views/equipments/index.html.erb:47:in `block in _app_views_equipments_index_html_erb__962747329747720056_70010399605000'
+app/views/equipments/index.html.erb:38:in `_app_views_equipments_index_html_erb__962747329747720056_70010399605000'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.7ms)
+Started GET "/brands/tables.html" for 127.0.0.1 at 2016-09-30 19:50:13 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"tables"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:50:15 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:54:31 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:55:02 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/brands/1.json" for 127.0.0.1 at 2016-09-30 19:55:04 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 1[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:55:06 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (16.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (13.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822233650'), ('20160822230018'), ('20160822230223'), ('20160822232621'), ('20160822233904'), ('20160822230216'), ('20160822230227');
+
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822233650'), ('20160822230018'), ('20160822230223'), ('20160822232621'), ('20160822233904'), ('20160822230216'), ('20160822230227');
+
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 2)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 3)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 1)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-09-30 22:55:21', '2016-09-30 22:55:21')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 3, 1, 1)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 2, 3, 2)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-09-30 22:55:21', '2016-09-30 22:55:21', 1, 2, 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 19:55:23 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:00:17 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 300ms (Views: 298.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:00:20 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:00:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:01:51 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:01:52 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:01:57 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SEa1mIr6RrISOx2YqDj8DgmxKcu616tpm76ogPYsMGM31M6OMRx+uXW3EebK/two7dDB67WdHqYoS0XHJItlng==", "brand"=>{"name"=>"teste"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2016-09-30 23:01:57', '2016-09-30 23:01:57')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:02:00 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:04:59 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:05:04 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:05:07 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:05:10 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lPG3y4uf3B2PyObc5IO/nBC6MAuELNfolFn5O9mv/dHrY8zdMHnkFuhE6qKGRZ+69NvYK4tmYicnrBR8CwioLA==", "brand"=>{"name"=>"criar"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('criar', '2016-09-30 23:05:10', '2016-09-30 23:05:10')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:05:24 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:05:28 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJ3b8r5HlmaSebC9Z0X4oOMxQtVfMGuYc+CnePHwULA3D6DkBaGubfX1vMMFg9iGB1Cq9VB63lfAFUo/I1cFTQ==", "brand"=>{"name"=>"novo"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('novo', '2016-09-30 23:05:28', '2016-09-30 23:05:28')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (2.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 61ms (Views: 53.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:05:32 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:05:59 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:06:02 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:06:04 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XD5ieDXawzVLMh4gw9p7fv2Fe8ngxJeOk2m1jRqfmAwjrBlujjz7Piy+El6hHFtYGeST6e+OIkEgnFjKyDjN8Q==", "brand"=>{"name"=>"teste"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2016-09-30 23:06:04', '2016-09-30 23:06:04')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:06:12 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:06:16 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:06:17 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:06:19 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TtwMdiBO9OgnR9Q071tqHOEeW0ta0xG2VpP9+/0aOhcxTndgm6jM40DL2EqNnUo6BX+za1WZpHnlZhC8L71v6g==", "brand"=>{"name"=>"dsaasdsad"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('dsaasdsad', '2016-09-30 23:06:19', '2016-09-30 23:06:19')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:07:12 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:07:58 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:07:59 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:08:01 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JhEooqD3qu6EYVzAiQnUqGS+580yQd42FbrNgogs9yvCj+0MWXmoN2diQ1g4gd0RfMTvzuDsrdrowZx2IfmIQ==", "brand"=>{"name"=>"dsadsaads"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('dsadsaads', '2016-09-30 23:08:01', '2016-09-30 23:08:01')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:08:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:08:45 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/brands" for 127.0.0.1 at 2016-09-30 20:08:47 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q0He3Fjl3ZQr4eXC5RAm4CHxSylKw/j681xo/O3ilDs806XK4wPln0xt6byH1gbGxZCjCUWJTTVAqYW7P0XBxg==", "brand"=>{"name"=>"dsadsaasd"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('dsadsaasd', '2016-09-30 23:08:47', '2016-09-30 23:08:47')[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:09:49 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:09:58 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/10/edit" for 127.0.0.1 at 2016-09-30 20:10:00 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 10 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/brands/10" for 127.0.0.1 at 2016-09-30 20:10:06 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wlzj7Rz1sXVi+oq6XskURyRf7klNjJl9PkSCJtUuEzJmBHGgF2zm+eDVffS65Pb4QZJ6uhQAV73P7ZmpiFg2pA==", "brand"=>{"name"=>"LG"}, "commit"=>"Alterar", "id"=>"10"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'LG', `updated_at` = '2016-09-30 23:10:06' WHERE `brands`.`id` = 10[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/brands/10" for 127.0.0.1 at 2016-09-30 20:11:31 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:11:36 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:11:43 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/brands/12.json" for 127.0.0.1 at 2016-09-30 20:11:46 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 12[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:11:47 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/11.json" for 127.0.0.1 at 2016-09-30 20:11:50 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 11 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 11[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:11:51 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/7.json" for 127.0.0.1 at 2016-09-30 20:11:56 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 7[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:11:57 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/6.json" for 127.0.0.1 at 2016-09-30 20:12:00 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 6[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:12:01 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/9.json" for 127.0.0.1 at 2016-09-30 20:12:03 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 9 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 9[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:12:03 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/5/edit" for 127.0.0.1 at 2016-09-30 20:12:07 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:12:09 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/5/edit" for 127.0.0.1 at 2016-09-30 20:12:10 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/brands/5" for 127.0.0.1 at 2016-09-30 20:12:13 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QgMgeRzmStiQUeRs7jxyyzaXtMUmj/nh7m2di6VIZg1UdWHkS/gWts/qQLujq6UL8MS8R5z56vQ/RCtNZYHJQw==", "brand"=>{"name"=>"Rosario"}, "commit"=>"Alterar", "id"=>"5"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'Rosario', `updated_at` = '2016-09-30 23:12:13' WHERE `brands`.`id` = 5[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 40.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/brands/5" for 127.0.0.1 at 2016-09-30 20:12:37 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:12:41 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:13:12 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:13:36 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/3/edit" for 127.0.0.1 at 2016-09-30 20:13:38 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/brands/3" for 127.0.0.1 at 2016-09-30 20:13:44 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EDP3HT+KHLKCTyx69dDApQEoymKLsIR3AlUbFAT+/Xc/gX66SJ5f91djL+mhMj/uppfZ28+6UJb0eOp5Kbswmg==", "brand"=>{"name"=>"Subi árvore é o caraio"}, "commit"=>"Alterar", "id"=>"3"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'Subi árvore é o caraio', `updated_at` = '2016-09-30 23:13:44' WHERE `brands`.`id` = 3[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (1.8ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-09-30 20:14:13 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 3[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/brands/3" for 127.0.0.1 at 2016-09-30 20:14:15 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:14:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/5.json" for 127.0.0.1 at 2016-09-30 20:14:24 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 5[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:14:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/2/edit" for 127.0.0.1 at 2016-09-30 20:14:45 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:14:46 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/2/edit" for 127.0.0.1 at 2016-09-30 20:14:48 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:14:56 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:22 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/brands/2.json" for 127.0.0.1 at 2016-09-30 20:15:24 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 2[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/10/edit" for 127.0.0.1 at 2016-09-30 20:15:45 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 10 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:46 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/4/edit" for 127.0.0.1 at 2016-09-30 20:15:46 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:47 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:15:48 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:49 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:15:50 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:51 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:15:52 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:55 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:15:56 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:15:58 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:15:59 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:16:00 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:16:01 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:16:54 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:17:03 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:17:06 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:17:07 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-09-30 20:17:08 -0300
+Processing by BrandsController#new as HTML
+  Rendering brands/new.html.erb within layouts/application
+  Rendered brands/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:17:11 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/4/edit" for 127.0.0.1 at 2016-09-30 20:17:13 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:17:16 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands/4/edit" for 127.0.0.1 at 2016-09-30 20:17:21 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/brands/4" for 127.0.0.1 at 2016-09-30 20:17:23 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jnvMO4Eliyfv/HmYB7cMEw9aoT9HA2pN4CLgryJSnZnyde1BvV51yAU8SnpsCRLQXe82jno52AQWZQC0TWO9lQ==", "brand"=>{"name"=>"Intelaaa"}, "commit"=>"Alterar", "id"=>"4"}
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'Intelaaa', `updated_at` = '2016-09-30 23:17:23' WHERE `brands`.`id` = 4[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 54ms (Views: 46.7ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/brands/4.json" for 127.0.0.1 at 2016-09-30 20:17:31 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 4[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/brands/4" for 127.0.0.1 at 2016-09-30 20:17:32 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands/4" for 127.0.0.1 at 2016-09-30 20:17:57 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:17:59 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/brands/8/edit" for 127.0.0.1 at 2016-09-30 20:18:00 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 8 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/brands/8" for 127.0.0.1 at 2016-09-30 20:18:01 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rw4AwGLTYDK+x/tCmv+PPFuPB5x3UghfCXnm7SBgcye3yKsVwxvYLFKm8YI4TB2qBzaxZ4fEpDNA3EW478Dz4Q==", "brand"=>{"name"=>"novoaa"}, "commit"=>"Alterar", "id"=>"8"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'novoaa', `updated_at` = '2016-09-30 23:18:01' WHERE `brands`.`id` = 8[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/brands/8" for 127.0.0.1 at 2016-09-30 20:18:16 -0300
+Processing by BrandsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering brands/show.html.erb within layouts/application
+  Rendered brands/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:19 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/brands/8/edit" for 127.0.0.1 at 2016-09-30 20:18:21 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 8 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/brands/8" for 127.0.0.1 at 2016-09-30 20:18:23 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n5KAJq8h/dC70wLqDlzi4rOVajVg4+V+OvlcViEt0eCHVCvzDulFzleyCCqs73B07yzczpB1SRJzXP8D7o1RJg==", "brand"=>{"name"=>"HP"}, "commit"=>"Alterar", "id"=>"8"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'HP', `updated_at` = '2016-09-30 23:18:23' WHERE `brands`.`id` = 8[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/brands
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:23 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/brands/8.json" for 127.0.0.1 at 2016-09-30 20:18:30 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 8[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:31 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (14.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (13.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822233650'), ('20160822230018'), ('20160822230223'), ('20160822232621'), ('20160822233904'), ('20160822230216'), ('20160822230227');
+
+[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822233650'), ('20160822230018'), ('20160822230223'), ('20160822232621'), ('20160822233904'), ('20160822230216'), ('20160822230227');
+
+[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 2)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 3)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 1)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-09-30 23:18:36', '2016-09-30 23:18:36')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 3, 1, 1)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 2, 3, 2)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-09-30 23:18:36', '2016-09-30 23:18:36', 1, 2, 3)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:39 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands/5/edit" for 127.0.0.1 at 2016-09-30 20:18:41 -0300
+Processing by BrandsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  Rendering brands/edit.html.erb within layouts/application
+  Rendered brands/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/brands/5" for 127.0.0.1 at 2016-09-30 20:18:43 -0300
+Processing by BrandsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QvlWnuCXx04+X1/fbA1WNt2vlJJU4XYm+kWBt0xOvl1UjxcDt4mbIGHk+wghmoH2G/ycEO6XZTMrbDdxjIcREw==", "brand"=>{"name"=>"Corsairsasdasd"}, "commit"=>"Alterar", "id"=>"5"}
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `brands` SET `name` = 'Corsairsasdasd', `updated_at` = '2016-09-30 23:18:43' WHERE `brands`.`id` = 5[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/brands
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:43 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/brands/5.json" for 127.0.0.1 at 2016-09-30 20:18:47 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 5[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:18:48 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:19:08 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/brands/2.json" for 127.0.0.1 at 2016-09-30 20:19:10 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 2[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-09-30 20:19:11 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+

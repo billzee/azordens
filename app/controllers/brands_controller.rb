@@ -8,6 +8,7 @@ class BrandsController < ApplicationController
 	def create
     @brand = Brand.new(brand_params)
     if @brand.save
+			flash[:notice] = "Nova marca registrada"
       index
     else
       render "new"
@@ -26,8 +27,10 @@ class BrandsController < ApplicationController
 
 	def update
 		@brand = Brand.find(params[:id])
-    @brand.update(brand_params)
-    index
+    if @brand.update(brand_params)
+			flash[:notice] = "Marca alterada"
+			redirect_to brands_path
+		end
 	end
 
 	def destroy
@@ -38,6 +41,6 @@ class BrandsController < ApplicationController
   private
 
   def brand_params
-    params.require(:brand).permit(:id, :name)
+    params.require(:brand).permit(:name)
   end
 end
