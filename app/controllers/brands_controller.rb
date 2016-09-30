@@ -32,14 +32,7 @@ class BrandsController < ApplicationController
 
 	def destroy
 		@brand = Brand.find params[:id]
-		puts @brand
-	  if @brand.destroy
-	     flash[:success] = "Movie deleted!"
-	     redirect_to brands_path
-	  else
-	    flash[:error] = "Movie was not deleted!"
-	    redirect_to brands_path
-	  end
+	  @brand.destroy
 	end
 
   private
