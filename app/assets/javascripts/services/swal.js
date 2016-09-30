@@ -16,7 +16,7 @@ angular.module('azordens')
         closeOnConfirm: false
       },
       function(){
-        $http.delete('/'+ path + '/' + id + '.json');
+        $http({method: 'DELETE', url: '/'+ path + '/'+ id +'.json',  headers: {'Content-Type': 'application/json'}, data: ''});
         swal("Excluído!", "", "success");
       }
     );

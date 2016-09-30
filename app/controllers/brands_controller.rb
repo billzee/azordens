@@ -25,15 +25,12 @@ class BrandsController < ApplicationController
   end
 
 	def update
-		brand = Brand.find(params[:id])
-    brand.update(brand_params)
+		@brand = Brand.find(params[:id])
+    @brand.update(brand_params)
     index
 	end
 
 	def destroy
-		brand = Brand.find(params[:id])
-		brand.destroy
-		index
 	end
 
   private
