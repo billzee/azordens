@@ -30,6 +30,8 @@ class BrandsController < ApplicationController
     if @brand.update(brand_params)
 			flash[:notice] = "Marca alterada"
 			redirect_to brands_path
+		else
+			render "edit"
 		end
 	end
 
