@@ -44328,3 +44328,247 @@ Processing by EquipmentsController#create as HTML
 Completed 200 OK in 77ms (Views: 68.0ms | ActiveRecord: 1.0ms)
 
 
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:09:23 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ogFzzG49zXt0XH0mz4IFkoInMycpVZrwp2ElLEzZcZzX62oxOJv0F2bDz7WAhnZ3yDhiefM26fd4Hd3gHVovvA==", "equipment"=>{"name"=>"Novo equi", "model"=>"10001", "description"=>"asddsasddsa", "brand_id"=>"1"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Novo equi', '10001', 'asddsasddsa', '2016-10-04 17:09:23', '2016-10-04 17:09:23', 1)[0m
+  [1m[35m (108.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 170ms (Views: 54.4ms | ActiveRecord: 111.1ms)
+
+
+Started GET "/equipments/3/edit" for 127.0.0.1 at 2016-10-04 14:09:39 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  Rendered equipments/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     6:   </div>
+     7: </div>
+     8: 
+     9: <%= form_for @brand, url: {action: "create"} do |f| %>
+    10: 
+    11:   <div class="row">
+    12:     <div class="col-lg-12">
+  
+app/views/equipments/edit.html.erb:9:in `_app_views_equipments_edit_html_erb___417616176348723756_70115523750100'
+app/controllers/equipments_controller.rb:25:in `edit'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:09:42 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:12:47 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/equipments/1" for 127.0.0.1 at 2016-10-04 14:12:49 -0300
+Processing by EquipmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pwT/t4SgozEi29y5J2BlXbndMhc+ZSMJAf13eXuGxQ1ohjzeYQVWV13S+3IPyi4GCVba3MzK0cqIH6T/PxVJA==", "equipment"=>{"name"=>"Impressora DeskJetdsadsadsa", "model"=>"d1520", "description"=>"", "brand_id"=>"2"}, "commit"=>"Criar", "id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (38.7ms)[0m  [1m[33mUPDATE `equipment` SET `name` = 'Impressora DeskJetdsadsadsa', `updated_at` = '2016-10-04 17:12:49' WHERE `equipment`.`id` = 1[0m
+  [1m[35m (107.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/equipments
+Completed 302 Found in 155ms (ActiveRecord: 146.7ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:12:49 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:13:05 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/equipments/1" for 127.0.0.1 at 2016-10-04 14:13:09 -0300
+Processing by EquipmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ottOwnypVOY6G+xcZkCJ0rRwbblQIKeEq0/eG7qiDj1F5UXP2z/DM6PnyMNK4iD/2rJCGn/qGE+laFVVo7BADQ==", "equipment"=>{"name"=>"Impressora DeskJetdsadsadsa", "model"=>"d1520", "description"=>"", "brand_id"=>"1"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `equipment` SET `brand_id` = 1, `updated_at` = '2016-10-04 17:13:09' WHERE `equipment`.`id` = 1[0m
+  [1m[35m (103.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/equipments
+Completed 302 Found in 112ms (ActiveRecord: 105.2ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:09 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:13:11 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/equipments/1" for 127.0.0.1 at 2016-10-04 14:13:14 -0300
+Processing by EquipmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOtSurhR9XwHGl61J0hPiFEcR5FbVzX0RlZE5IA8sQ1z1Vm3H8diqZ7meioL6ualP95oMnSdij9Icc+qmS7/PQ==", "equipment"=>{"name"=>"Impressora DeskJetdsadsadsa", "model"=>"d1520", "description"=>"sdazdsadsa", "brand_id"=>"1"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `equipment` SET `description` = 'sdazdsadsa', `updated_at` = '2016-10-04 17:13:14' WHERE `equipment`.`id` = 1[0m
+  [1m[35m (129.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/equipments
+Completed 302 Found in 134ms (ActiveRecord: 130.5ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:14 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:13:15 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:17 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:13:19 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 88ms (Views: 84.9ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/equipments/1" for 127.0.0.1 at 2016-10-04 14:13:21 -0300
+Processing by EquipmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uoZniJgQWVNUDrcswIvfMSD9Zx06J2yDcGz3p0Qe7aFduGyFP4bOhs3yk7PsKXYcTj9IvhXt00h+S3zpXQyjkQ==", "equipment"=>{"name"=>"Impressora DeskJetdsadsa", "model"=>"d1520", "description"=>"sdazdsadsa", "brand_id"=>"1"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `equipment` SET `name` = 'Impressora DeskJetdsadsa', `updated_at` = '2016-10-04 17:13:21' WHERE `equipment`.`id` = 1[0m
+  [1m[35m (122.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/equipments
+Completed 302 Found in 127ms (ActiveRecord: 122.8ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:21 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-04 14:13:29 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/equipments/1" for 127.0.0.1 at 2016-10-04 14:13:34 -0300
+Processing by EquipmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7CZYhG8MC41fYtyUzrjWc6ctL/SB++YsuXdQOEV6t1UjpJvtiqn+6yBr+1/mEp0oF6bHP3NUFO8wlYO+Aek7Q==", "equipment"=>{"name"=>"Impressora DeskJetdsadsa", "model"=>"d1520", "description"=>"sdazdsadsa", "brand_id"=>"2"}, "commit"=>"Alterar", "id"=>"1"}
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `equipment` SET `brand_id` = 2, `updated_at` = '2016-10-04 17:13:34' WHERE `equipment`.`id` = 1[0m
+  [1m[35m (69.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/equipments
+Completed 302 Found in 78ms (ActiveRecord: 70.5ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:34 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 1.1ms)
+
+
