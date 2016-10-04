@@ -3,7 +3,7 @@
 angular.module('azordens')
 .service('swalService', function($http, $window) {
 
-  this.delete = function(id, path) {
+  this.delete = function(id, route) {
     swal(
       {
         title: 'Tem certeza?',
@@ -16,7 +16,7 @@ angular.module('azordens')
         closeOnConfirm: false
       },
       function(){
-        $http.delete('/'+ path + '/'+ id +'.json')
+        $http.delete('/'+ route + '/'+ id +'.json')
         .success(function(){
           swal({title:'Excluído!', text: '', type: 'success'},
           function(){

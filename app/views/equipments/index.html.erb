@@ -65,7 +65,7 @@
                     <%= Brand.find(equipment.brand_id).name %>
                   </td>
                   <td class="col-md-1 text-center">
-                    <button class="btn btn-danger">
+                    <button ng-click="delete(<%= equipment.id %>, 'equipments')" class="btn btn-danger">
                       <i class="fa fa-fw fa-trash"></i>
                     </button>
                   </td>

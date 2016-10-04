@@ -3,7 +3,7 @@
 angular.module('azordens')
   .controller('MainCtrl', function($scope, swalService) {
 
-    $scope.delete = function(brand){
-      swalService.delete(brand, 'brands');
+    $scope.delete = function(id, route){
+      swalService.delete(id, route);
     }
   });
