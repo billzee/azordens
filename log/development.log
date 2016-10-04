@@ -46642,3 +46642,242 @@ Processing by CustomersController#index as HTML
 Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:43:33 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:43:34 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:43:53 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iooKj9hbj/CLlIEmEySNCDkXn8W/cr/9+9WchDmvrTMtrdLs6X3q/URtENGusWMinktjWpo76rxmakclfhv9TA==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 92ms (Views: 75.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:44:40 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:44:42 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:44:43 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RalFXJLnqqnXGP19W/IMj8lh1qKM7IFXoyP02a9DDpfijp0/o8HPpBjhbIrmZ+Klbj0qPaml1BY+nC946Pde6A==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 81ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:44:53 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:44:56 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:44:56 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iguh9qK5VbgSRstrQHT7kMqSYTH4uUAu5nATCJ+WktItLHmVk58wtd2/Wpz94RW6bc6drt3wFW97z8ip2CLCrQ==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 91ms (Views: 67.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:45:10 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:45:12 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:45:13 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2wjvgKdwfQuchWImX3qnBTib3+RabKEvf1OEdy+Asq4S/vdM7uk+eGLhH8k6AS2s76T4LQg58UgQpWwmwpStQ==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 92ms (Views: 61.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:48:08 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/1/edit" for 127.0.0.1 at 2016-10-04 17:48:11 -0300
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:48:12 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 83ms (Views: 80.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2016-10-04 17:48:13 -0300
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/customers/3" for 127.0.0.1 at 2016-10-04 17:48:15 -0300
+Processing by CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S17ZngTv6jPVUw39Uk5wg1KXT1Hku1xLUiipZ4LXlKpPoUK6H4jyG68ogE7ITb5oR9+ZdS+sWUJO4AI3BzPViA==", "customer"=>{"first_name"=>"Mariaaaa", "last_name"=>"Camargo", "phone"=>"5496881001", "email"=>"mariacamargo@yahoo.com"}, "commit"=>"Alterar", "id"=>"3"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'mariacamargo@yahoo.com' AND (`customers`.`id` != 3) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `customers` SET `first_name` = 'Mariaaaa', `updated_at` = '2016-10-04 20:48:15' WHERE `customers`.`id` = 3[0m
+  [1m[35m (103.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 115ms (ActiveRecord: 104.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:48:15 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:48:17 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:48:18 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wRSp+Bk8PYC7BDGlfW6HHLk72RfKKpU1Fn4OxzP8siFmM3GbKBpYjXT9oFLA+2k2HmcliO9jwHSLwdVmdEjiXg==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 80ms (Views: 68.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:48:45 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-04 17:48:48 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-04 17:48:49 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qGPSCjoaMnYcejuCwngBVgPQ7RNhBfXzhn2WPlK7LiEPRAppCzxXe9ODqnV/7e98pIwRjERMoLIbwk2fFQ9+Xg==", "customer"=>{"first_name"=>"", "last_name"=>"", "phone"=>"", "email"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 92ms (Views: 78.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:48:51 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (4.2ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 61ms (Views: 55.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2016-10-04 17:48:55 -0300
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 92ms (Views: 83.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/customers/3" for 127.0.0.1 at 2016-10-04 17:48:57 -0300
+Processing by CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M8OA6rq2RPxgfQ+yME8/u3TjRx4H/e+Z3ZWGxiK0Hh83PBvOodFc1BoGggGqTPFQYauROszq6pDBXS2Wp1BfPQ==", "customer"=>{"first_name"=>"Mariaaaa", "last_name"=>"Camargo", "phone"=>"5496881001", "email"=>"joaosilva@gmail.com"}, "commit"=>"Alterar", "id"=>"3"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'joaosilva@gmail.com' AND (`customers`.`id` != 3) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 77ms (Views: 67.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:49:00 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 0.4ms)
+
+

@@ -6,3 +6,8 @@ pt-BR:
       equipment:
         name: "Nome"
         model: "Modelo"
+      customer:
+        first_name: "Nome"
+        last_name: "Sobrenome"
+        phone: "Telefone"
+        email: "E-mail"
