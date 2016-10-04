@@ -8,7 +8,7 @@ class BrandsController < ApplicationController
 	def create
     @brand = Brand.new(brand_params)
     if @brand.save
-			flash[:notice] = "Nova marca registrada"
+			flash[:notice] = "Nova Marca registrada"
       index
     else
       render "new"
