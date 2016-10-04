@@ -33,7 +33,9 @@
               <% end %>
             </li>
             <li>
-              <a href="tables.html"><i class="fa fa-fw fa-users"></i> Clientes</a>
+              <%= link_to customers_path do %>
+                <i class="fa fa-fw fa-users"></i> Clientes
+              <% end %>
             </li>
             <li>
               <%= link_to brands_path do %>

@@ -46269,3 +46269,376 @@ Processing by BrandsController#create as HTML
 Completed 200 OK in 93ms (Views: 76.2ms | ActiveRecord: 1.5ms)
 
 
+Started POST "/brands" for 127.0.0.1 at 2016-10-04 17:15:31 -0300
+Processing by BrandsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uuEw60Wsm1JhFIKGzj0IBcQmOLAPmAB68/Z56UJ9Wr/PCykWEwqiPnOLMBWBOXvgjjlp7tX7c30sioElE/4Enw==", "brand"=>{"name"=>"hp"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'hp' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('hp', '2016-10-04 20:15:31', '2016-10-04 20:15:31')[0m
+  [1m[35m (187.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 270ms (Views: 74.0ms | ActiveRecord: 189.0ms)
+
+
+Started DELETE "/brands/2.json" for 127.0.0.1 at 2016-10-04 17:15:45 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 2[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 2[0m
+  [1m[35m (48.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 51.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:15:47 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:15:49 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 76ms (Views: 72.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 17:15:50 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 64ms (Views: 47.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 17:15:53 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CaBntczDgmGjSnSfzhiBFxO4/dV6hP8nPHV0+o4B4bpNo8faIcaQtQogUGoC9AR5PikFT8Tcp8puIYdygXWd/w==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>"1"}, "commit"=>"Criar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 94ms (Views: 84.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:20:26 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tables.html" for 127.0.0.1 at 2016-10-04 17:20:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tables.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (16.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.1ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:20:29 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:20:32 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tables.html" for 127.0.0.1 at 2016-10-04 17:20:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tables.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (7.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.4ms)
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:20:35 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:31:52 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 470ms (Views: 463.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:32:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customers_path' for #<#<Class:0x007f9c7468eaf8>:0x007f9c82031c38>):
+    33:               <% end %>
+    34:             </li>
+    35:             <li>
+    36:               <%= link_to customers_path do %>
+    37:                 <i class="fa fa-fw fa-users"></i> Clientes
+    38:               <% end %>
+    39:             </li>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__2037762404702683973_70155086425360'
+app/controllers/brands_controller.rb:5:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 17:32:41 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:32:44 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'customers.name' in 'order clause': SELECT `customers`.* FROM `customers` ORDER BY `customers`.`name` ASC):
+     9: 
+    10:   <div class="row">
+    11:     <div class="col-xs-12">
+    12:       <% if @customers.length > 0 %>
+    13:         <div class="alert alert-info alert-dismissable">
+    14:           <i class="fa fa-info-circle"></i>  Clique no nome do Cliente que deseja alterar
+    15:         </div>
+  
+app/views/customers/index.html.erb:12:in `_app_views_customers_index_html_erb__2101236765745317347_70154969549880'
+app/controllers/customers_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:34:22 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Samsung' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (89.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'HP' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'D-link' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (56.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Intel' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Corsair' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-10-04 20:34:34', '2016-10-04 20:34:34', 4)[0m
+  [1m[35m (50.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-10-04 20:34:34', '2016-10-04 20:34:34', 3)[0m
+  [1m[35m (50.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'joaosilva@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (54.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'teste@teste.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (114.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'mariacamargo@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-04 20:34:34', '2016-10-04 20:34:34')[0m
+  [1m[35m (103.6ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-04 20:34:35', '2016-10-04 20:34:35', 3, 1, 1)[0m
+  [1m[35m (56.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-04 20:34:35', '2016-10-04 20:34:35', 2, 3, 2)[0m
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-04 20:34:35', '2016-10-04 20:34:35', 1, 2, 3)[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:34:37 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:34:57 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2016-10-04 17:35:01 -0300
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/edit.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     6:   </div>
+     7: </div>
+     8: 
+     9: <% if @equipment.errors.full_messages.any? %>
+    10:   <div class="alert alert-danger alert-dismissable">
+    11:     <% @equipment.errors.full_messages.each do |msg| %>
+    12:       <p><i class="fa fa-warning"></i>  <%= msg %></p>
+  
+app/views/customers/edit.html.erb:9:in `_app_views_customers_edit_html_erb___4606106185363851623_70155080179460'
+app/controllers/customers_controller.rb:25:in `edit'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:35:02 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/customers/2.json" for 127.0.0.1 at 2016-10-04 17:35:07 -0300
+Processing by CustomersController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `customers` WHERE `customers`.`id` = 2[0m
+  [1m[35m (43.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for CustomersController#destroy, rendering head :no_content
+Completed 204 No Content in 69ms (ActiveRecord: 45.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-04 17:35:09 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 0.7ms)
+
+

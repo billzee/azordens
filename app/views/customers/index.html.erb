@@ -1,0 +1,80 @@
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+        <h1 class="page-header">
+          Clientes
+        </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <% if @customers.length > 0 %>
+        <div class="alert alert-info alert-dismissable">
+          <i class="fa fa-info-circle"></i>  Clique no nome do Cliente que deseja alterar
+        </div>
+      <% end %>
+
+      <% if flash[:notice] %>
+        <div class="alert alert-success fade in out">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <i class="fa fa-check-circle"></i> <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <% if @customers.length == 0 %>
+        <div class="alert alert-warning">
+          <i class="fa fa-warning"></i> Você não tem nenhum Cliente cadastrado
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="row m-b-20">
+    <div class="col-xs-12 text-right">
+      <%= link_to new_customer_path, class: "btn btn-success btn-md" do %>
+        <i class="fa fa-plus-square-o"></i> Novo Cliente
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <% if @customers.length > 0 %>
+        <div class="table-responsive">
+        	<table class="table table-hover">
+            <thead class="c-white bg-orange">
+              <tr>
+                <th class="col-md-3">Nome</th>
+                <th class="col-md-4">Telefone</th>
+                <th class="col-md-4">Email</th>
+                <th class="col-md-1 text-center">Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+            	<% @customers.each do |customer| %>
+                <tr>
+                  <td class="col-md-3">
+                    <%= link_to customer.first_name + ' ' + customer.last_name, edit_customer_path(customer.id) %>
+                  </td>
+                  <td class="col-md-4">
+                    <%= customer.phone %>
+                  </td>
+                  <td class="col-md-4">
+                    <%= customer.email %>
+                  </td>
+                  <td class="col-md-1 text-center">
+                    <button ng-click="delete(<%= customer.id %>, 'customers')" class="btn btn-danger">
+                      <i class="fa fa-fw fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+        	</table>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
