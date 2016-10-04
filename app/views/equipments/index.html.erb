@@ -62,7 +62,7 @@
                     <%= equipment.model %>
                   </td>
                   <td class="col-md-4">
-                    <%= Brand.find(equipment.brand_id).name %>
+                    <%= Brand.find(equipment.brand_id).name if Brand.exists? id: equipment.brand_id %>
                   </td>
                   <td class="col-md-1 text-center">
                     <button ng-click="delete(<%= equipment.id %>, 'equipments')" class="btn btn-danger">

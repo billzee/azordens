@@ -44572,3 +44572,1461 @@ Processing by EquipmentsController#index as HTML
 Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 1.1ms)
 
 
+Started DELETE "/equipments/1.json" for 127.0.0.1 at 2016-10-04 14:13:54 -0300
+Processing by EquipmentsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM `equipment` WHERE `equipment`.`id` = 1[0m
+  [1m[35m (102.0ms)[0m  [1m[35mCOMMIT[0m
+No template found for EquipmentsController#destroy, rendering head :no_content
+Completed 204 No Content in 119ms (ActiveRecord: 103.2ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:13:56 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:49:23 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 236ms (Views: 182.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:49:27 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 93ms (Views: 79.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:49:29 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:49:33 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Column 'brand_id' cannot be null: UPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3):
+  
+app/controllers/brands_controller.rb:40:in `destroy'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1326.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (1531.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (357.0ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (444.8ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (419.7ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (608.2ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (331.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (53.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (55.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (446.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:51:02', '2016-10-04 19:51:02')[0m
+  [1m[35m (48.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (375.7ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (333.2ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (444.5ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int NOT NULL,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (476.6ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1[0m
+  [1m[35m (353.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (54.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (55.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (399.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (49.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (107.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (53.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (55.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-10-04 19:51:05', '2016-10-04 19:51:05', 2)[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-10-04 19:51:05', '2016-10-04 19:51:05', 3)[0m
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-10-04 19:51:05', '2016-10-04 19:51:05', 1)[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (107.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-04 19:51:05', '2016-10-04 19:51:05')[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-04 19:51:06', '2016-10-04 19:51:06', 3, 1, 1)[0m
+  [1m[35m (59.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-04 19:51:06', '2016-10-04 19:51:06', 2, 3, 2)[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-04 19:51:06', '2016-10-04 19:51:06', 1, 2, 3)[0m
+  [1m[35m (98.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:51:18 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:51:22 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.9ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:51:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (3.7ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 97ms (Views: 90.5ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:51:28 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Column 'brand_id' cannot be null: UPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3):
+  
+app/controllers/brands_controller.rb:40:in `destroy'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (1064.2ms)[0m  [1m[35mALTER TABLE `orders` DROP `status`[0m
+  [1m[35mSQL (54.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160822234306'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (1088.9ms)[0m  [1m[35mALTER TABLE `orders` ADD `status` int[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822234306')[0m
+  [1m[35m (108.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (1005.1ms)[0m  [1m[35mALTER TABLE `orders` DROP `status`[0m
+  [1m[35mSQL (53.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160822234306'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (1152.6ms)[0m  [1m[35mALTER TABLE `orders` ADD `status` int[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822234306')[0m
+  [1m[35m (98.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:53:24 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 55ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:53:29 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Column 'brand_id' cannot be null: UPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3):
+  
+app/controllers/brands_controller.rb:40:in `destroy'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1396.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (1250.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (395.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (497.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCustomers (20160822230018)
+  [1m[35m (444.1ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230018')[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBrands (20160822230216)
+  [1m[35m (332.5ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230216')[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEquipment (20160822230223)
+  [1m[35m (489.5ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230223')[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20160822230227)
+  [1m[35m (354.2ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230227')[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBrandToEquipment (20160822232621)
+  [1m[35m (723.3ms)[0m  [1m[35mALTER TABLE `equipment` ADD `brand_id` int[0m
+  [1m[35m (366.4ms)[0m  [1m[35mCREATE  INDEX `index_equipment_on_brand_id`  ON `equipment` (`brand_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822232621')[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEquipmentToOrder (20160822233650)
+  [1m[35m (1547.8ms)[0m  [1m[35mALTER TABLE `orders` ADD `equipment_id` int NOT NULL[0m
+  [1m[35m (344.9ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_equipment_id`  ON `orders` (`equipment_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233650')[0m
+  [1m[35m (54.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerToOrder (20160822233904)
+  [1m[35m (891.1ms)[0m  [1m[35mALTER TABLE `orders` ADD `customer_id` int NOT NULL[0m
+  [1m[35m (388.4ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_customer_id`  ON `orders` (`customer_id`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233904')[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (702.0ms)[0m  [1m[35mALTER TABLE `orders` ADD `status` int[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822234306')[0m
+  [1m[35m (54.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:54:19', '2016-10-04 19:54:19')[0m
+  [1m[35m (101.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:54:26 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 54ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:54:29 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:54:30 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.8ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 93ms (Views: 83.3ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 19:54:37', '2016-10-04 19:54:37')[0m
+  [1m[35m (58.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-04 19:54:37', '2016-10-04 19:54:37')[0m
+  [1m[35m (95.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 19:54:37', '2016-10-04 19:54:37')[0m
+  [1m[35m (87.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 19:54:37', '2016-10-04 19:54:37')[0m
+  [1m[35m (51.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 19:54:37', '2016-10-04 19:54:37')[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-10-04 19:54:37', '2016-10-04 19:54:37', 2)[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-10-04 19:54:37', '2016-10-04 19:54:37', 3)[0m
+  [1m[35m (50.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-10-04 19:54:37', '2016-10-04 19:54:37', 1)[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-04 19:54:38', '2016-10-04 19:54:38')[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-04 19:54:38', '2016-10-04 19:54:38')[0m
+  [1m[35m (106.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-04 19:54:38', '2016-10-04 19:54:38')[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-04 19:54:38', '2016-10-04 19:54:38', 3, 1, 1)[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-04 19:54:38', '2016-10-04 19:54:38', 2, 3, 2)[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-04 19:54:38', '2016-10-04 19:54:38', 1, 2, 3)[0m
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:54:41 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:54:43 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:54:46 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 3[0m
+  [1m[35m (60.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 87ms (ActiveRecord: 62.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:54:48 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:54:50 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (1.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115526116280'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115526116280'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.9ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:56:24 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Equipment::BrandId):
+    62:                     <%= equipment.model %>
+    63:                   </td>
+    64:                   <td class="col-md-4">
+    65:                     <%= Brand.find(equipment.brand_id).name %>
+    66:                   </td>
+    67:                   <td class="col-md-1 text-center">
+    68:                     <button ng-click="delete(<%= equipment.id %>, 'equipments')" class="btn btn-danger">
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115529026560'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115529026560'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1322.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (98.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (358.5ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (408.8ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (643.4ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (386.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (53.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (55.1ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (733.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:56:37', '2016-10-04 19:56:37')[0m
+  [1m[35m (46.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (356.8ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (488.4ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (423.6ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (598.4ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (364.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (41.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (44.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (487.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:56:40', '2016-10-04 19:56:40')[0m
+  [1m[35m (47.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 19:56:40', '2016-10-04 19:56:40')[0m
+  [1m[35m (53.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-04 19:56:40', '2016-10-04 19:56:40')[0m
+  [1m[35m (97.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 19:56:41', '2016-10-04 19:56:41')[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 19:56:41', '2016-10-04 19:56:41')[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 19:56:41', '2016-10-04 19:56:41')[0m
+  [1m[35m (50.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1317.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (1659.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (573.2ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (357.2ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (531.7ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (819.0ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (421.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (53.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (54.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (577.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:57:04', '2016-10-04 19:57:04')[0m
+  [1m[35m (44.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (386.2ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (444.8ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (497.7ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (742.2ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (431.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (67.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (101.8ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (382.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:57:07', '2016-10-04 19:57:07')[0m
+  [1m[35m (47.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 19:57:07', '2016-10-04 19:57:07')[0m
+  [1m[35m (47.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-04 19:57:07', '2016-10-04 19:57:07')[0m
+  [1m[35m (84.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (85.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (50.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 2)[0m
+  [1m[35m (71.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 3)[0m
+  [1m[35m (96.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 1)[0m
+  [1m[35m (71.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (93.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-04 19:57:08', '2016-10-04 19:57:08')[0m
+  [1m[35m (86.4ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 3, 1, 1)[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 2, 3, 2)[0m
+  [1m[35m (95.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-04 19:57:08', '2016-10-04 19:57:08', 1, 2, 3)[0m
+  [1m[35m (108.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:57:18 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:57:20 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 71ms (Views: 59.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:57:21 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:57:24 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 3[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:57:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:57:27 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=3):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115544715060'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115544715060'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.7ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:58:50 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=3):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115444543880'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115444543880'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1359.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (1483.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (414.1ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (465.3ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (499.6ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (565.0ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (364.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (53.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (54.7ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (657.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:59:01', '2016-10-04 19:59:01')[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (579.9ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (510.4ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (453.0ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `model` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `brand_id` int,  INDEX `index_equipment_on_brand_id` USING btree (`brand_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (481.6ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255), `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `equipment_id` int NOT NULL, `customer_id` int NOT NULL, `status` int,  INDEX `index_orders_on_customer_id` USING btree (`customer_id`),  INDEX `index_orders_on_equipment_id` USING btree (`equipment_id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8[0m
+  [1m[35m (509.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (41.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES ('20160822234306')[0m
+  [1m[35m (44.0ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160822230216'), ('20160822230223'), ('20160822230018'), ('20160822233904'), ('20160822230227'), ('20160822233650'), ('20160822232621');
+
+[0m
+  [1m[35m (331.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-04 19:59:04', '2016-10-04 19:59:04')[0m
+  [1m[35m (46.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (95.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (86.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (68.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Impressora DeskJet', 'd1520', '', '2016-10-04 19:59:05', '2016-10-04 19:59:05', 2)[0m
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Roteador Wireless', 'DSL-2740', 'Roteador de cor preta neste modelo', '2016-10-04 19:59:05', '2016-10-04 19:59:05', 3)[0m
+  [1m[35m (49.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('Notebook', 'DS1000', '14\", 4GB RAM, Processador Intel Core i5', '2016-10-04 19:59:05', '2016-10-04 19:59:05', 1)[0m
+  [1m[35m (89.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (94.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-04 19:59:05', '2016-10-04 19:59:05')[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-04 19:59:06', '2016-10-04 19:59:06', 3, 1, 1)[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-04 19:59:06', '2016-10-04 19:59:06', 2, 3, 2)[0m
+  [1m[35m (94.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-04 19:59:06', '2016-10-04 19:59:06', 1, 2, 3)[0m
+  [1m[35m (86.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:59:07 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:59:09 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/brands/3.json" for 127.0.0.1 at 2016-10-04 16:59:10 -0300
+Processing by BrandsController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE `equipment` SET `equipment`.`brand_id` = NULL WHERE `equipment`.`brand_id` = 3[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM `brands` WHERE `brands`.`id` = 3[0m
+  [1m[35m (58.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for BrandsController#destroy, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 60.8ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 16:59:12 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 16:59:13 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115448808920'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115448808920'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.3ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:01:40 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115581248740'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115581248740'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.2ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:01:54 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  Rendered equipments/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/guilherme/projects/azordens/app/views/equipments/index.html.erb:65: syntax error, unexpected tCONSTANT, expecting keyword_then or ';' or '\n'
+....find(equipment.brand_id) Brand.find(equipment.brand_id).nam...
+...                               ^):
+  
+app/views/equipments/index.html.erb:65: syntax error, unexpected tCONSTANT, expecting keyword_then or ';' or '\n'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.5ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:02:42 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  Rendered equipments/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/guilherme/projects/azordens/app/views/equipments/index.html.erb:65: syntax error, unexpected ')', expecting keyword_end
+...find(equipment.brand_id).name );@output_buffer.safe_append='
+...                               ^
+/home/guilherme/projects/azordens/app/views/equipments/index.html.erb:82: syntax error, unexpected keyword_ensure, expecting ')'
+/home/guilherme/projects/azordens/app/views/equipments/index.html.erb:84: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/equipments/index.html.erb:65: syntax error, unexpected ')', expecting keyword_end
+app/views/equipments/index.html.erb:82: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/equipments/index.html.erb:84: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:02:52 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Brand with 'id'=):
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115483646020'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115483646020'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:03:13 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `exists?' for #<Brand:0x007f8a1626d958>):
+    62:                     <%= equipment.model %>
+    63:                   </td>
+    64:                   <td class="col-md-4">
+    65:                     <%= Brand.find(equipment.brand_id).name if Brand.find(equipment.brand_id).exists? %>
+    66:                   </td>
+    67:                   <td class="col-md-1 text-center">
+    68:                     <button ng-click="delete(<%= equipment.id %>, 'equipments')" class="btn btn-danger">
+  
+app/views/equipments/index.html.erb:65:in `block in _app_views_equipments_index_html_erb___4115624461782098565_70115525588080'
+app/views/equipments/index.html.erb:56:in `_app_views_equipments_index_html_erb___4115624461782098565_70115525588080'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.9ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:04:08 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/equipments/2/edit" for 127.0.0.1 at 2016-10-04 17:04:20 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:04:22 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.7ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 17:04:23 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 17:04:26 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9VKh9fvQtGM9ZD/uL2sLiIw3W5peO8U3KIpHsutEmVCxUQGaFtWmt5QOGxvjh47moaajAOBjndp63rQ65DDlFQ==", "equipment"=>{"name"=>"sdadsa", "model"=>"dsadsadas", "description"=>"dsadsasad", "brand_id"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`) VALUES ('sdadsa', 'dsadsadas', 'dsadsasad', '2016-10-04 20:04:26', '2016-10-04 20:04:26')[0m
+  [1m[35m (219.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (64.9ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (71.5ms)
+Completed 200 OK in 338ms (Views: 44.8ms | ActiveRecord: 286.9ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 17:04:37 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 79ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 17:04:38 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTb5CX2ucrP7OVVp5QRroNO+ikpbYxxzvSzojErI4ObBNVlmkKtgZ1JTcZwp6O7O/i9y0OU7RJ7veBsERbycow==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 85ms (Views: 64.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:04:41 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 17:04:43 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 2.2ms)
+
+

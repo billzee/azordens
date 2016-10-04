@@ -1,5 +1,6 @@
 class Equipment < ApplicationRecord
   validates :name, presence: true
   validates :model, presence: true
-  validates :brand_id, presence: true
+  has_one :brand, dependent: :nullify
+
 end
