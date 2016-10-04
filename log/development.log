@@ -43960,3 +43960,371 @@ Processing by EquipmentsController#create as HTML
 Completed 200 OK in 71ms (Views: 61.2ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 14:02:25 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-04 14:02:26 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 74ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 14:02:30 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tables.html" for 127.0.0.1 at 2016-10-04 14:02:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tables.html"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (6.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.1ms)
+Started GET "/brands" for 127.0.0.1 at 2016-10-04 14:02:34 -0300
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:02:35 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (4.1ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:02:36 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:02:37 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KgRbIregh/7BHALioaGRaQ8iiVjaNY2Tlj0H6qg2CuBuB/tNWqWVKmh2JhdtTRQHIrNxwmRt1X7EafRip0J2pQ==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>"1"}, "commit"=>"Criar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 87ms (Views: 80.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:02:54 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:02:56 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:02:57 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ab3cTql8fQ9u1FAtt9iuV57liejNe8hqYbl9qb2Oj4YtvnwhRHlv28e+dNh7NCs5s3RxcnMjkIcz7Y4hsvrzww==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>"1"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:03:35 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:03:39 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:03:40 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ljnrtyA1J8JCoea2l8gHpdtRWtvAwEchicfYldQCEaaW0fBMYXGS6Bgo28Ws6Vwuvy98dFbWfHUc+zqWCR0Aw==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>"1"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 87ms (Views: 66.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:05:25 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:05:27 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  Rendered equipments/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:65: syntax error, unexpected tSTRING_BEG, expecting =>
+...d.all, :id, :name, {:selected 'teste'}, {class: "form-contro...
+...                               ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:65: syntax error, unexpected '}', expecting ')'
+...:id, :name, {:selected 'teste'}, {class: "form-control"}) );...
+...                               ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting keyword_end
+...e'}, {class: "form-control"}) );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/equipments/new.html.erb:65: syntax error, unexpected tSTRING_BEG, expecting =>
+app/views/equipments/new.html.erb:65: syntax error, unexpected '}', expecting ')'
+app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting keyword_end
+app/controllers/equipments_controller.rb:20:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:05:38 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:06:08 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  Rendered equipments/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting =>
+...este", {class: "form-control"}) );@output_buffer.safe_append...
+...                               ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:79: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:81: syntax error, unexpected keyword_ensure, expecting ')'
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:83: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting =>
+app/views/equipments/new.html.erb:79: syntax error, unexpected keyword_end, expecting ')'
+app/views/equipments/new.html.erb:81: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/equipments/new.html.erb:83: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/equipments_controller.rb:20:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.7ms)
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:06:42 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  Rendered equipments/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting =>
+... true, {class: "form-control"}) );@output_buffer.safe_append...
+...                               ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:79: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:81: syntax error, unexpected keyword_ensure, expecting ')'
+/home/guilherme/projects/azordens/app/views/equipments/new.html.erb:83: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/equipments/new.html.erb:65: syntax error, unexpected ')', expecting =>
+app/views/equipments/new.html.erb:79: syntax error, unexpected keyword_end, expecting ')'
+app/views/equipments/new.html.erb:81: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/equipments/new.html.erb:83: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/equipments_controller.rb:20:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:07:37 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:07:49 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:07:51 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wq2zZ5efzktYN2/u/0BV3gtGfgAi5dbKdHL/zqj2fAAvR6qawTn3J0qo3X2wRCY7QVkvXviGpc2rDgcC+XUiIA==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 67ms (Views: 60.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:08:25 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:08:27 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:08:28 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"heYpwriT3H/90KAbg25qcTiEb+KZoO6ulgu26uRH88XB5YmtVZbOq1S6hO5Pgu8fFRWXeCf4tkPEX0Vi6zOPgA==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 86ms (Views: 77.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-04 14:08:39 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 3 LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-04 14:08:41 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:08:42 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxK6IsQAiBbuCfrwMkFqgTyx1CyCXhzrw2PEAw4TTPzfERpNKQWawkdj3gX+re/vESAstjwGRAaRNzeLAWcwuQ==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 58ms (Views: 52.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-04 14:08:44 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gGgW3Ce4cH6WST1gynxKd8dCxONSEifGxiSl58gf8cn1gg8hcR5JEoTWj/OFeDmSjV2VvYhxVMEZWF0rmZyv6Q==", "equipment"=>{"name"=>"", "model"=>"", "description"=>"", "brand_id"=>"2"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 77ms (Views: 68.0ms | ActiveRecord: 1.0ms)
+
+

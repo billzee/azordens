@@ -3,3 +3,7 @@ pt-BR:
     attributes:
       brand:
         name: "Nome"
+      equipment:
+        name: "Nome"
+        model: "Modelo"
+        brand_id: "Marca"
