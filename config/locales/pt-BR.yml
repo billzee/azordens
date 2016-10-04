@@ -1,5 +1,5 @@
 pt-BR:
   activerecord:
-          attributes:
-            brand:
-              name: "Nome"
+    attributes:
+      brand:
+        name: "Nome"
