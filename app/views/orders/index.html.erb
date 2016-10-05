@@ -2,16 +2,16 @@
   <div class="row">
     <div class="col-xs-12">
         <h1 class="page-header">
-          Clientes
+          Ordens de Serviço
         </h1>
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-12">
-      <% if @customers.length > 0 %>
+      <% if @orders.length > 0 %>
         <div class="alert alert-info alert-dismissable">
-          <i class="fa fa-info-circle"></i>  Clique no nome do Cliente que deseja alterar
+          <i class="fa fa-info-circle"></i>  Clique na OS que deseja consultar
         </div>
       <% end %>
 
@@ -22,9 +22,9 @@
         </div>
       <% end %>
 
-      <% if @customers.length == 0 %>
+      <% if @orders.length == 0 %>
         <div class="alert alert-warning">
-          <i class="fa fa-warning"></i> Você não tem nenhum Cliente cadastrado
+          <i class="fa fa-warning"></i> Você não tem nenhum Equipamento cadastrado
         </div>
       <% end %>
 
@@ -33,39 +33,39 @@
 
   <div class="row m-b-20">
     <div class="col-xs-12 text-right">
-      <%= link_to new_customer_path, class: "btn btn-success btn-md" do %>
-        <i class="fa fa-plus-square-o"></i> Novo Cliente
+      <%= link_to new_order_path, class: "btn btn-success btn-md" do %>
+        <i class="fa fa-plus-square-o"></i> Nova OS
       <% end %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-12">
-      <% if @customers.length > 0 %>
+      <% if @orders.length > 0 %>
         <div class="table-responsive">
         	<table class="table table-hover">
             <thead class="c-white bg-orange">
               <tr>
-                <th class="col-md-3">Nome</th>
-                <th class="col-md-4">Telefone</th>
-                <th class="col-md-4">Email</th>
+                <th class="col-md-3">Número</th>
+                <th class="col-md-4">Cliente</th>
+                <th class="col-md-4">Equipamento</th>
                 <th class="col-md-1 text-center">Excluir</th>
               </tr>
             </thead>
             <tbody>
-            	<% @customers.each do |customer| %>
+            	<% @orders.each do |order| %>
                 <tr>
+                  <td class="col-md-2">
+                    <%= link_to order.id, edit_order_path(order.id) %>
+                  </td>
                   <td class="col-md-3">
-                    <%= link_to customer.full_name, edit_customer_path(customer.id) %>
+                    <%= Customer.find(order.customer_id).full_name if Customer.exists? id: order.customer_id %>
                   </td>
-                  <td class="col-md-4">
-                    <%= customer.phone %>
-                  </td>
-                  <td class="col-md-4">
-                    <%= customer.email %>
+                  <td class="col-md-6">
+                    <%= Equipment.find(order.equipment_id).specs if Equipment.exists? id: order.equipment_id %>
                   </td>
                   <td class="col-md-1 text-center">
-                    <button ng-click="delete(<%= customer.id %>, 'customers')" class="btn btn-danger">
+                    <button ng-click="delete(<%= order.id %>, 'orders')" class="btn btn-danger">
                       <i class="fa fa-fw fa-trash"></i>
                     </button>
                   </td>

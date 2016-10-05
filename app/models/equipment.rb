@@ -3,4 +3,8 @@ class Equipment < ApplicationRecord
   validates :model, presence: true
   has_one :brand, dependent: :nullify
 
+  def specs
+    self.name + ' ' + self.model
+  end
+
 end
