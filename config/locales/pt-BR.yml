@@ -4,10 +4,16 @@ pt-BR:
       brand:
         name: "Nome"
       equipment:
-        name: "Nome"
+        description: "Descrição"
         model: "Modelo"
       customer:
         first_name: "Nome"
         last_name: "Sobrenome"
         phone: "Telefone"
         email: "E-mail"
+      order:
+        defect: "Defeito"
+        serial_number: "Número Serial"
+        observation: "Observação"
+        customer_id: "Cliente"
+        equipment_id: "Equipamento"

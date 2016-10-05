@@ -1,5 +1,5 @@
 class Equipment < ApplicationRecord
-  validates :name, presence: true
+  validates :description, presence: true
   validates :model, presence: true
   has_many :orders, dependent: :nullify
 
@@ -8,7 +8,7 @@ class Equipment < ApplicationRecord
       brand = Brand.find(self.brand_id).name
       self.name + ' ' + brand + ' ' + self.model
     else
-      self.name + ' ' + self.model
+      self.description + ' ' + self.model
     end
   end
 end

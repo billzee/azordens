@@ -1,6 +1,6 @@
 class EquipmentsController < ApplicationController
 	def index
-		@all_equipment = Equipment.order :name
+		@all_equipment = Equipment.order :created_at
   	render "index"
 	end
 
@@ -16,7 +16,6 @@ class EquipmentsController < ApplicationController
 
   def new
     @equipment = Equipment.new
-    @brands_array = Brand.order :name
     render "new"
   end
 

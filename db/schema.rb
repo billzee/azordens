@@ -28,9 +28,8 @@ ActiveRecord::Schema.define(version: 20160822234306) do
   end
 
   create_table "equipment", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",        null: false
-    t.string   "model"
-    t.string   "description"
+    t.string   "description", null: false
+    t.string   "model",       null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "brand_id"

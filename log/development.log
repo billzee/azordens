@@ -49493,3 +49493,1220 @@ Processing by CustomersController#index as HTML
 Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/brands" for 127.0.0.1 at 2016-10-05 18:27:21 -0300
+Started GET "/brands" for 127.0.0.1 at 2016-10-05 18:27:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BrandsController#index as HTML
+Processing by BrandsController#index as HTML
+  Rendering brands/index.html.erb within layouts/application
+  Rendering brands/index.html.erb within layouts/application
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT `brands`.* FROM `brands` ORDER BY `brands`.`name` ASC[0m
+  Rendered brands/index.html.erb within layouts/application (13.1ms)
+  Rendered brands/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 2505ms (Views: 2488.6ms | ActiveRecord: 2.9ms)
+
+
+Completed 200 OK in 2578ms (Views: 2536.1ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:29:16 -0300
+  
+NameError (undefined local variable or method `map' for #<ActionDispatch::Routing::Mapper:0x007f124b534058>):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:29:23 -0300
+  
+ArgumentError (must be called with a path and/or options):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.3ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.1ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:30:29 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 141ms (Views: 129.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:30:36 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 97ms (Views: 89.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:33:14 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 87ms (Views: 79.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:33:16 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-05 18:33:17 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:33:18 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (4.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 116ms (Views: 105.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-05 18:33:19 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:33:21 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 118ms (Views: 103.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:33:24 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124ac0a068>):
+    62:     <div class="col-lg-12">
+    63:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    64:         <label>Marca</label>
+    65:         <%= f.collection_select(:customer_id, Customer.all, :id, :name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    66:       </div>
+    67:     </div>
+    68:   </div>
+  
+app/views/orders/new.html.erb:65:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858270134840'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858270134840'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:33:33 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:34:10 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:34:11 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124b420590>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858274366400'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858274366400'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:34:56 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `#<Customer::ActiveRecord_Relation:0x007f124b494328>' for #<Equipment:0x007f124b4d4a18>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858274719020'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858274719020'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.6ms)
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:35:06 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124991da18>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858260187700'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858260187700'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:35:43 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 81ms (Views: 74.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:35:45 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-05 18:35:46 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (1.3ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:36:15 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 103ms (Views: 92.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:36:16 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124ae7d6b0>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858271345960'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858271345960'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.5ms)
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:37:00 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124e672b38>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858180269020'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858180269020'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:37:12 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 103ms (Views: 93.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-05 18:37:13 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2016-10-05 18:37:14 -0300
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2016-10-05 18:37:20 -0300
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XfLAODzzOlGdSxPjC/i2mt+UkY6QWC3cyFmXkeN3VAEOZsCsDTQHUTLAqGn8O6qNeBas1ayg+acj9LB0M5nbw==", "customer"=>{"first_name"=>"tiozao", "last_name"=>"dasdsad", "phone"=>"312321", "email"=>"dsadsa"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'dsadsa' LIMIT 1[0m
+  [1m[35mSQL (30.9ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('tiozao', 'dasdsad', 'dsadsa', '312321', '2016-10-05 21:37:20', '2016-10-05 21:37:20')[0m
+  [1m[35m (89.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 209ms (Views: 79.7ms | ActiveRecord: 121.7ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:37:25 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 97ms (Views: 91.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/equipments/new" for 127.0.0.1 at 2016-10-05 18:37:26 -0300
+Processing by EquipmentsController#new as HTML
+  Rendering equipments/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/equipments" for 127.0.0.1 at 2016-10-05 18:37:30 -0300
+Processing by EquipmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NlsPjaxo2n+NyQSoSCxk6ZFX7JzoEr+nfhEeC1NZF/FI9IbS5OENIRGS3syXwjkqXg+NBzV7SU8NYdBy530Cew==", "equipment"=>{"name"=>"casdsa", "model"=>"asdasdsa", "description"=>"dasdsa", "brand_id"=>"2"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `equipment` (`name`, `model`, `description`, `created_at`, `updated_at`, `brand_id`) VALUES ('casdsa', 'asdasdsa', 'dasdsa', '2016-10-05 21:37:30', '2016-10-05 21:37:30', 2)[0m
+  [1m[35m (219.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 295ms (Views: 67.6ms | ActiveRecord: 221.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-05 18:37:35 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:37:36 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 85ms (Views: 77.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-05 18:37:37 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:37:38 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBrand Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-10-05 18:37:39 -0300
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT `customers`.* FROM `customers` ORDER BY `customers`.`first_name` ASC[0m
+  Rendered customers/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:37:39 -0300
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 117ms (Views: 104.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:37:57 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124cc70668>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858287037900'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858287037900'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.6ms)
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:38:16 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Equipment:0x007f124b5e0650>):
+    20:     <div class="col-lg-12">
+    21:       <div class="form-group <%= 'has-error has-feedback' if @order.errors[:brand_id].present? %>">
+    22:         <label>Cliente</label>
+    23:         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
+    24:       </div>
+    25:     </div>
+    26:   </div>
+  
+app/views/orders/new.html.erb:23:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858275687700'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858275687700'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.8ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:38:37 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 108ms (Views: 100.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:38:39 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  Rendered orders/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x007f124b745018>):
+    29:     <div class="col-lg-12">
+    30:         <div class="form-group <%= 'has-error has-feedback' if @order.errors[:name].present? %>">
+    31:         <label>Nome</label>
+    32:         <%= f.text_field :name, class: "form-control" %>
+    33:         <% if @order.errors[:name].present? %>
+    34:           <span class="form-control-feedback">
+    35:             <i class="fa fa-warning"></i>
+  
+app/views/orders/new.html.erb:32:in `block in _app_views_orders_new_html_erb__1059373183467750909_69858276021900'
+app/views/orders/new.html.erb:17:in `_app_views_orders_new_html_erb__1059373183467750909_69858276021900'
+app/controllers/orders_controller.rb:19:in `new'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:39:41 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment`[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered orders/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:39:58 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment`[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered orders/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2016-10-05 18:40:49 -0300
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment`[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered orders/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 89ms (Views: 86.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2016-10-05 18:40:54 -0300
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RzwLanTpRC3OQG1WT+MDSkUCxjdKAfx6fQ8zCq1DN+94qiSMl+M/3bVA/ACz8i1D+i4VwXnV7Xwp48dQUuEBTg==", "order"=>{"customer_id"=>"", "equipment_id"=>"", "defect"=>"", "serial_number"=>"", "observation"=>""}, "commit"=>"Criar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT `customers`.* FROM `customers`[0m
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment`[0m
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `brands`.* FROM `brands` WHERE `brands`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered orders/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 83ms (Views: 74.8ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (1254.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_development`[0m
+  [1m[35m (58.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS `azordens_test`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE `azordens_development` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `azordens_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (395.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (409.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (15.9ms)[0m  [1m[34mSELECT GET_LOCK('7454216087489022600', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCustomers (20160822230018)
+  [1m[35m (360.8ms)[0m  [1m[35mCREATE TABLE `customers` (`id` int AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `email` varchar(255), `phone` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230018')[0m
+  [1m[35m (49.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBrands (20160822230216)
+  [1m[35m (366.8ms)[0m  [1m[35mCREATE TABLE `brands` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230216')[0m
+  [1m[35m (95.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEquipment (20160822230223)
+  [1m[35m (377.4ms)[0m  [1m[35mCREATE TABLE `equipment` (`id` int AUTO_INCREMENT PRIMARY KEY, `description` varchar(255) NOT NULL, `model` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230223')[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20160822230227)
+  [1m[35m (421.4ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `defect` varchar(255) NOT NULL, `serial_number` varchar(255), `observation` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822230227')[0m
+  [1m[35m (52.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddBrandToEquipment (20160822232621)
+  [1m[35m (691.9ms)[0m  [1m[35mALTER TABLE `equipment` ADD `brand_id` int[0m
+  [1m[35m (301.7ms)[0m  [1m[35mCREATE  INDEX `index_equipment_on_brand_id`  ON `equipment` (`brand_id`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822232621')[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEquipmentToOrder (20160822233650)
+  [1m[35m (590.8ms)[0m  [1m[35mALTER TABLE `orders` ADD `equipment_id` int NOT NULL[0m
+  [1m[35m (323.1ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_equipment_id`  ON `orders` (`equipment_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233650')[0m
+  [1m[35m (53.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCustomerToOrder (20160822233904)
+  [1m[35m (734.7ms)[0m  [1m[35mALTER TABLE `orders` ADD `customer_id` int NOT NULL[0m
+  [1m[35m (334.1ms)[0m  [1m[35mCREATE  INDEX `index_orders_on_customer_id`  ON `orders` (`customer_id`) [0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822233904')[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStatusToOrder (20160822234306)
+  [1m[35m (714.0ms)[0m  [1m[35mALTER TABLE `orders` ADD `status` int[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160822234306')[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2016-10-05 21:44:22', '2016-10-05 21:44:22')[0m
+  [1m[35m (44.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7454216087489022600')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `brands`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'brands'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `customers`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'customers'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `equipment`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'equipment'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'brands'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'customers'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'equipment'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'azordens_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Samsung' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Samsung', '2016-10-05 21:44:28', '2016-10-05 21:44:28')[0m
+  [1m[35m (45.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'HP' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('HP', '2016-10-05 21:44:28', '2016-10-05 21:44:28')[0m
+  [1m[35m (106.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'D-link' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('D-link', '2016-10-05 21:44:28', '2016-10-05 21:44:28')[0m
+  [1m[35m (103.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Intel' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Intel', '2016-10-05 21:44:28', '2016-10-05 21:44:28')[0m
+  [1m[35m (57.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Corsair' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `brands` (`name`, `created_at`, `updated_at`) VALUES ('Corsair', '2016-10-05 21:44:28', '2016-10-05 21:44:28')[0m
+  [1m[35m (48.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Samsung' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'HP' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'D-link' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Intel' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Corsair' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Samsung' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'HP' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'D-link' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Intel' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`name` = BINARY 'Corsair' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `equipment` (`description`, `model`, `created_at`, `updated_at`) VALUES ('Impressora DeskJet', 'd1520', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (47.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `equipment` (`description`, `model`, `created_at`, `updated_at`) VALUES ('Roteador Wireless', 'DSL-2740', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `equipment` (`description`, `model`, `created_at`, `updated_at`) VALUES ('Notebook', 'DS1000', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (109.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'joaosilva@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('João', 'Silva', 'joaosilva@gmail.com', '5491834667', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'teste@teste.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Teste', 'Teste', 'teste@teste.com', '5499999999', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (104.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`email` = BINARY 'mariacamargo@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `customers` (`first_name`, `last_name`, `email`, `phone`, `created_at`, `updated_at`) VALUES ('Maria', 'Camargo', 'mariacamargo@yahoo.com', '5496881001', '2016-10-05 21:45:27', '2016-10-05 21:45:27')[0m
+  [1m[35m (104.2ms)[0m  [1m[35mCOMMIT[0m
+Creating scope :open. Overwriting existing method Order.open.
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não liga, faz bip prolongado', '156451256148912148', 'Acompanha carregador', '2016-10-05 21:45:27', '2016-10-05 21:45:27', 3, 1, 1)[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Não funciona conexão com a internet', '', 'Esta faltando uma antena', '2016-10-05 21:45:27', '2016-10-05 21:45:27', 2, 3, 2)[0m
+  [1m[35m (106.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`defect`, `serial_number`, `observation`, `created_at`, `updated_at`, `equipment_id`, `customer_id`, `status`) VALUES ('Cartuchos foram trocados, mas apenas imprime em preto-e-branco', 'ABCDE123456789', 'Bandeja de folhas quebrada', '2016-10-05 21:45:27', '2016-10-05 21:45:27', 1, 2, 3)[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:45:31 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (30.3ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (missing attribute: name):
+    62:                     <%= Customer.find(order.customer_id).full_name if Customer.exists? id: order.customer_id %>
+    63:                   </td>
+    64:                   <td class="col-md-6">
+    65:                     <%= Equipment.find(order.equipment_id).specs if Equipment.exists? id: order.equipment_id %>
+    66:                   </td>
+    67:                   <td class="col-md-1 text-center">
+    68:                     <button ng-click="delete(<%= order.id %>, 'orders')" class="btn btn-danger">
+  
+app/models/equipment.rb:11:in `specs'
+app/views/orders/index.html.erb:65:in `block in _app_views_orders_index_html_erb___1669160533330922_69858276796760'
+app/views/orders/index.html.erb:56:in `_app_views_orders_index_html_erb___1669160533330922_69858276796760'
+app/controllers/orders_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.9ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.4ms)
+Started GET "/orders" for 127.0.0.1 at 2016-10-05 18:45:51 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 89ms (Views: 82.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:45:54 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (1.1ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'equipment.name' in 'order clause': SELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC):
+     9: 
+    10:   <div class="row">
+    11:     <div class="col-xs-12">
+    12:       <% if @all_equipment.length > 0 %>
+    13:         <div class="alert alert-info alert-dismissable">
+    14:           <i class="fa fa-info-circle"></i>  Clique no nome do Equipamento que deseja alterar
+    15:         </div>
+  
+app/views/equipments/index.html.erb:12:in `_app_views_equipments_index_html_erb___3811905868224244713_69858348034560'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+Started GET "/" for 127.0.0.1 at 2016-10-05 18:48:11 -0300
+Processing by OrdersController#index as HTML
+Creating scope :open. Overwriting existing method Order.open.
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` ORDER BY `orders`.`id` ASC[0m
+  [1m[36mCustomer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 3 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Load (0.2ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` WHERE `customers`.`id` = 2 LIMIT 1[0m
+  [1m[36mEquipment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  [1m[36mEquipment Load (0.1ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendered orders/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 93ms (Views: 85.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:48:15 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (1.1ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'equipment.name' in 'order clause': SELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`name` ASC):
+     9: 
+    10:   <div class="row">
+    11:     <div class="col-xs-12">
+    12:       <% if @all_equipment.length > 0 %>
+    13:         <div class="alert alert-info alert-dismissable">
+    14:           <i class="fa fa-info-circle"></i>  Clique no nome do Equipamento que deseja alterar
+    15:         </div>
+  
+app/views/equipments/index.html.erb:12:in `_app_views_equipments_index_html_erb___3811905868224244713_69858301470700'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:49:04 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`creation_date` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'equipment.creation_date' in 'order clause': SELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`creation_date` ASC):
+     9: 
+    10:   <div class="row">
+    11:     <div class="col-xs-12">
+    12:       <% if @all_equipment.length > 0 %>
+    13:         <div class="alert alert-info alert-dismissable">
+    14:           <i class="fa fa-info-circle"></i>  Clique no nome do Equipamento que deseja alterar
+    15:         </div>
+  
+app/views/equipments/index.html.erb:12:in `_app_views_equipments_index_html_erb___3811905868224244713_69858260547920'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.2ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.1ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.7ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:49:15 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`creation` ASC[0m
+  Rendered equipments/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Mysql2::Error: Unknown column 'equipment.creation' in 'order clause': SELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`creation` ASC):
+     9: 
+    10:   <div class="row">
+    11:     <div class="col-xs-12">
+    12:       <% if @all_equipment.length > 0 %>
+    13:         <div class="alert alert-info alert-dismissable">
+    14:           <i class="fa fa-info-circle"></i>  Clique no nome do Equipamento que deseja alterar
+    15:         </div>
+  
+app/views/equipments/index.html.erb:12:in `_app_views_equipments_index_html_erb___3811905868224244713_69858303247540'
+app/controllers/equipments_controller.rb:4:in `index'
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.9ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:49:34 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.4ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`created_at` ASC[0m
+  [1m[36mBrand Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 69ms (Views: 62.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:49:39 -0300
+  
+SyntaxError (/home/guilherme/projects/azordens/app/controllers/equipments_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end):
+  
+app/controllers/equipments_controller.rb:3: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/guilherme/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+Started GET "/equipments" for 127.0.0.1 at 2016-10-05 18:49:47 -0300
+Processing by EquipmentsController#index as HTML
+  Rendering equipments/index.html.erb within layouts/application
+  [1m[36mEquipment Load (0.3ms)[0m  [1m[34mSELECT `equipment`.* FROM `equipment` ORDER BY `equipment`.`created_at` ASC[0m
+  [1m[36mBrand Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  [1m[36mBrand Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM `brands` WHERE `brands`.`id` IS NULL LIMIT 1[0m
+  Rendered equipments/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 62ms (Views: 56.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-05 18:49:49 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.6ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 95ms (Views: 90.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/equipments/1/edit" for 127.0.0.1 at 2016-10-05 18:50:11 -0300
+Processing by EquipmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEquipment Load (0.5ms)[0m  [1m[34mSELECT  `equipment`.* FROM `equipment` WHERE `equipment`.`id` = 1 LIMIT 1[0m
+  Rendering equipments/edit.html.erb within layouts/application
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT `brands`.* FROM `brands`[0m
+  Rendered equipments/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.7ms)
+
+

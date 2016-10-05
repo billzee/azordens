@@ -8,9 +8,9 @@
 
 brands = Brand.create([{name:  'Samsung'}, {name: 'HP'}, {name: 'D-link'}, {name: 'Intel'}, {name: 'Corsair'}])
 equipments =
-	Equipment.create([{name:  'Impressora DeskJet', model: 'd1520', description: '', brand_id: brands.second.id},
-		{name:  'Roteador Wireless', model: 'DSL-2740', description: 'Roteador de cor preta neste modelo', brand_id: brands.third.id},
-		{name:  'Notebook', model: 'DS1000', description: '14", 4GB RAM, Processador Intel Core i5', brand_id: brands.first.id}
+	Equipment.create([{description:  'Impressora DeskJet', model: 'd1520', brand_id: brands.second.id},
+		{description:  'Roteador Wireless', model: 'DSL-2740', brand_id: brands.third.id},
+		{description:  'Notebook', model: 'DS1000', brand_id: brands.first.id}
 ])
 customers =
 	Customer.create([{first_name: 'João', last_name: 'Silva', email: 'joaosilva@gmail.com', phone: '5491834667'},

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 	resources :equipments
 	resources :customers
 	resources :orders
+
+	root 'orders#index'
 end

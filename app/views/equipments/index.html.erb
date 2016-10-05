@@ -56,7 +56,7 @@
             	<% @all_equipment.each do |equipment| %>
                 <tr>
                   <td class="col-md-3">
-                    <%= link_to equipment.name, edit_equipment_path(equipment.id) %>
+                    <%= link_to equipment.description, edit_equipment_path(equipment.id) %>
                   </td>
                   <td class="col-md-4">
                     <%= equipment.model %>
