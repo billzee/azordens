@@ -1,0 +1,30 @@
+/* generic classes */
+.m-20 {
+  margin: 20px !important;
+}
+
+.m-b-20 {
+  margin-bottom: 20px !important;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.c-white{
+  color: white;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+table tbody tr td {
+  a {
+    font-weight: 700;
+    font-size: 15px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

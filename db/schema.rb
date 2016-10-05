@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20160822234306) do
   end
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "first_name", null: false
+    t.string   "last_name",  null: false
     t.string   "email"
     t.string   "phone"
     t.datetime "created_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160822234306) do
   end
 
   create_table "equipment", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
+    t.string   "name",        null: false
     t.string   "model"
     t.string   "description"
     t.datetime "created_at",  null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160822234306) do
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "defect"
+    t.string   "defect",                      null: false
     t.string   "serial_number"
     t.text     "observation",   limit: 65535
     t.datetime "created_at",                  null: false
