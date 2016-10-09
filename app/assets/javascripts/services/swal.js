@@ -20,7 +20,11 @@ angular.module('azordens')
         .success(function(){
           swal({title:'Excluído!', text: '', type: 'success'},
           function(){
-            $window.location.reload();
+            if(route === 'orders'){
+              $window.location.href('/orders/');
+            } else{
+              $window.location.reload();
+            }
           });
         })
         .error(function(){

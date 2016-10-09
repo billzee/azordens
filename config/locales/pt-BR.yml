@@ -1,4 +1,10 @@
 pt-BR:
+  open: "Em aberto"
+  in_progress: "Em progresso"
+  concluded: "Concluída"
+  delivered: "Entregue"
+  closed: "Fechada"
+  
   activerecord:
     attributes:
       brand:
@@ -17,3 +23,9 @@ pt-BR:
         observation: "Observação"
         customer_id: "Cliente"
         equipment_id: "Equipamento"
+        statuses:
+          open: "Em aberto"
+          in_progress: "Em progresso"
+          concluded: "Concluída"
+          delivered: "Entregue"
+          closed: "Fechada"

@@ -24,7 +24,7 @@
 
       <% if @orders.length == 0 %>
         <div class="alert alert-warning">
-          <i class="fa fa-warning"></i> Você não tem nenhum Equipamento cadastrado
+          <i class="fa fa-warning"></i> Você não tem nenhuma OS cadastrada
         </div>
       <% end %>
 
@@ -49,7 +49,7 @@
                 <th class="col-md-2">Número</th>
                 <th class="col-md-3">Cliente</th>
                 <th class="col-md-6">Equipamento</th>
-                <th class="col-md-1 text-center">Excluir</th>
+                <th class="col-md-1 text-center">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -65,9 +65,7 @@
                     <%= Equipment.find(order.equipment_id).specs if Equipment.exists? id: order.equipment_id %>
                   </td>
                   <td class="col-md-1 text-center">
-                    <button ng-click="delete(<%= order.id %>, 'orders')" class="btn btn-danger">
-                      <i class="fa fa-fw fa-trash"></i>
-                    </button>
+                    <%= I18n.t(Order.find(order.id).status) %>
                   </td>
                 </tr>
               <% end %>

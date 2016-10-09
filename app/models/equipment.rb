@@ -6,7 +6,7 @@ class Equipment < ApplicationRecord
   def specs
     if self.brand_id.present?
       brand = Brand.find(self.brand_id).name
-      self.name + ' ' + brand + ' ' + self.model
+      self.description + ' ' + brand + ' ' + self.model
     else
       self.description + ' ' + self.model
     end

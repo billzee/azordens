@@ -1,27 +1,59 @@
 <div class="row">
   <div class="col-lg-12">
     <h1 class="page-header">
-      Alterar <small>Equipamento</small>
+      Alterar <small>OS</small>
     </h1>
   </div>
 </div>
 
-<% if @equipment.errors.full_messages.any? %>
+<% if @order.errors.full_messages.any? %>
   <div class="alert alert-danger alert-dismissable">
-    <% @equipment.errors.full_messages.each do |msg| %>
+    <% @order.errors.full_messages.each do |msg| %>
       <p><i class="fa fa-warning"></i>  <%= msg %></p>
     <% end %>
   </div>
 <% end %>
 
-<%= form_for @equipment, url: {action: "update"} do |f| %>
+<%= form_for @order, url: {action: "update"} do |f| %>
+
+  <div class="row">
+
+    <div class="col-lg-3">
+      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
+        <label>Cliente*</label>
+        <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}) %>
+      </div>
+    </div>
+
+    <div class="col-lg-5 text-left">
+      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
+        <label>Equipamento*</label>
+        <%= f.collection_select(:equipment_id, Equipment.all, :id, :specs, {:include_blank => "Selecione um Equipamento"}) %>
+      </div>
+    </div>
+
+
+    <div class="col-lg-3 text-right">
+      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
+        <label>Status*</label>
+        <%= f.select(:status, Order.status_attributes_for_select, {:include_blank => "Selecione um Equipamento"}) %>
+      </div>
+    </div>
+
+    <div class="col-lg-1 text-left">
+      <button type="button" ng-click="delete(<%= @order.id %>, 'orders')" class="btn btn-danger">
+        <i class="fa fa-fw fa-trash"></i>
+      </button>
+    </div>
+
+  </div>
 
   <div class="row">
     <div class="col-lg-12">
-        <div class="form-group <%= 'has-error has-feedback' if @equipment.errors[:name].present? %>">
-        <label>Nome</label>
-        <%= f.text_field :name, class: "form-control" %>
-        <% if @equipment.errors[:name].present? %>
+        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:defect].present? %>">
+        <label>Defeito*</label>
+        <%= f.text_field :defect, class: "form-control" %>
+        <% if @order.errors[:defect].present? %>
           <span class="form-control-feedback">
             <i class="fa fa-warning"></i>
           </span>
@@ -32,10 +64,10 @@
 
   <div class="row">
     <div class="col-lg-12">
-        <div class="form-group <%= 'has-error has-feedback' if @equipment.errors[:model].present? %>">
-        <label>Modelo</label>
-        <%= f.text_field :model, class: "form-control" %>
-        <% if @equipment.errors[:model].present? %>
+        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:serial_number].present? %>">
+        <label>Número Serial</label>
+        <%= f.text_field :serial_number, class: "form-control" %>
+        <% if @order.errors[:serial_number].present? %>
           <span class="form-control-feedback">
             <i class="fa fa-warning"></i>
           </span>
@@ -46,23 +78,14 @@
 
   <div class="row">
     <div class="col-lg-12">
-        <div class="form-group <%= 'has-error has-feedback' if @equipment.errors[:description].present? %>">
-        <label>Descrição</label>
-        <%= f.text_field :description, class: "form-control" %>
-        <% if @equipment.errors[:description].present? %>
+        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:observation].present? %>">
+        <label>Observação</label>
+        <%= f.text_area :observation, class: "form-control" %>
+        <% if @order.errors[:observation].present? %>
           <span class="form-control-feedback">
             <i class="fa fa-warning"></i>
           </span>
         <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="form-group <%= 'has-error has-feedback' if @equipment.errors[:brand_id].present? %>">
-        <label>Marca</label>
-        <%= f.collection_select(:brand_id, Brand.all, :id, :name, {:include_blank => "Selecione uma Marca"}, {class: "form-control"}) %>
       </div>
     </div>
   </div>
@@ -70,8 +93,8 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="form-group">
-        <%= f.submit "Alterar", class: "btn btn-success" %>
-        <%= link_to 'Cancelar', equipments_path, class: "btn btn-secondary" %>
+        <%= f.submit "Criar", class: "btn btn-success" %>
+        <%= link_to 'Cancelar', orders_path, class: "btn btn-secondary" %>
       </div>
     </div>
   </div>

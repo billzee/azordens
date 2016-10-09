@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
 	def update
 		@order = Order.find(params[:id])
 		if @order.update(order_params)
-			flash[:notice] = "Equipamento alterado"
+			flash[:notice] = "OS atualizada"
 			redirect_to orders_path
 		else
 			render "edit"
