@@ -4,6 +4,7 @@ angular.module('azordens')
 .service('swalService', function($http, $window) {
 
   this.delete = function(id, route) {
+    var route = route;
     swal(
       {
         title: 'Tem certeza?',
@@ -21,7 +22,8 @@ angular.module('azordens')
           swal({title:'Excluído!', text: '', type: 'success'},
           function(){
             if(route === 'orders'){
-              $window.location.href('/orders/');
+              $window.location.href = '../';
+              console.log('entrou');
             } else{
               $window.location.reload();
             }
