@@ -16,5 +16,6 @@
 //= require tether
 //= require bootstrap
 //= require angular
+//= require ng-table
 //= require sweetalert
 //= require_tree .

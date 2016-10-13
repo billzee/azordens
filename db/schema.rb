@@ -37,14 +37,20 @@ ActiveRecord::Schema.define(version: 20160822234306) do
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "defect",                                  null: false
+    t.string   "defect",                                   null: false
     t.string   "serial_number"
-    t.text     "observation",   limit: 65535
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-    t.integer  "equipment_id",                            null: false
-    t.integer  "customer_id",                             null: false
-    t.integer  "status",                      default: 0, null: false
+    t.text     "observation",    limit: 65535
+    t.datetime "opened_at"
+    t.datetime "in_progress_at"
+    t.datetime "done_at"
+    t.datetime "delivered_at"
+    t.datetime "closed_at"
+    t.datetime "cancelled_at"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.integer  "equipment_id",                             null: false
+    t.integer  "customer_id",                              null: false
+    t.integer  "status",                       default: 0, null: false
     t.index ["customer_id"], name: "index_orders_on_customer_id", using: :btree
     t.index ["equipment_id"], name: "index_orders_on_equipment_id", using: :btree
   end

@@ -4,7 +4,7 @@ pt-BR:
   concluded: "Concluída"
   delivered: "Entregue"
   closed: "Fechada"
-  
+
   activerecord:
     attributes:
       brand:
@@ -24,8 +24,9 @@ pt-BR:
         customer_id: "Cliente"
         equipment_id: "Equipamento"
         statuses:
-          open: "Em aberto"
+          opened: "Aberta"
           in_progress: "Em progresso"
-          concluded: "Concluída"
+          done: "Concluída"
           delivered: "Entregue"
           closed: "Fechada"
+          cancelled: "Cancelada"

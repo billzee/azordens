@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-	enum status: { open: 0, in_progress: 1, concluded: 2, delivered: 3, closed: 4 }
+	enum status: { opened: 0, in_progress: 1, done: 2, delivered: 3, closed: 4, cancelled: 5 }
 
 	validates :customer_id, presence: true
 	validates :equipment_id, presence: true

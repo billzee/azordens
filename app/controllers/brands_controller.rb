@@ -2,7 +2,15 @@ class BrandsController < ApplicationController
 
 	def index
 		@brands = Brand.order :name
-  	render "index"
+		respond_to do |format|
+		  format.html
+		  format.json { render json: @brands }
+		 end
+	end
+
+	def all
+		@brand = Brand.order :name
+		puts 'aqui' + @brand.to_json
 	end
 
 	def create
