@@ -69,7 +69,9 @@
           class="table table-hover"
           show-filter="true">
             <tr ng-repeat="row in $data">
-              <td data-title="'Nome'" data-filter="{name: 'text'}">{{row.name}}</td>
+              <td data-title="'Nome'" data-filter="{name: 'text'}">
+                <a href="/brands/{{row.id}}/edit/">{{row.name}}</a>
+              </td>
             </tr>
           </table>
         </div>

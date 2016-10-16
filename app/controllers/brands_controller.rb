@@ -8,11 +8,6 @@ class BrandsController < ApplicationController
 		 end
 	end
 
-	def all
-		@brand = Brand.order :name
-		puts 'aqui' + @brand.to_json
-	end
-
 	def create
     @brand = Brand.new(brand_params)
     if @brand.save
