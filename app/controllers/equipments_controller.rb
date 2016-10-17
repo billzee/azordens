@@ -1,7 +1,10 @@
 class EquipmentsController < ApplicationController
 	def index
 		@all_equipment = Equipment.order :created_at
-  	render "index"
+		respond_to do |format|
+			format.html
+			format.json { render json: @all_equipment }
+		 end
 	end
 
 	def create

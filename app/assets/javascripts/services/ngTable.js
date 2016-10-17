@@ -2,13 +2,9 @@
 
 angular.module('azordens')
 .service('ngTableService', function(ngTableParams, $filter) {
-  this.options = {
-    page: 1,
-    count: 5
-  };
 
   this.newTable = function(options) {
-    angular.extend(this.options, options || {});
+    angular.extend(options || {});
     var ngTable = new ngTableParams({
       count: 10,
       sorting: options.sorting,
