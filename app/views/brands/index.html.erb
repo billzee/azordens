@@ -43,33 +43,9 @@
     <div class="col-xs-12">
       <% if @brands.length > 0 %>
         <div class="table-responsive">
-        	<!-- <table class="table table-hover">
-            <thead class="c-white bg-orange">
-              <tr>
-                <th class="col-md-11">Nome</th>
-                <th class="col-md-1 text-center">Excluir</th>
-              </tr>
-            </thead>
-            <tbody>
-              	<% @brands.each do |brand| %>
-                  <tr>
-                    <td class="col-md-11">
-                      <%= link_to brand.name, edit_brand_path(brand.id) %>
-                    </td>
-                    <td class="col-md-1 text-center">
-                      <button ng-click="delete(<%= brand.id %>, 'brands')" class="btn btn-danger">
-                        <i class="fa fa-fw fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                <% end %>
-            </tbody>
-        	</table> -->
-          <table ng-table="ngTableParams"
-          class="table table-hover"
-          show-filter="true">
+          <table ng-table="ngTableParams" class="table table-hover" show-filter="true">
             <tr ng-repeat="row in $data">
-              <td data-title="'Nome'" data-filter="{name: 'text'}">
+              <td data-title="'Nome'" header-class="'bg-orange c-white'" data-filter="{name: 'text'}">
                 <a href="/brands/{{row.id}}/edit/">{{row.name}}</a>
               </td>
             </tr>

@@ -6,14 +6,9 @@ angular.module('azordens')
       $scope.ngTableParams =
 
       ngTableService.newTable({
-        // sorting: {'accounts.created_at': 'desc'},
-        page: 1,
-        count: 2,
         filter: {name},
         promise: function(){return $http.get('/brands.json')},
-        successCallback: function(data) {
-          console.log(data);
-        },
+        successCallback: function(data) {},
         errorCallback: function(error, status) {
           console.log(error, 'Status: ' + String(status));
         }

@@ -4,31 +4,27 @@ angular.module('azordens')
 .service('ngTableService', function(ngTableParams, $filter) {
   this.options = {
     page: 1,
-    count: 3,
-    filterDelay: 0
+    count: 5
   };
 
   this.newTable = function(options) {
     angular.extend(this.options, options || {});
     var ngTable = new ngTableParams({
-      page: 1,
-      count: options.count,
+      count: 10,
       sorting: options.sorting,
       filter: options.filter
     }, {
+      counts: [],
       getData: function($defer, params) {
         ngTable.loadingTable = true;
 
         options.promise({params: params.url()})
         .success(function(data) {
-
           var filteredData = params.filter() ? $filter('filter')(data, params.filter()) : data;
-          // var orderedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
           var count = params.count() ? $filter('limitTo')(filteredData, params.count()) : filteredData;
-          var pages = filteredData.length / count.length;
-          console.log(pages);
 
-          $defer.resolve(count);
+          params.total(filteredData.length);
+          $defer.resolve(filteredData.slice((params.page() - 1) * params.count(), params.page() * params.count()))
 
           if (options.successCallback) {
             options.successCallback.apply(this, arguments);
@@ -46,9 +42,9 @@ angular.module('azordens')
             options.finallyCallback.apply(this, arguments);
           }
         });
-      }
+      },
+      isDataReloadRequired: true
     });
-
     return ngTable;
   };
 });
