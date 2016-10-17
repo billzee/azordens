@@ -45,8 +45,11 @@
         <div class="table-responsive">
           <table ng-table="ngTableParams" class="table table-hover" show-filter="true">
             <tr ng-repeat="row in $data">
-              <td data-title="'Nome'" header-class="'bg-orange c-white'" data-filter="{name: 'text'}">
+              <td data-title="'Nome'" sortable="'name'" header-class="'bg-orange c-white pointer'" data-filter="{name: 'text'}">
                 <a href="/brands/{{row.id}}/edit/">{{row.name}}</a>
+              </td>
+              <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'date'}">
+                {{row.created_at | date: 'short'}}
               </td>
             </tr>
           </table>

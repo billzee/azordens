@@ -11,7 +11,7 @@ class EquipmentsController < ApplicationController
     @equipment = Equipment.new(equipment_params)
     if @equipment.save
 			flash[:notice] = "Novo Equipamento registrado"
-      index
+      redirect_to equipments_path
     else
       render "new"
     end

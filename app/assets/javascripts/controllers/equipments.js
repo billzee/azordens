@@ -7,6 +7,7 @@ angular.module('azordens')
 
       ngTableService.newTable({
         filter: {description: '', model: ''},
+        sorting: {created_at: 'desc'},
         promise: function(){return $http.get('/equipments.json')},
         successCallback: function(data) {},
         errorCallback: function(error, status) {

@@ -8,7 +8,7 @@ angular.module('azordens')
     var ngTable = new ngTableParams({
       count: 10,
       sorting: options.sorting,
-      filter: options.filter
+      filter: options.filter,
     }, {
       counts: [],
       getData: function($defer, params) {
@@ -17,10 +17,11 @@ angular.module('azordens')
         options.promise({params: params.url()})
         .success(function(data) {
           var filteredData = params.filter() ? $filter('filter')(data, params.filter()) : data;
-          var count = params.count() ? $filter('limitTo')(filteredData, params.count()) : filteredData;
+          console.log(params.orderBy());
+          var sortedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
 
-          params.total(filteredData.length);
-          $defer.resolve(filteredData.slice((params.page() - 1) * params.count(), params.page() * params.count()))
+          params.total(sortedData.length);
+          $defer.resolve(sortedData.slice((params.page() - 1) * params.count(), params.page() * params.count()))
 
           if (options.successCallback) {
             options.successCallback.apply(this, arguments);
@@ -38,8 +39,7 @@ angular.module('azordens')
             options.finallyCallback.apply(this, arguments);
           }
         });
-      },
-      isDataReloadRequired: true
+      }
     });
     return ngTable;
   };

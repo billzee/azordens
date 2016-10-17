@@ -12,7 +12,7 @@ class BrandsController < ApplicationController
     @brand = Brand.new(brand_params)
     if @brand.save
 			flash[:notice] = "Nova Marca registrada"
-      index
+      redirect_to brands_path
     else
       render "new"
     end

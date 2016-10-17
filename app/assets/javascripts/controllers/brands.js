@@ -7,6 +7,7 @@ angular.module('azordens')
 
       ngTableService.newTable({
         filter: {name},
+        sorting: {created_at: 'desc'},
         promise: function(){return $http.get('/brands.json')},
         successCallback: function(data) {},
         errorCallback: function(error, status) {
