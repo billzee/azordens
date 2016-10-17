@@ -2,7 +2,6 @@
 
 angular.module('azordens')
   .controller('BrandsCtrl', function($scope, $http, swalService, ngTableService) {
-    console.log('brands');
 
       $scope.ngTableParams =
 

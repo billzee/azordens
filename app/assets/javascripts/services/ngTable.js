@@ -11,7 +11,7 @@ angular.module('azordens')
   this.newTable = function(options) {
     angular.extend(this.options, options || {});
     var ngTable = new ngTableParams({
-      page: options.page,
+      page: 1,
       count: options.count,
       sorting: options.sorting,
       filter: options.filter
@@ -23,9 +23,12 @@ angular.module('azordens')
         .success(function(data) {
 
           var filteredData = params.filter() ? $filter('filter')(data, params.filter()) : data;
-          var orderedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
-          params.total(data.total);
-          $defer.resolve(filteredData, orderedData);
+          // var orderedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
+          var count = params.count() ? $filter('limitTo')(filteredData, params.count()) : filteredData;
+          var pages = filteredData.length / count.length;
+          console.log(pages);
+
+          $defer.resolve(count);
 
           if (options.successCallback) {
             options.successCallback.apply(this, arguments);

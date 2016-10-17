@@ -23,7 +23,6 @@ angular.module('azordens')
           function(){
             if(route === 'orders'){
               $window.location.href = '../';
-              console.log('entrou');
             } else{
               $window.location.reload();
             }
