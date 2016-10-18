@@ -11,4 +11,18 @@ class Order < ApplicationRecord
       [I18n.t("activerecord.attributes.#{model_name.i18n_key}.statuses.#{status}"), status]
 		end
   end
+
+	def customer
+		customer = Customer.find(self.customer_id)
+		customer.first_name + ' ' + customer.last_name
+	end
+
+	def equipment
+		Equipment.find(self.equipment_id).description
+	end
+
+	def as_json(options = {})
+	  super options.merge(methods: [:customer, :equipment])
+	end
+
 end

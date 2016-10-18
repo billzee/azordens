@@ -1,7 +1,10 @@
 class OrdersController < ApplicationController
   def index
-		@orders = Order.order :id
-  	render "index"
+		@orders = Order.order :created_at
+		respond_to do |format|
+			format.html
+			format.json { render json: @orders }
+		 end
 	end
 
 	def create

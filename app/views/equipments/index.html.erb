@@ -51,8 +51,8 @@
             <td data-title="'Modelo'" sortable="'model'" header-class="'bg-orange c-white pointer'" data-filter="{model: 'text'}">
               {{row.model}}
             </td>
-            <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'date'}">
-              {{row.created_at | date: 'short'}}
+            <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'text'}">
+              {{row.created_at | date}}
             </td>
           </tr>
         </table>

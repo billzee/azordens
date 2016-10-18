@@ -33,7 +33,7 @@
 }
 
 #page-wrapper {
-  min-height: 625px;
+  height: calc(100vh - 50px);
 }
 
 table tbody tr td {

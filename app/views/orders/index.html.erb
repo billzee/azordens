@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="OrdersCtrl">
   <div class="row">
     <div class="col-xs-12">
         <h1 class="page-header">
@@ -43,34 +43,22 @@
     <div class="col-xs-12">
       <% if @orders.length > 0 %>
         <div class="table-responsive">
-        	<table class="table table-hover">
-            <thead class="c-white bg-orange">
-              <tr>
-                <th class="col-md-2">Número</th>
-                <th class="col-md-3">Cliente</th>
-                <th class="col-md-6">Equipamento</th>
-                <th class="col-md-1 text-center">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-            	<% @orders.each do |order| %>
-                <tr>
-                  <td class="col-md-2">
-                    <%= link_to order.id, edit_order_path(order.id) %>
-                  </td>
-                  <td class="col-md-3">
-                    <%= Customer.find(order.customer_id).full_name if Customer.exists? id: order.customer_id %>
-                  </td>
-                  <td class="col-md-6">
-                    <%= Equipment.find(order.equipment_id).specs if Equipment.exists? id: order.equipment_id %>
-                  </td>
-                  <td class="col-md-1 text-center">
-                    <%= I18n.t(Order.find(order.id).status) %>
-                  </td>
-                </tr>
-              <% end %>
-            </tbody>
-        	</table>
+          <table ng-table="ngTableParams" class="table table-hover" show-filter="true">
+            <tr ng-repeat="row in $data">
+              <td data-title="'Número'" sortable="'id'" header-class="'bg-orange c-white pointer'" data-filter="{id: 'number'}">
+                <a href="/orders/{{row.id}}/edit/">{{row.id}}</a>
+              </td>
+              <td data-title="'Cliente'" sortable="'customer'" header-class="'bg-orange c-white pointer'" data-filter="{customer: 'text'}">
+                {{row.customer}}
+              </td>
+              <td data-title="'Status'" sortable="'status'" header-class="'bg-orange c-white pointer'" data-filter="{status: 'text'}">
+                {{row.status}}
+              </td>
+              <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'text'}">
+                {{row.created_at | date}}
+              </td>
+            </tr>
+          </table>
         </div>
       <% end %>
     </div>
