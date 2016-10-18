@@ -1,14 +1,17 @@
 class CustomersController < ApplicationController
   def index
-		@customers = Customer.order :first_name
-  	render "index"
+		@customers = Customer.order :created_at
+		respond_to do |format|
+			format.html
+			format.json { render json: @customers }
+		 end
 	end
 
 	def create
     @customer = Customer.new(customer_params)
     if @customer.save
 			flash[:notice] = "Novo Cliente registrado"
-      index
+      redirect_to customers_path
     else
       render "new"
     end
@@ -16,7 +19,6 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
-    # @brands_array = Brand.order :name
     render "new"
   end
 

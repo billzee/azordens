@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('azordens')
-  .controller('BrandsCtrl', function($scope, $http, swalService, ngTableService) {
+  .controller('CustomersCtrl', function($scope, $http, swalService, ngTableService) {
 
     $scope.ngTableParams =
 
     ngTableService.newTable({
-      filter: {name},
+      filter: {first_name: '', email: '', phone: '', created_at: ''},
       sorting: {created_at: 'desc'},
-      promise: function(){return $http.get('/brands.json')},
+      promise: function(){return $http.get('/customers.json')},
       successCallback: function(data) {},
       errorCallback: function(error, status) {
         console.log(error, 'Status: ' + String(status));

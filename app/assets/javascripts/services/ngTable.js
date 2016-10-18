@@ -17,7 +17,6 @@ angular.module('azordens')
         options.promise({params: params.url()})
         .success(function(data) {
           var filteredData = params.filter() ? $filter('filter')(data, params.filter()) : data;
-          console.log(params.orderBy());
           var sortedData = params.sorting() ? $filter('orderBy')(filteredData, params.orderBy()) : filteredData;
 
           params.total(sortedData.length);
