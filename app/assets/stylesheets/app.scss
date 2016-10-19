@@ -1,14 +1,16 @@
 /* generic classes */
 
-.pointer {
+$orange: orange;
+
+.pointer{
   cursor: pointer;
 }
 
-.m-20 {
+.m-20{
   margin: 20px !important;
 }
 
-.m-b-20 {
+.m-b-20{
   margin-bottom: 20px !important;
 }
 
@@ -16,11 +18,11 @@
   text-align: center !important;
 }
 
-.text-left {
+.text-left{
   text-align: left !important;
 }
 
-.text-right {
+.text-right{
   text-align: right !important;
 }
 
@@ -28,19 +30,37 @@
   color: white;
 }
 
-.bg-orange {
-  background-color: orange;
+.bg-orange{
+  background-color: $orange;
 }
 
-#page-wrapper {
+#page-wrapper{
   min-height: calc(100vh - 50px);
 }
 
-table tbody tr td {
-  a {
+.ng-table-pager{
+  .pagination>.active>a,
+  .pagination>.active>a:focus,
+  .pagination>.active>a:hover,
+  .pagination>.active>span,
+  .pagination>.active>span:focus,
+  .pagination>.active>span:hover{
+    background-color: $orange;
+    border-color: $orange;
+    color: white;
+  }
+  .pagination>li>a,
+  .pagination>li>span{
+    color: $orange;
+  }
+  text-align: center;
+}
+
+table tbody tr td{
+  a{
     font-weight: 700;
     font-size: 15px;
-    &:hover {
+    &:hover{
       text-decoration: none;
     }
   }

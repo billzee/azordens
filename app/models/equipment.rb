@@ -3,7 +3,7 @@ class Equipment < ApplicationRecord
   validates :model, presence: true
   has_many :orders, dependent: :nullify
 
-  def self.specs
+  def specs
     if self.brand_id.present?
       brand = Brand.find(self.brand_id).name
       self.description + ' ' + brand + ' ' + self.model
