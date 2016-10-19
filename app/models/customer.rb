@@ -1,7 +1,7 @@
 class Customer < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true, email_format: { message: "deve ser válido" }
   has_many :orders, dependent: :nullify
 
   def full_name
