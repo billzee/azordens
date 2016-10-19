@@ -45,16 +45,16 @@
         <div class="table-responsive">
           <table ng-table="ngTableParams" class="table table-bordered table-striped table-hover" show-filter="true">
             <tr ng-repeat="row in $data">
-              <td data-title="'Nome Completo'" sortable="'first_name'" header-class="'bg-orange c-white pointer'" data-filter="{first_name: 'text'}">
-                <a href="/customers/{{row.id}}/edit/">{{row.first_name + ' ' + row.last_name}}</a>
+              <td ng-click="go('customers', row.id)" class="pointer"  data-title="'Nome Completo'" sortable="'first_name'" header-class="'bg-black c-white pointer'" data-filter="{first_name: 'text'}">
+                <span class="c-blue f-700">{{row.first_name + ' ' + row.last_name}}</span>
               </td>
-              <td data-title="'E-mail'" sortable="'email'" header-class="'bg-orange c-white pointer'" data-filter="{email: 'text'}">
+              <td data-title="'E-mail'" sortable="'email'" header-class="'bg-black c-white pointer'" data-filter="{email: 'text'}">
                 {{row.email}}
               </td>
-              <td data-title="'Telefone'" sortable="'phone'" header-class="'bg-orange c-white pointer'" data-filter="{phone: 'text'}">
+              <td data-title="'Telefone'" sortable="'phone'" header-class="'bg-black c-white pointer'" data-filter="{phone: 'text'}">
                 {{row.phone}}
               </td>
-              <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'text'}">
+              <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-black c-white pointer'" data-filter="{created_at: 'text'}">
                 {{row.created_at_date_for_json}}
               </td>
             </tr>

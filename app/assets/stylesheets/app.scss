@@ -1,6 +1,8 @@
 /* generic classes */
 
+$black: #222;
 $orange: orange;
+$blue: #31708f;
 
 .pointer{
   cursor: pointer;
@@ -30,8 +32,16 @@ $orange: orange;
   color: white;
 }
 
-.bg-orange{
-  background-color: $orange;
+.c-blue{
+  color: $blue;
+}
+
+.f-700{
+  font-weight: 700;
+}
+
+.bg-black{
+  background-color: $black;
 }
 
 #page-wrapper{

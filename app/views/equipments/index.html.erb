@@ -45,13 +45,13 @@
       <div class="table-responsive">
         <table ng-table="ngTableParams" class="table table-bordered table-striped table-hover" show-filter="true">
           <tr ng-repeat="row in $data">
-            <td data-title="'Descrição'" sortable="'description'" header-class="'bg-orange c-white pointer'" data-filter="{description: 'text'}">
-              <a href="/equipments/{{row.id}}/edit/">{{row.description}}</a>
+            <td ng-click="go('equipments', row.id)" class="pointer"  data-title="'Descrição'" sortable="'description'" header-class="'bg-black c-white pointer'" data-filter="{description: 'text'}">
+              <span class="c-blue f-700">{{row.description}}</span>
             </td>
-            <td data-title="'Modelo'" sortable="'model'" header-class="'bg-orange c-white pointer'" data-filter="{model: 'text'}">
+            <td data-title="'Modelo'" sortable="'model'" header-class="'bg-black c-white pointer'" data-filter="{model: 'text'}">
               {{row.model}}
             </td>
-            <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-orange c-white pointer'" data-filter="{created_at: 'text'}">
+            <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-black c-white pointer'" data-filter="{created_at: 'text'}">
               {{row.created_at_date_for_json}}
             </td>
           </tr>
