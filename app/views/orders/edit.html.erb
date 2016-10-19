@@ -27,7 +27,7 @@
     <div class="col-xs-6 text-right">
       <div class="form-group">
         <label>Status</label>
-        <%= f.select(:status, Order.status_attributes_for_select) %>
+        <%= f.select(:status, @available_statuses) %>
       </div>
     </div>
   </div>

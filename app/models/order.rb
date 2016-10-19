@@ -6,9 +6,9 @@ class Order < ApplicationRecord
 	validates :defect, presence: true
 	validates :status, presence: true
 
-	def status_attributes_for_select(currStatus)
-    statuses.map do |status, _|
-      [I18n.t("activerecord.attributes.#{model_name.i18n_key}.statuses.#{status}"), status]
+	def self.status_attributes_for_select
+    statuses.map do |status, key|
+      [I18n.t("activerecord.attributes.#{model_name.i18n_key}.statuses.#{status}"), key]
 		end
   end
 

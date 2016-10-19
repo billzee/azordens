@@ -24,8 +24,16 @@ class OrdersController < ApplicationController
 
   def edit
     order = Order.find(params[:id])
+    arr = []
     currStatus = Order.statuses[order.status]
-    p Order.status_attributes_for_select(currStatus)
+    Order.status_attributes_for_select.map do |status, key|
+      if currStatus < key
+        arr.push(status)
+      end
+		end
+    
+    @available_statuses = arr
+    @order = order
 
     render "edit"
   end
