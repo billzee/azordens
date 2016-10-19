@@ -14,6 +14,14 @@ $red: #a94442;
   margin: 20px !important;
 }
 
+.m-t-0{
+  margin-top: 0px;
+}
+
+.m-t-5{
+  margin-top: 5px;
+}
+
 .p-l-10{
   padding-left: 10px !important;
 }
@@ -79,7 +87,7 @@ $red: #a94442;
   }
   .pagination>li>a,
   .pagination>li>span{
-    color: $orange;
+    color: $black;
   }
   text-align: center;
 }

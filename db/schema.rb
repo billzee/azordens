@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 20160822234306) do
     t.string   "defect",                                   null: false
     t.string   "serial_number"
     t.text     "observation",    limit: 65535
-    t.datetime "opened_at"
     t.datetime "in_progress_at"
     t.datetime "done_at"
     t.datetime "delivered_at"

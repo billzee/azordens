@@ -20,81 +20,114 @@
 <%= form_for @order, url: {action: "update"} do |f| %>
 
   <div class="row">
-    <div class="col-xs-6">
-      <div class="form-group">
-        <label>Cliente</label>
-        <br>
-        <%= Customer.find(@order.customer_id).full_name %>
-      </div>
-    </div>
-
-    <div class="col-xs-6 text-right">
-      <% if @order.status != 'cancelled' && @order.status != 'closed' %>
-        <div class="form-group">
-          <label>Status</label>
-          <%= f.select(:status, @available_statuses) %>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label>Cliente</label>
+            <br>
+            <%= Customer.find(@order.customer_id).full_name %>
+          </div>
         </div>
-      <% end %>
-      <div class="p-r-10 f-700">
-        <% if @order.status == 'closed' %>
-          OS Fechada <i class="fa fa-check c-green"></i>
-        <% end %>
-        <% if @order.status == 'cancelled' %>
-          <span class="c-red">OS Cancelada</span>
-        <% end %>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label>Equipamento</label>
+            <br>
+            <%= Equipment.find(@order.equipment_id).specs %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:defect].present? %>">
+            <label>Defeito*</label>
+            <%= f.text_field :defect, class: "form-control" %>
+            <% if @order.errors[:defect].present? %>
+            <span class="form-control-feedback">
+              <i class="fa fa-warning"></i>
+            </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:serial_number].present? %>">
+            <label>Número Serial</label>
+            <%= f.text_field :serial_number, class: "form-control" %>
+            <% if @order.errors[:serial_number].present? %>
+            <span class="form-control-feedback">
+              <i class="fa fa-warning"></i>
+            </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:observation].present? %>">
+            <label>Observação</label>
+            <%= f.text_area :observation, class: "form-control" %>
+            <% if @order.errors[:observation].present? %>
+            <span class="form-control-feedback">
+              <i class="fa fa-warning"></i>
+            </span>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="form-group">
-        <label>Equipamento</label>
-        <br>
-        <%= Equipment.find(@order.equipment_id).specs %>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-xs-4">
+          <h3 class="m-t-5">Status</h3>
+        </div>
+        <div class="col-xs-8 text-right">
+
+          <% if @order.status != 'cancelled' && @order.status != 'closed' %>
+            <div class="form-group">
+              <%= f.select(:status, @available_statuses) %>
+            </div>
+          <% end %>
+
+          <div class="p-r-10 f-700">
+            <% if @order.status == 'closed' %>
+              OS Fechada <i class="fa fa-check c-green"></i>
+            <% end %>
+            <% if @order.status == 'cancelled' %>
+              <span class="c-red">OS Cancelada</span>
+            <% end %>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:defect].present? %>">
-        <label>Defeito*</label>
-        <%= f.text_field :defect, class: "form-control" %>
-        <% if @order.errors[:defect].present? %>
-          <span class="form-control-feedback">
-            <i class="fa fa-warning"></i>
-          </span>
+      <ul class="list-group">
+        <% if @order.created_at.present? %>
+          <li class="list-group-item">Aberta em <span class="badge"><%= @order.created_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
         <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:serial_number].present? %>">
-        <label>Número Serial</label>
-        <%= f.text_field :serial_number, class: "form-control" %>
-        <% if @order.errors[:serial_number].present? %>
-          <span class="form-control-feedback">
-            <i class="fa fa-warning"></i>
-          </span>
+        <% if @order.in_progress_at.present? %>
+          <li class="list-group-item">Em progresso em <span class="badge"><%= @order.in_progress_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
         <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-        <div class="form-group <%= 'has-error has-feedback' if @order.errors[:observation].present? %>">
-        <label>Observação</label>
-        <%= f.text_area :observation, class: "form-control" %>
-        <% if @order.errors[:observation].present? %>
-          <span class="form-control-feedback">
-            <i class="fa fa-warning"></i>
-          </span>
+        <% if @order.done_at.present? %>
+          <li class="list-group-item">Concluída em <span class="badge"><%= @order.done_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
         <% end %>
-      </div>
+        <% if @order.delivered_at.present? %>
+          <li class="list-group-item">Entregue em <span class="badge"><%= @order.delivered_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
+        <% end %>
+        <% if @order.closed_at.present? %>
+          <li class="list-group-item list-group-item-success">Fechada em <span class="badge"><%= @order.closed_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
+        <% end %>
+        <% if @order.cancelled_at.present? %>
+          <li class="list-group-item list-group-item-danger">Cancelada em <span class="badge"><%= @order.cancelled_at.strftime("%d/%m/%Y às %H:%M") %></span></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 

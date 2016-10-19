@@ -5,7 +5,6 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     	t.string :serial_number, null: true
     	t.text :observation, null: true
 
-      t.timestamp :opened_at, null: true
       t.timestamp :in_progress_at, null: true
       t.timestamp :done_at, null: true
       t.timestamp :delivered_at, null: true
