@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     if @order.save
 			flash[:notice] = "Nova OS registrada"
-      index
+      redirect_to orders_path
     else
       render "new"
     end

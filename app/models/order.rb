@@ -12,6 +12,14 @@ class Order < ApplicationRecord
 		end
   end
 
+	def created_at_date_for_json
+		I18n.l self.created_at, format: "%d/%m/%Y"
+	end
+
+	def status_for_json
+		I18n.t :"activerecord.attributes.#{model_name.i18n_key}.statuses.#{self.status}"
+	end
+
 	def customer
 		customer = Customer.find(self.customer_id)
 		customer.first_name + ' ' + customer.last_name
@@ -22,7 +30,6 @@ class Order < ApplicationRecord
 	end
 
 	def as_json(options = {})
-	  super options.merge(methods: [:customer, :equipment])
+	  super options.merge(methods: [:customer, :equipment, :status_for_json, :created_at_date_for_json])
 	end
-
 end
