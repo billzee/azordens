@@ -24,10 +24,21 @@
         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}) %>
       </div>
     </div>
+
     <div class="col-xs-6 text-right">
-      <div class="form-group">
-        <label>Status</label>
-        <%= f.select(:status, @available_statuses) %>
+      <% if @order.status != 'cancelled' && @order.status != 'closed' %>
+        <div class="form-group">
+          <label>Status</label>
+          <%= f.select(:status, @available_statuses) %>
+        </div>
+      <% end %>
+      <div class="p-r-10 f-700">
+        <% if @order.status == 'closed' %>
+          OS Fechada <i class="fa fa-check c-green"></i>
+        <% end %>
+        <% if @order.status == 'cancelled' %>
+          <span class="c-red">OS Cancelada</span>
+        <% end %>
       </div>
     </div>
   </div>

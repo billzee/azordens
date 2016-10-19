@@ -3,6 +3,8 @@
 $black: #222;
 $orange: orange;
 $blue: #31708f;
+$green: #5cb85c;
+$red: red;
 
 .pointer{
   cursor: pointer;
@@ -10,6 +12,14 @@ $blue: #31708f;
 
 .m-20{
   margin: 20px !important;
+}
+
+.p-l-10{
+  padding-left: 10px !important;
+}
+
+.p-r-10{
+  padding-right: 10px !important;
 }
 
 .m-b-20{
@@ -32,8 +42,12 @@ $blue: #31708f;
   color: white;
 }
 
-.c-blue{
-  color: $blue;
+.c-red{
+  color: $red;
+}
+
+.c-green{
+  color: $green;
 }
 
 .f-700{
