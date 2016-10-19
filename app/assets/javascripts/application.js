@@ -17,5 +17,6 @@
 //= require bootstrap
 //= require angular
 //= require ng-table
+//= require bootstrap-select
 //= require sweetalert
 //= require_tree .
