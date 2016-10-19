@@ -23,7 +23,10 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order = Order.find(params[:id])
+    order = Order.find(params[:id])
+    currStatus = Order.statuses[order.status]
+    p Order.status_attributes_for_select(currStatus)
+
     render "edit"
   end
 
@@ -45,6 +48,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:customer_id, :equipment_id, :defect, :serial_number, :observation)
+    params.require(:order).permit(:customer_id, :equipment_id, :defect, :serial_number, :observation, :status)
   end
 end

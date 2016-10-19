@@ -24,12 +24,6 @@
         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}) %>
       </div>
     </div>
-    <div class="col-xs-6 text-right">
-      <div class="form-group">
-        <label>Status</label>
-        <%= f.select(:status, Order.status_attributes_for_select) %>
-      </div>
-    </div>
   </div>
 
   <div class="row">
