@@ -17,35 +17,29 @@
 <%= form_for @order, url: {action: "update"} do |f| %>
 
   <div class="row">
-
-    <div class="col-lg-3">
-      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
+    <div class="col-xs-6">
+      <div class="form-group">
         <label>Cliente*</label>
+        <br>
         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}) %>
       </div>
     </div>
+    <div class="col-xs-6 text-right">
+      <div class="form-group">
+        <label>Status</label>
+        <%= f.select(:status, Order.status_attributes_for_select) %>
+      </div>
+    </div>
+  </div>
 
-    <div class="col-lg-5 text-left">
-      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
         <label>Equipamento*</label>
+        <br>
         <%= f.collection_select(:equipment_id, Equipment.all, :id, :specs, {:include_blank => "Selecione um Equipamento"}) %>
       </div>
     </div>
-
-
-    <div class="col-lg-3 text-right">
-      <div class="form-group <%= 'has-error' if @order.errors[:brand_id].present? %>">
-        <label>Status*</label>
-        <%= f.select(:status, Order.status_attributes_for_select, {:include_blank => "Selecione um Equipamento"}) %>
-      </div>
-    </div>
-
-    <div class="col-lg-1 text-left">
-      <button type="button" ng-click="delete(<%= @order.id %>, 'orders')" class="btn btn-danger">
-        <i class="fa fa-fw fa-trash"></i>
-      </button>
-    </div>
-
   </div>
 
   <div class="row">
