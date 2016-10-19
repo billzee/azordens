@@ -18,5 +18,6 @@
 //= require angular
 //= require ng-table
 //= require bootstrap-select
+//= require vanilla-masker
 //= require sweetalert
 //= require_tree .

@@ -30,3 +30,9 @@ pt-BR:
           delivered: "Entregue"
           closed: "Fechada"
           cancelled: "Cancelada"
+    errors:
+      models:
+        customer:
+          attributes:
+            phone:
+              improbable_phone: "deve ter um número válido"
