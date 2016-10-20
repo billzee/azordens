@@ -12,6 +12,7 @@ pt-BR:
       equipment:
         description: "Descrição"
         model: "Modelo"
+        brand_id: "Marca"
       customer:
         first_name: "Nome"
         last_name: "Sobrenome"

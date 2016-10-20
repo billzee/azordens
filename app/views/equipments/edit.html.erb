@@ -46,7 +46,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <div class="form-group <%= 'has-error has-feedback' if @equipment.errors[:brand_id].present? %>">
+      <div class="form-group <%= 'has-error' if @equipment.errors[:brand_id].present? %>">
         <label>Marca</label>
         <%= f.collection_select(:brand_id, Brand.all, :id, :name, {:include_blank => "Selecione uma Marca"}, {class: "form-control"}) %>
       </div>

@@ -1,6 +1,7 @@
 class Equipment < ApplicationRecord
   validates :description, presence: true
   validates :model, presence: true
+  validates :brand_id, presence: true
   has_many :orders, dependent: :nullify
 
   def specs

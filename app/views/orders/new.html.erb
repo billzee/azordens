@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <div class="form-group">
+      <div class="form-group <%= 'has-error' if @order.errors[:customer_id].present? %>">
         <label>Cliente*</label>
         <br>
         <%= f.collection_select(:customer_id, Customer.all, :id, :full_name, {:include_blank => "Selecione um Cliente"}, {class: "form-control"}) %>
@@ -28,7 +28,7 @@
 
   <div class="row">
     <div class="col-xs-12">
-      <div class="form-group">
+      <div class="form-group <%= 'has-error' if @order.errors[:equipment_id].present? %>">
         <label>Equipamento*</label>
         <br>
         <%= f.collection_select(:equipment_id, Equipment.all, :id, :specs, {:include_blank => "Selecione um Equipamento"}, {class: "form-control"}) %>
