@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
 			redirect_to brands_path
 			flash[:notice] = "Nova Marca registrada"
     else
-      render :new
+			render :new
     end
   end
 
