@@ -22,12 +22,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
           <%= link_to orders_path, class: "navbar-brand" do %>
             Azordens
           <% end %>
 
+
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <button class="btn btn-danger pull-right m-t-8 m-r-15">
+            <i class="fa fa-power-off"></i>
+          </button>
+          
           <ul class="nav navbar-nav side-nav">
             <li>
               <%= link_to orders_path do %>
@@ -51,6 +57,7 @@
             </li>
           </ul>
         </div>
+
       </nav>
 
       <div id="page-wrapper">

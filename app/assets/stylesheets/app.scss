@@ -6,12 +6,29 @@ $blue: #31708f;
 $green: #5cb85c;
 $red: #a94442;
 
+.navbar-inverse{
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* Standard syntax */
+    border-color: $orange !important;
+}
+
 body{
   margin-top: 50px !important;
 }
 
 .pointer{
   cursor: pointer;
+}
+
+.m-t-8{
+  margin-top: 8px;
+}
+
+.m-r-15{
+  margin-right: 15px;
 }
 
 .m-20{
