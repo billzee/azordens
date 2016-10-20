@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
     @order.status = :opened
     if @order.save
       redirect_to edit_order_path(@order)
-      flash[:notice] = "Nova OS registrada"
+      flash[:notice] = "OS registrada"
     else
       render :new
     end
@@ -27,9 +27,9 @@ class OrdersController < ApplicationController
     p Time.now
     order = Order.find(params[:id])
     arr = []
-    currStatus = Order.statuses[order.status]
+    curr_status = Order.statuses[order.status]
     Order.statuses_settings.map do |label, status, key|
-      if currStatus < key
+      if curr_status < key
         arr.push([label, status])
       end
 		end
@@ -43,16 +43,16 @@ class OrdersController < ApplicationController
 	def update
 		@order = Order.find(params[:id])
 
-    case @order.status # a_variable is the variable we want to compare
-    when 'in_progress'    #compare to 1
+    case order_params["status"]
+    when 'in_progress'
       @order.in_progress_at = Time.now
-    when 'done'    #compare to 2
+    when 'done'
       @order.done_at = Time.now
-    when 'delivered'    #compare to 2
+    when 'delivered'
       @order.delivered_at = Time.now
-    when 'closed'    #compare to 2
+    when 'closed'
       @order.closed_at = Time.now
-    when 'cancelled'    #compare to 2
+    when 'cancelled'
       @order.cancelled_at = Time.now
     end
 
