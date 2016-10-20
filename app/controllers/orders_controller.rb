@@ -11,10 +11,10 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.status = :opened
     if @order.save
-			flash[:notice] = "Nova OS registrada"
       redirect_to orders_path
+      flash[:notice] = "Nova OS registrada"
     else
-      render "new"
+      render :new
     end
   end
 
@@ -56,8 +56,8 @@ class OrdersController < ApplicationController
     end
 
 		if @order.update(order_params)
-			flash[:notice] = "OS atualizada"
 			redirect_to orders_path
+      flash[:notice] = "OS atualizada"
 		else
 			render "edit"
 		end

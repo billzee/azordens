@@ -10,10 +10,10 @@ class CustomersController < ApplicationController
 	def create
     @customer = Customer.new(customer_params)
     if @customer.save
-			flash[:notice] = "Novo Cliente registrado"
       redirect_to customers_path
+      flash[:notice] = "Novo Cliente registrado"
     else
-      render "new"
+      render :new
     end
   end
 
@@ -30,8 +30,8 @@ class CustomersController < ApplicationController
 	def update
 		@customer = Customer.find(params[:id])
 		if @customer.update(customer_params)
-			flash[:notice] = "Equipamento alterado"
 			redirect_to customers_path
+      flash[:notice] = "Equipamento alterado"
 		else
 			render "edit"
 		end

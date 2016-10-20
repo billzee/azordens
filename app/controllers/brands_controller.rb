@@ -11,10 +11,10 @@ class BrandsController < ApplicationController
 	def create
     @brand = Brand.new(brand_params)
     if @brand.save
+			redirect_to brands_path
 			flash[:notice] = "Nova Marca registrada"
-      redirect_to brands_path
     else
-      render "new"
+      render :new
     end
   end
 
@@ -31,8 +31,8 @@ class BrandsController < ApplicationController
 	def update
 		@brand = Brand.find(params[:id])
     if @brand.update(brand_params)
-			flash[:notice] = "Marca alterada"
 			redirect_to brands_path
+			flash[:notice] = "Marca alterada"
 		else
 			render "edit"
 		end

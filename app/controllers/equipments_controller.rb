@@ -10,10 +10,10 @@ class EquipmentsController < ApplicationController
 	def create
     @equipment = Equipment.new(equipment_params)
     if @equipment.save
-			flash[:notice] = "Novo Equipamento registrado"
       redirect_to equipments_path
+			flash[:notice] = "Novo Equipamento registrado"
     else
-      render "new"
+      render :new
     end
   end
 
@@ -30,8 +30,8 @@ class EquipmentsController < ApplicationController
 	def update
 		@equipment = Equipment.find(params[:id])
 		if @equipment.update(equipment_params)
-			flash[:notice] = "Equipamento alterado"
 			redirect_to equipments_path
+			flash[:notice] = "Equipamento alterado"
 		else
 			render "edit"
 		end
