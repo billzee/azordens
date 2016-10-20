@@ -17,6 +17,13 @@
   </div>
 <% end %>
 
+<% if flash[:notice] %>
+  <div class="alert alert-success fade in out">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <i class="fa fa-check-circle"></i> <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <%= form_for @order, url: {action: "update"} do |f| %>
 
   <div class="row">

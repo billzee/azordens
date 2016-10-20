@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.status = :opened
     if @order.save
-      redirect_to orders_path
+      redirect_to edit_order_path(@order)
       flash[:notice] = "Nova OS registrada"
     else
       render :new
@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    p Time.now
     order = Order.find(params[:id])
     arr = []
     currStatus = Order.statuses[order.status]
@@ -56,7 +57,7 @@ class OrdersController < ApplicationController
     end
 
 		if @order.update(order_params)
-			redirect_to orders_path
+      redirect_to edit_order_path(@order)
       flash[:notice] = "OS atualizada"
 		else
 			render "edit"
