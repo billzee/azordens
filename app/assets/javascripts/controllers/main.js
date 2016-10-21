@@ -8,5 +8,4 @@ angular.module('azordens')
       var path = route + '/' + id + '/edit';
       $window.location.href = path;
     };
-
   });
