@@ -19,8 +19,8 @@ $.rails.showConfirmationDialog = function(link){
       title: 'Tem certeza?',
       text: message,
       type: 'warning',
-      confirmButtonColor: '#DD6B55',
-      confirmButtonText: 'Sim, excluir',
+      confirmButtonColor: '#a94442',
+      confirmButtonText: 'Sim',
       cancelButtonText: 'Cancelar',
       showCancelButton: true,
       closeOnConfirm: false
