@@ -43,17 +43,19 @@ class OrdersController < ApplicationController
 	def update
 		@order = Order.find(params[:id])
 
-    case order_params["status"]
-    when 'in_progress'
-      @order.in_progress_at = Time.now
-    when 'done'
-      @order.done_at = Time.now
-    when 'delivered'
-      @order.delivered_at = Time.now
-    when 'closed'
-      @order.closed_at = Time.now
-    when 'cancelled'
-      @order.cancelled_at = Time.now
+    if order_params["status"] != @order.status
+      case order_params["status"]
+      when 'in_progress'
+        @order.in_progress_at = Time.now
+      when 'done'
+        @order.done_at = Time.now
+      when 'delivered'
+        @order.delivered_at = Time.now
+      when 'closed'
+        @order.closed_at = Time.now
+      when 'cancelled'
+        @order.cancelled_at = Time.now
+      end
     end
 
 		if @order.update(order_params)
