@@ -1,5 +1,5 @@
 <div ng-controller="CustomersCtrl">
-  <div class="row">
+  <div class="row hidden-print">
     <div class="col-xs-12">
         <h1 class="page-header">
           Clientes
@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row hidden-print">
     <div class="col-xs-12">
       <% if @customers.length > 0 %>
         <div class="alert alert-info alert-dismissable">
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <div class="row m-b-20">
+  <div class="row m-b-20 hidden-print">
     <div class="col-xs-12 text-right">
       <%= link_to new_customer_path, class: "btn btn-success btn-md" do %>
         <i class="fa fa-plus-square-o"></i> Novo Cliente

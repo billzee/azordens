@@ -134,6 +134,11 @@ input[type="color"]:focus,
   text-align: center;
 }
 
+.btn-default.active>span{
+  border-color: $orange;
+  color: $orange;
+}
+
 table tbody tr td{
   a{
     font-weight: 700;
