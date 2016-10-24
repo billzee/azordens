@@ -139,6 +139,14 @@ input[type="color"]:focus,
   color: $orange;
 }
 
+@media print {
+  .filter,
+  .ng-table-pager {
+    display: none !important;
+  }
+}
+
+
 table tbody tr td{
   a{
     font-weight: 700;

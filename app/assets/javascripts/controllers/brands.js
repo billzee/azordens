@@ -15,6 +15,10 @@ angular.module('azordens')
       }
     });
 
+    if($scope.ngTableParams){
+      console.log(angular.element('.ng-table-pager'));
+    }
+
     $scope.delete = function(id, route){
       swalService.delete(id, route);
     }
