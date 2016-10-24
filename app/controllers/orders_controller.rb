@@ -25,12 +25,11 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    p Time.now
     order = Order.find(params[:id])
     arr = []
     curr_status = Order.statuses[order.status]
     Order.statuses_settings.map do |label, status, key|
-      if curr_status < key
+      if curr_status <= key
         arr.push([label, status])
       end
 		end
