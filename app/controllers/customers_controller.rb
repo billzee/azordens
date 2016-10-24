@@ -13,7 +13,8 @@ class CustomersController < ApplicationController
       redirect_to customers_path
       flash[:notice] = "Novo Cliente registrado"
     else
-      render :new
+      flash[:error] = @customer.errors.full_messages
+			redirect_to new_customer_path
     end
   end
 
@@ -33,7 +34,8 @@ class CustomersController < ApplicationController
 			redirect_to customers_path
       flash[:notice] = "Equipamento alterado"
 		else
-			render "edit"
+      flash[:error] = @customer.errors.full_messages
+			redirect_to edit_customer_path(@customer)
 		end
 	end
 

@@ -6,10 +6,10 @@
   </div>
 </div>
 
-<% if @brand.errors.full_messages.any? %>
+<% if flash[:error] %>
   <div class="alert alert-danger alert-dismissable">
-    <% @brand.errors.full_messages.each do |msg| %>
-      <i class="fa fa-warning"></i>  <%= msg %>
+    <% flash[:error].each do |msg| %>
+      <p><i class="fa fa-warning"></i>  <%= msg %></p>
     <% end %>
   </div>
 <% end %>

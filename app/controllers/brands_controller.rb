@@ -14,7 +14,8 @@ class BrandsController < ApplicationController
 			redirect_to brands_path
 			flash[:notice] = "Nova Marca registrada"
     else
-			render :new
+			flash[:error] = @brand.errors.full_messages
+			redirect_to new_brand_path
     end
   end
 
@@ -34,7 +35,8 @@ class BrandsController < ApplicationController
 			redirect_to brands_path
 			flash[:notice] = "Marca alterada"
 		else
-			render "edit"
+			flash[:error] = @brand.errors.full_messages
+			redirect_to edit_brand_path(@brand)
 		end
 	end
 

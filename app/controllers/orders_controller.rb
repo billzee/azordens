@@ -14,7 +14,8 @@ class OrdersController < ApplicationController
       redirect_to edit_order_path(@order)
       flash[:notice] = "OS registrada"
     else
-      render :new
+      flash[:error] = @order.errors.full_messages
+      redirect_to new_order_path
     end
   end
 
@@ -60,7 +61,8 @@ class OrdersController < ApplicationController
       redirect_to edit_order_path(@order)
       flash[:notice] = "OS atualizada"
 		else
-			render "edit"
+      flash[:error] = @order.errors.full_messages
+			redirect_to edit_order_path(@order)
 		end
 	end
 

@@ -9,9 +9,9 @@
   </div>
 </div>
 
-<% if @order.errors.full_messages.any? %>
+<% if flash[:error] %>
   <div class="alert alert-danger alert-dismissable">
-    <% @order.errors.full_messages.each do |msg| %>
+    <% flash[:error].each do |msg| %>
       <p><i class="fa fa-warning"></i>  <%= msg %></p>
     <% end %>
   </div>
@@ -50,42 +50,27 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:defect].present? %>">
+          <div class="form-group">
             <label>Defeito*</label>
             <%= f.text_field :defect, class: "form-control" %>
-            <% if @order.errors[:defect].present? %>
-            <span class="form-control-feedback">
-              <i class="fa fa-warning"></i>
-            </span>
-            <% end %>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12">
-          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:serial_number].present? %>">
+          <div class="form-group">
             <label>Número Serial</label>
             <%= f.text_field :serial_number, class: "form-control" %>
-            <% if @order.errors[:serial_number].present? %>
-            <span class="form-control-feedback">
-              <i class="fa fa-warning"></i>
-            </span>
-            <% end %>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12">
-          <div class="form-group <%= 'has-error has-feedback' if @order.errors[:observation].present? %>">
+          <div class="form-group">
             <label>Observação</label>
             <%= f.text_area :observation, class: "form-control" %>
-            <% if @order.errors[:observation].present? %>
-            <span class="form-control-feedback">
-              <i class="fa fa-warning"></i>
-            </span>
-            <% end %>
           </div>
         </div>
       </div>

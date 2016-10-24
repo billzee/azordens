@@ -13,7 +13,8 @@ class EquipmentsController < ApplicationController
       redirect_to equipments_path
 			flash[:notice] = "Novo Equipamento registrado"
     else
-      render :new
+			flash[:error] = @equipment.errors.full_messages
+      redirect_to new_equipment_path
     end
   end
 
@@ -33,7 +34,8 @@ class EquipmentsController < ApplicationController
 			redirect_to equipments_path
 			flash[:notice] = "Equipamento alterado"
 		else
-			render "edit"
+			flash[:error] = @equipment.errors.full_messages
+			redirect_to edit_equipment_path(@equipment)
 		end
 	end
 
