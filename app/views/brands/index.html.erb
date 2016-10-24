@@ -32,8 +32,11 @@
   </div>
 
   <div class="row m-b-20 hidden-print">
-    <div class="col-xs-12 text-right">
-      <%= link_to new_brand_path, class: "btn btn-success btn-md" do %>
+    <div class="col-xs-12">
+      <button class="btn btn-primary pull-left" ng-click="print();">
+        <i class="fa fa-print"></i>
+      </button>
+      <%= link_to new_brand_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Nova Marca
       <% end %>
     </div>
