@@ -14,7 +14,13 @@ $red: #a94442;
   background: -moz-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* Standard syntax */
   border-color: $orange !important;
-  opacity: 0.5;
+  opacity: 0.7;
+  filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+.opaque{
+  opacity: 1.0 !important;
+  filter: alpha(opacity=100) !important; /* For IE8 and earlier */
 }
 
 .navbar-collapse{
@@ -175,9 +181,10 @@ textarea:focus{
   text-align: center;
 }
 
-.btn-default.active>span{
+.btn-default.active{
+  background-color: $orange !important;
   border-color: $orange;
-  color: $orange;
+  color: white !important;
 }
 
 @media print {
@@ -186,7 +193,6 @@ textarea:focus{
     display: none !important;
   }
 }
-
 
 table tbody tr td{
   a{
