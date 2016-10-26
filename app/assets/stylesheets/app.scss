@@ -7,16 +7,51 @@ $green: #5cb85c;
 $red: #a94442;
 
 .navbar-inverse{
-    background: white; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* Standard syntax */
-    border-color: $orange !important;
+  margin-bottom: 0px !important;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(bottom, rgb(240, 240, 240), rgb(255, 255, 255)); /* Standard syntax */
+  border-color: $orange !important;
+  opacity: 0.5;
+}
+
+.navbar-collapse{
+  margin-top: 0px;
+}
+
+.relative{
+  position: relative;
+}
+
+.w-100{
+  width: 100%;
+}
+.navbar-nav{
+  margin-top: 0px !important;
+}
+
+.side-nav{
+  max-resolution: 0px;
+  background-color: $black;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    background-color: black;
+    text-decoration: none !important;
+  }
+}
+
+.navbar-toggle{
+  background-color: $black !important;
 }
 
 body{
   margin-top: 50px !important;
+  background-color: white !important;
 }
 
 .pointer{

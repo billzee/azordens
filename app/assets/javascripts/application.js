@@ -20,4 +20,6 @@
 //= require bootstrap-select
 //= require vanilla-masker
 //= require sweetalert
+//= require moment
+//= require daterangepicker
 //= require_tree .

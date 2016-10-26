@@ -39,6 +39,9 @@
       <button class="btn btn-primary pull-left" ng-click="print();">
         <i class="fa fa-print"></i>
       </button>
+
+        <%= text_field :field_name, class: "daterange" %>
+
       <%= link_to new_brand_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Nova Marca
       <% end %>

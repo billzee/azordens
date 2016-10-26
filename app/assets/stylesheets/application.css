@@ -14,5 +14,6 @@
  *= require_self
  *= require font-awesome
  *= require sweetalert
+ *= require daterangepicker-bs3
  *= require bootstrap-select
  */
