@@ -42,7 +42,15 @@ class BrandsController < ApplicationController
 
 	def destroy
 		@brand = Brand.find params[:id]
-	  @brand.destroy
+		if @brand.visible
+			@brand.update(visible: false)
+			redirect_to brands_path
+			flash[:notice] = "Marca ocultada"
+		else
+			@brand.update(visible: true)
+			redirect_to edit_brand_path(@brand)
+			flash[:notice] = "Marca está visível"
+		end
 	end
 
   private

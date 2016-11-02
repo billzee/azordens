@@ -3,6 +3,7 @@ class CreateEquipment < ActiveRecord::Migration[5.0]
     create_table :equipment do |t|
       t.string :description, null: false
     	t.string :model, null: false
+      t.boolean :visible, default: true, null: false
 
       t.timestamps
     end

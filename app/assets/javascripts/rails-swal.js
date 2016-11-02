@@ -16,7 +16,7 @@ $.rails.showConfirmationDialog = function(link){
   var message = link.data("confirm");
   swal(
     {
-      title: 'Tem certeza?',
+      title: '',
       text: message,
       type: 'warning',
       confirmButtonColor: '#a94442',

@@ -5,6 +5,7 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
     	t.string :last_name, null: false
     	t.string :email, null: true, unique: true
     	t.string :phone, null: true
+      t.boolean :visible, default: true, null: false
 
       t.timestamps
     end

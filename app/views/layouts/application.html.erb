@@ -14,7 +14,7 @@
 
     <div id="wrapper">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="navbar-header w-100 opaque">
+        <div class="navbar-header w-100">
           <%= link_to orders_path, class: "navbar-brand" do %>
             Azordens
           <% end %>
@@ -66,10 +66,9 @@
 
   </body>
   <script type="text/javascript">
-  $(document).ready(function() {
-    console.log('aqui');
-    $('input[class="daterange"]').daterangepicker();
-  });
+    $(document).ready(function() {
+      $('input[class="daterange"]').daterangepicker();
+    });
   </script>
 
 </html>
