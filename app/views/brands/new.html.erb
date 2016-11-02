@@ -7,7 +7,7 @@
 </div>
 
 <% if flash[:error] %>
-  <div class="alert alert-danger alert-dismissable">
+  <div class="alert hidden-print alert-danger alert-dismissable">
     <% flash[:error].each do |msg| %>
       <p><i class="fa fa-warning"></i>  <%= msg %></p>
     <% end %>

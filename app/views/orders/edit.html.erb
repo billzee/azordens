@@ -1,16 +1,22 @@
 <div class="row">
   <div class="col-xs-12">
-    <h1 class="page-header">
+    <h1 class="page-header hidden-print">
       Consultar <small>OS </small>
       <small class="pull-right m-t-15">
         <%= @order.id %>
+      </small>
+    </h1>
+    <h1 class="page-header visible-print">
+      <small>Ordem de Serviço</small>
+      <small class="pull-right m-t-15">
+        Número <%= @order.id %>
       </small>
     </h1>
   </div>
 </div>
 
 <% if flash[:error] %>
-  <div class="alert alert-danger alert-dismissable">
+  <div class="alert hidden-print alert-danger alert-dismissable">
     <% flash[:error].each do |msg| %>
       <p><i class="fa fa-warning"></i>  <%= msg %></p>
     <% end %>
@@ -18,7 +24,7 @@
 <% end %>
 
 <% if flash[:notice] %>
-  <div class="alert alert-success fade in out">
+  <div class="alert hidden-print alert-success fade in out">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <i class="fa fa-check-circle"></i> <%= flash[:notice] %>
   </div>
@@ -84,7 +90,7 @@
         <div class="col-xs-8 text-right">
 
           <% if @order.status != 'cancelled' && @order.status != 'closed' %>
-            <div class="form-group">
+            <div class="form-group hidden-print">
               <%= f.select(:status, @available_statuses) %>
             </div>
           <% end %>
@@ -123,10 +129,17 @@
       <div class="row">
         <div class="col-xs-4 pull-right">
           <% if @order.status != 'opened' && @order.status != 'cancelled' %>
-          <div class="form-group">
-            <label>Valor*</label>
-            <%= f.text_field :value, class: "form-control", data: {"ng-model": "value", "ui-money-mask": "3"} %>
-          </div>
+            <div class="form-group">
+              <label>Valor*</label>
+              <%= @order.value %>
+              <%= f.text_field :value, class: "form-control", data: {"ng-model": "value", "ui-money-mask": "3"} %>
+            </div>
+          <% end %>
+          <% if @order.status == 'opened'%>
+            <div class="form-group visible-print">
+              <label>Valor</label>
+              <input type="text" class="form-control">
+            </div>
           <% end %>
         </div>
       </div>
@@ -134,11 +147,14 @@
 
   </div>
 
-  <div class="row">
+  <div class="row hidden-print">
     <div class="col-xs-12">
       <div class="form-group">
         <%= f.submit "Alterar", class: "btn btn-success" %>
         <%= link_to 'Cancelar', orders_path, class: "btn btn-secondary" %>
+        <button class="btn btn-primary pull-right" ng-click="print();">
+          Etiqueta <i class="fa fa-print"></i>
+        </button>
       </div>
     </div>
   </div>

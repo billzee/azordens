@@ -13,20 +13,20 @@
   <div class="row hidden-print">
     <div class="col-xs-12">
       <% if @orders.length > 0 %>
-        <div class="alert alert-info alert-dismissable">
+        <div class="alert hidden-print alert-info alert-dismissable">
           <i class="fa fa-info-circle"></i>  Clique no número da OS que deseja consultar
         </div>
       <% end %>
 
       <% if flash[:notice] %>
-        <div class="alert alert-success fade in out">
+        <div class="alert hidden-print alert-success fade in out">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <i class="fa fa-check-circle"></i> <%= flash[:notice] %>
         </div>
       <% end %>
 
       <% if @orders.length == 0 %>
-        <div class="alert alert-warning">
+        <div class="alert hidden-print alert-warning">
           <i class="fa fa-warning"></i> Você não tem nenhuma OS cadastrada
         </div>
       <% end %>
