@@ -24,5 +24,4 @@
 //= require daterangepicker
 //= require bootstrap-switch
 //= require angular-bootstrap-switch
-//= require angular-input-masks
 //= require_tree .
