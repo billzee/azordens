@@ -68,7 +68,7 @@
                 {{row.email}}
               </td>
               <td data-title="'Telefone'" sortable="'phone'" header-class="'bg-black c-white pointer'" data-filter="{phone: 'text'}">
-                {{row.phone}}
+                {{row.phone | tel}}
               </td>
               <td data-title="'Criado em'" sortable="'created_at'" header-class="'bg-black c-white pointer'" data-filter="{created_at: 'text'}">
                 {{row.created_at_date_for_json}}
