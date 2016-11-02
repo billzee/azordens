@@ -22,11 +22,11 @@ class Order < ApplicationRecord
 
 	def customer
 		customer = Customer.find(self.customer_id)
-		customer.first_name + ' ' + customer.last_name
+		customer.first_name + ' ' + customer.last_name + ' (' + customer.email + ')'
 	end
 
 	def equipment
-		Equipment.find(self.equipment_id).description
+		Equipment.find(self.equipment_id).specs
 	end
 
 	def as_json(options = {})

@@ -61,16 +61,19 @@
         <div class="table-responsive">
           <table ng-table="ngTableParams" class="table table-bordered  table-hover" show-filter="true">
             <tr ng-repeat="row in $data">
-              <td ng-click="go('orders', row.id)" class="pointer"  data-title="'Número'" sortable="'id'" header-class="'bg-black c-white pointer'" data-filter="{id: 'number'}">
+              <td ng-click="go('orders', row.id)" class="pointer" data-title="'Número'" sortable="'id'" header-class="'bg-black c-white pointer w-15'" data-filter="{id: 'text'}">
                 <span class="c-blue f-700">{{row.id}}</span>
               </td>
               <td data-title="'Cliente'" sortable="'customer'" header-class="'bg-black c-white pointer'" data-filter="{customer: 'text'}">
                 {{row.customer}}
               </td>
+              <td data-title="'Equipamento'" sortable="'equipment'" header-class="'bg-black c-white pointer'" data-filter="{equipment: 'text'}">
+                {{row.equipment}}
+              </td>
               <td data-title="'Status'" sortable="'status_for_json'" header-class="'bg-black c-white pointer'" data-filter="{status_for_json: 'select'}" filter-data="filterOptions">
                 {{row.status_for_json}}
               </td>
-              <td data-title="'Aberta em'" sortable="'created_at'" header-class="'bg-black c-white pointer'" data-filter="{created_at: 'text'}">
+              <td data-title="'Aberta em'" sortable="'created_at'" header-class="'bg-black c-white pointer w-35'" data-filter="{created_at: 'text'}">
                 {{row.created_at_date_for_json}}
               </td>
             </tr>
