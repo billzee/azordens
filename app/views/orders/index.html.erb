@@ -35,10 +35,20 @@
   </div>
 
   <div class="row m-b-20 hidden-print">
-    <div class="col-xs-12">
-      <button class="btn btn-primary pull-left" ng-click="print();">
+    <div class="col-xs-2 pull-left">
+      <button class="btn btn-primary" ng-click="print();">
         <i class="fa fa-print"></i>
       </button>
+    </div>
+
+    <div class="col-xs-5 text-left">
+      Mostrar Canceladas
+      <input bs-switch ng-model="showHidden"
+      type="checkbox" switch-on-text="SIM"
+      switch-off-text="NÃO" switch-change="initializeTable()">
+    </div>
+
+    <div class="col-xs-5">
       <%= link_to new_order_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Nova OS
       <% end %>
@@ -57,7 +67,7 @@
               <td data-title="'Cliente'" sortable="'customer'" header-class="'bg-black c-white pointer'" data-filter="{customer: 'text'}">
                 {{row.customer}}
               </td>
-              <td data-title="'Status'" sortable="'status_for_json'" header-class="'bg-black c-white pointer'" data-filter="{status_for_json: 'text'}">
+              <td data-title="'Status'" sortable="'status_for_json'" header-class="'bg-black c-white pointer'" data-filter="{status_for_json: 'select'}" filter-data="filterOptions">
                 {{row.status_for_json}}
               </td>
               <td data-title="'Aberta em'" sortable="'created_at'" header-class="'bg-black c-white pointer'" data-filter="{created_at: 'text'}">

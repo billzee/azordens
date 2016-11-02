@@ -25,5 +25,4 @@ angular.module('azordens')
     };
 
     $scope.initializeTable();
-
   });

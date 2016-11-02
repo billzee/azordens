@@ -22,6 +22,7 @@ angular.module('azordens')
           console.log(error, 'Status: ' + String(status));
         }
       });
-    }
+    };
 
+    $scope.initializeTable();
   });

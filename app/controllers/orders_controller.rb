@@ -55,6 +55,7 @@ class OrdersController < ApplicationController
         @order.closed_at = Time.now
       when 'cancelled'
         @order.cancelled_at = Time.now
+        @order.visible = false
       end
     end
 
