@@ -1,1 +1,1 @@
-angular.module('azordens', ['ngTable']);
+angular.module('azordens', ['ngTable', 'frapontillo.bootstrap-switch']);

@@ -10,6 +10,7 @@ angular.module('azordens')
       sorting: options.sorting,
       filter: options.filter,
     }, {
+      counts: [20, 50, 100, 200],
       getData: function($defer, params) {
         ngTable.loadingTable = true;
 

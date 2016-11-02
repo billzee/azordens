@@ -22,4 +22,6 @@
 //= require sweetalert
 //= require moment
 //= require daterangepicker
+//= require bootstrap-switch
+//= require angular-bootstrap-switch
 //= require_tree .

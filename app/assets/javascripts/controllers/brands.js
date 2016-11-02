@@ -2,25 +2,28 @@
 
 angular.module('azordens')
   .controller('BrandsCtrl', function($scope, $http, swalService, ngTableService) {
+    $scope.showHidden = false;
 
-    $scope.ngTableParams =
-
-    ngTableService.newTable({
-      filter: {name},
-      sorting: {created_at: 'desc'},
-      promise: function(){return $http.get('/brands.json')},
-      successCallback: function(data) {},
-      errorCallback: function(error, status) {
-        console.log(error, 'Status: ' + String(status));
+    $scope.initializeTable = function(){
+      var visible;
+      if($scope.showHidden){
+        visible = '';
+      } else{
+        visible = true;
       }
-    });
 
-    if($scope.ngTableParams){
-      console.log(angular.element('.ng-table-pager'));
-    }
+      $scope.ngTableParams =
+      ngTableService.newTable({
+        filter: {name, visible: visible},
+        sorting: {created_at: 'desc'},
+        promise: function(){return $http.get('/brands.json')},
+        successCallback: function(data) {},
+        errorCallback: function(error, status) {
+          console.log(error, 'Status: ' + String(status));
+        }
+      });
+    };
 
-    $scope.delete = function(id, route){
-      swalService.delete(id, route);
-    }
+    $scope.initializeTable();
 
   });
