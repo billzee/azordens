@@ -24,4 +24,5 @@
 //= require daterangepicker
 //= require bootstrap-switch
 //= require angular-bootstrap-switch
+//= require jquery-mask-plugin
 //= require_tree .
