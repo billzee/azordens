@@ -1,4 +1,6 @@
 class EquipmentsController < ApplicationController
+	before_action :authenticate_user!
+	
 	def index
 		@all_equipment = Equipment.order :created_at
 		respond_to do |format|

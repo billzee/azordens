@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
 		@customers = Customer.order :created_at
 		respond_to do |format|
@@ -51,7 +53,7 @@ class CustomersController < ApplicationController
 			flash[:notice] = "Cliente está visível"
 		end
 	end
-  
+
   private
   def customer_params
     params.require(:customer).permit(:first_name, :last_name, :email, :phone)

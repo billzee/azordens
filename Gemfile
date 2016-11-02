@@ -18,8 +18,9 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'rails-i18n', '~> 5.0.0' # For 5.0.x
 
-gem 'validates_email_format_of'
+gem 'devise'
 
+gem 'validates_email_format_of'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
