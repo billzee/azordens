@@ -5,6 +5,15 @@ class Order < ApplicationRecord
 	validates :equipment_id, presence: true
 	validates :defect, presence: true
 	validates :status, presence: true
+	validates :value, presence: true, if: :is_closing
+
+	def is_closing
+  	if self.status === 'done' || self.status === 'delivered' || self.status === 'closed'
+			true
+		else
+			false
+		end
+	end
 
 	def self.statuses_settings
     statuses.map do |status, key|

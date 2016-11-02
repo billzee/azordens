@@ -4,6 +4,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     	t.string :defect, null: false
     	t.string :serial_number, null: true
     	t.text :observation, null: true
+      t.decimal :value, null: true
       t.boolean :visible, default: true, null: false
 
       t.timestamp :in_progress_at, null: true

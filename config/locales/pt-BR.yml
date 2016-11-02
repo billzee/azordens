@@ -21,6 +21,7 @@ pt-BR:
       order:
         defect: "Defeito"
         serial_number: "Número Serial"
+        value: "Valor"
         observation: "Observação"
         customer_id: "Cliente"
         equipment_id: "Equipamento"
