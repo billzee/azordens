@@ -41,7 +41,15 @@ class EquipmentsController < ApplicationController
 
 	def destroy
 		@equipment = Equipment.find params[:id]
-		@equipment.destroy
+		if @equipment.visible
+			@equipment.update(visible: false)
+			redirect_to equipments_path
+			flash[:notice] = "Equipamento ocultado"
+		else
+			@equipment.update(visible: true)
+			redirect_to edit_equipment_path(@equipment)
+			flash[:notice] = "Equipamento está visível"
+		end
 	end
 
   private

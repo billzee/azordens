@@ -14,6 +14,13 @@
   </div>
 <% end %>
 
+<% if flash[:notice] %>
+  <div class="alert alert-success fade in out">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <i class="fa fa-check-circle"></i> <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <%= form_for @customer, url: {action: "update"} do |f| %>
 
   <div class="row">
@@ -77,6 +84,15 @@
       <div class="form-group">
         <%= f.submit "Alterar", class: "btn btn-success" %>
         <%= link_to 'Cancelar', customers_path, class: "btn btn-secondary" %>
+        <% if @customer.visible %>
+          <%= link_to @customer, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Ocultar esse cliente?' } do %>
+            <i class="fa fa-eye-slash"></i>
+          <% end %>
+        <% else %>
+          <%= link_to @customer, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Mostrar esse cliente?' } do %>
+            <i class="fa fa-eye"></i>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

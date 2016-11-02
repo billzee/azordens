@@ -39,11 +39,19 @@ class CustomersController < ApplicationController
 		end
 	end
 
-	def destroy
+  def destroy
 		@customer = Customer.find params[:id]
-		@customer.destroy
+		if @customer.visible
+			@customer.update(visible: false)
+			redirect_to customers_path
+			flash[:notice] = "Cliente ocultado"
+		else
+			@customer.update(visible: true)
+			redirect_to edit_customer_path(@customer)
+			flash[:notice] = "Cliente está visível"
+		end
 	end
-
+  
   private
   def customer_params
     params.require(:customer).permit(:first_name, :last_name, :email, :phone)
