@@ -5,7 +5,7 @@ angular.module('azordens')
     $scope.showHidden = false;
     $scope.date = {start: null, end: null};
 
-    $scope.initializeTable = function(date){
+    $scope.initializeTable = function(){
       var visible;
       var date;
 
@@ -17,9 +17,12 @@ angular.module('azordens')
 
       if($scope.date && ($scope.date.start && $scope.date.end)){
         date = $scope.date;
+        date.end.setDate(date.end.getDate() + 1);
       } else{
         date = null;
       }
+
+      console.log(date);
 
       $scope.ngTableParams =
       ngTableService.newTable({

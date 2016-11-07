@@ -34,37 +34,36 @@
     </div>
   </div>
 
-  <div class="row hidden-print">
-    <div class="col-xs-2 pull-left m-t-15">
-      <button class="btn btn-primary" ng-click="print();">
+  <div class="row m-b-10 hidden-print">
+    <div class="col-sm-1 m-t-15">
+      <button class="btn btn-primary" type="button" ng-click="print();">
         <i class="fa fa-print"></i>
       </button>
     </div>
-
-    <div class="col-xs-3 text-left f-11 m-t-25">
+    <div class="col-sm-3 f-11 m-t-25">
       Mostrar Ocultas <br>
       <input bs-switch ng-model="showHidden"
         type="checkbox" switch-on-text="SIM" switch-size="small"
       switch-off-text="NÃO" switch-change="initializeTable()">
     </div>
 
-    <div class="col-xs-2 text-left f-11">
+    <div class="col-sm-2 f-11">
       Data início <br>
       <div class="form-group">
-        <input type="text" datepicker class="form-control" ng-focus="date.start = null;"
-        ng-model="date.start" ng-change="initializeTable()">
+        <input type="text" class="form-control" ng-focus="date.start = null;"
+        ui-date-mask ng-model="date.start" required ng-change="initializeTable()">
       </div>
     </div>
 
-    <div class="col-xs-2 text-left f-11">
+    <div class="col-sm-2 f-11">
       Data fim <br>
       <div class="form-group">
-        <input type="date" class="form-control" ng-focus="date.end = null;"
-        ng-model="date.end" ng-change="initializeTable()">
+        <input type="text" class="form-control" ng-focus="date.end = null;"
+        ui-date-mask ng-model="date.end" required ng-change="initializeTable()">
       </div>
     </div>
 
-    <div class="col-xs-3 pull-right m-t-15">
+    <div class="col-sm-3 pull-right m-t-15">
       <%= link_to new_brand_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Nova Marca
       <% end %>
