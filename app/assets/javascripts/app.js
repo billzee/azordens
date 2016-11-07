@@ -1,1 +1,1 @@
-angular.module('azordens', ['ngTable', 'frapontillo.bootstrap-switch']);
+angular.module('azordens', ['ngTable', 'frapontillo.bootstrap-switch', 'ui.utils.masks']);

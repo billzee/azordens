@@ -24,6 +24,7 @@
     "bootstrap-select": "^1.11.2",
     "vanilla-masker": "^1.1.0",
     "angular-bootstrap-switch": "^0.5.1",
-    "jquery-mask-plugin": "jQuery-Mask-Plugin#^1.14.0"
+    "jquery-mask-plugin": "jQuery-Mask-Plugin#^1.14.0",
+    "angular-input-masks": "^2.5.0"
   }
 }

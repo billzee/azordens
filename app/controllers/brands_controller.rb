@@ -2,7 +2,12 @@ class BrandsController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@brands = Brand.order :name
+		if params[:date]
+			date = JSON.parse(params[:date])
+			@brands = Brand.where(created_at: date["start"]..date["end"]).order :created_at
+		else
+			@brands = Brand.order :name
+		end
 		respond_to do |format|
 		  format.html
 		  format.json { render json: @brands }

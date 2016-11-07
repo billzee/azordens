@@ -25,4 +25,5 @@
 //= require bootstrap-switch
 //= require angular-bootstrap-switch
 //= require jquery-mask-plugin
+//= require angular-input-masks
 //= require_tree .
