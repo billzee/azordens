@@ -63,10 +63,16 @@
       </div>
     </div>
 
-    <div class="col-sm-3 pull-right m-t-15">
+    <div class="col-sm-4 pull-right m-t-15">
       <%= link_to new_brand_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Nova Marca
       <% end %>
+    </div>
+  </div>
+
+  <div class="row m-b-10 visible-print">
+    <div class="col-sm-12">
+      de {{date.start | date}} à {{date.end | date}}
     </div>
   </div>
 

@@ -22,8 +22,6 @@ angular.module('azordens')
         date = null;
       }
 
-      console.log(date);
-
       $scope.ngTableParams =
       ngTableService.newTable({
         filter: {name, visible: visible},
