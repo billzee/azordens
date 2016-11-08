@@ -56,27 +56,53 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <div class="form-group">
+          <div class="form-group hidden-print">
             <label>Defeito*</label>
             <%= f.text_field :defect, class: "form-control" %>
           </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="form-group">
-            <label>Número Serial</label>
-            <%= f.text_field :serial_number, class: "form-control" %>
+          <div class="row m-b-15 visible-print">
+            <div class="col-xs-12">
+              <label>Defeito</label> <br>
+              <%= @order.defect %>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12">
-          <div class="form-group">
+          <div class="form-group hidden-print">
+            <label>Número Serial</label>
+            <%= f.text_field :serial_number, class: "form-control" %>
+          </div>
+          <div class="row m-b-15 visible-print">
+            <div class="col-xs-12">
+              <label>Número Serial</label> <br>
+              <%= @order.serial_number %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group hidden-print">
             <label>Observação</label>
             <%= f.text_area :observation, class: "form-control" %>
+          </div>
+          <div class="visible-print">
+            <label>Observação</label> <br>
+            <div class="row m-b-20">
+              <div class="col-xs-12">
+                <%= @order.observation %> <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br> <br>
+                ______________________________________________________________________________________________________________________________________ <br>
+              </div>
+            </div>
           </div>
         </div>
       </div>
