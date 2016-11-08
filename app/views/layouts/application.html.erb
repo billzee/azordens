@@ -18,9 +18,10 @@
           <%= link_to orders_path, class: "navbar-brand" do %>
             Azordens
           <% end %>
-          <button class="btn btn-danger m-t-8 m-r-15 relative pull-right">
+
+          <%= button_to destroy_user_session_path, class: 'btn btn-danger m-t-8 m-r-15 relative pull-right', :method => :delete do %>
             <i class="fa fa-power-off"></i>
-          </button>
+          <% end %>
 
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -63,12 +64,5 @@
       </div>
 
 	  </div>
-
   </body>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('input[class="daterange"]').daterangepicker();
-    });
-  </script>
-
 </html>
