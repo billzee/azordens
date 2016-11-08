@@ -16,10 +16,10 @@
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header w-100">
           <%= link_to orders_path, class: "navbar-brand" do %>
-            Azordens
+            <%= image_tag 'logo.png', class: 'img-responsive w-200' %>
           <% end %>
 
-          <%= button_to destroy_user_session_path, class: 'btn btn-danger m-t-8 m-r-15 relative pull-right', :method => :delete do %>
+          <%= button_to destroy_user_session_path, class: 'btn btn-danger m-t-8 m-r-15 relative pull-right', :method => :delete, data: {confirm: 'Sair?'} do %>
             <i class="fa fa-power-off"></i>
           <% end %>
 

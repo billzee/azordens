@@ -11,16 +11,18 @@
       </div>
 
       <% if devise_mapping.rememberable? -%>
-        Lembrar <br>
-        <div class="form-group">
-          <%= f.check_box :remember_me, data: { "bs-switch": "", "ng-init": "remember = true", "ng-model": "remember",
-          "switch-on-text": "SIM", "switch-size": "mini", "switch-off-text": "NÃO"} %>
+        <div class="text-center">
+          <span class="f-11">Lembrar</span> <br>
+          <div class="form-group">
+            <%= f.check_box :remember_me, data: { "bs-switch": "", "ng-init": "remember = true", "ng-model": "remember",
+              "switch-on-text": "SIM", "switch-size": "mini", "switch-off-text": "NÃO"} %>
+            </div>
         </div>
       <% end -%>
 
       <%= f.submit "Entrar", class: 'btn btn-success btn-block' %>
     <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
 </div>
-
-<%= render "devise/shared/links" %>

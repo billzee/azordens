@@ -41,6 +41,18 @@ $red: #a94442;
 .w-100{
   width: 100%;
 }
+
+.w-200{
+  width: 150px !important;
+}
+
+.navbar-brand{
+  padding-bottom: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 10px !important;
+  padding-left: 10px !important;
+}
+
 .navbar-nav{
   margin-top: 0px !important;
 }
@@ -101,6 +113,10 @@ body{
 
 .m-t-5{
   margin-top: 5px;
+}
+
+.m-t-20{
+  margin-top: 20px;
 }
 
 .m-t-25{
