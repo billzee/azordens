@@ -30,28 +30,53 @@
           <i class="fa fa-warning"></i> Você não tem nenhum Equipamento cadastrado
         </div>
       <% end %>
-
     </div>
   </div>
 
-  <div class="row m-b-20 hidden-print">
-    <div class="col-xs-2 pull-left">
-      <button class="btn btn-primary" ng-click="print();">
-        <i class="fa fa-print"></i>
-      </button>
+  <div class="row m-b-10 hidden-print">
+    <div class="col-sm-1 m-t-15">
+      <div class="form-group">
+        <button class="btn btn-primary" type="button" ng-click="print();">
+          <i class="fa fa-print"></i>
+        </button>
+      </div>
     </div>
 
-    <div class="col-xs-5 text-left">
-      Mostrar Ocultos
-      <input bs-switch ng-model="showHidden"
-      type="checkbox" switch-on-text="SIM"
-      switch-off-text="NÃO" switch-change="initializeTable()">
+    <div class="col-sm-3 f-11 m-t-25">
+      Mostrar Ocultas <br>
+      <div class="form-group">
+        <input bs-switch ng-model="showHidden"
+        type="checkbox" switch-on-text="SIM" switch-size="small"
+        switch-off-text="NÃO" switch-change="initializeTable()">
+      </div>
     </div>
 
-    <div class="col-xs-5">
+    <div class="col-sm-2 f-11">
+      Data início <br>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-focus="date.start = null;"
+        ui-date-mask ng-model="date.start" required ng-change="initializeTable()">
+      </div>
+    </div>
+
+    <div class="col-sm-2 f-11">
+      Data fim <br>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-focus="date.end = null;"
+        ui-date-mask ng-model="date.end" required ng-change="initializeTable()">
+      </div>
+    </div>
+
+    <div class="col-sm-4 pull-right m-t-15">
       <%= link_to new_equipment_path, class: "btn btn-success btn-md pull-right" do %>
         <i class="fa fa-plus-square-o"></i> Novo Equipamento
       <% end %>
+    </div>
+  </div>
+
+  <div class="row m-b-10 visible-print" ng-if="date.start || date.end">
+    <div class="col-sm-12">
+      de {{date.start | date}} à {{date.end | date}}
     </div>
   </div>
 

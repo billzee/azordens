@@ -1,8 +1,14 @@
 class CustomersController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
-		@customers = Customer.order :created_at
+    if params[:date]
+      date = JSON.parse(params[:date])
+      @customers = Customer.where(created_at: date["start"]..date["end"]).order :created_at
+    else
+      @customers = Customer.order :created_at
+    end
+    p @customers
 		respond_to do |format|
 			format.html
 			format.json { render json: @customers }

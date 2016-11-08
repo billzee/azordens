@@ -1,8 +1,13 @@
 class EquipmentsController < ApplicationController
 	before_action :authenticate_user!
-	
+
 	def index
-		@all_equipment = Equipment.order :created_at
+		if params[:date]
+      date = JSON.parse(params[:date])
+      @all_equipment = Equipment.where(created_at: date["start"]..date["end"]).order :created_at
+    else
+      @all_equipment = Equipment.order :created_at
+    end
 		respond_to do |format|
 			format.html
 			format.json { render json: @all_equipment }
