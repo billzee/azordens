@@ -21,7 +21,7 @@ $.rails.showConfirmationDialog = function(link){
       type: 'warning',
       confirmButtonColor: '#a94442',
       confirmButtonText: 'Sim',
-      cancelButtonText: 'Cancelar',
+      cancelButtonText: 'Não',
       showCancelButton: true,
       closeOnConfirm: false
     },

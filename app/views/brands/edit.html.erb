@@ -40,17 +40,17 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="form-group">
-        <%= f.submit "Alterar", class: "btn btn-success" %>
-        <%= link_to 'Cancelar', brands_path, class: "btn btn-secondary" %>
         <% if @brand.visible %>
-          <%= link_to @brand, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Ocultar essa marca?' } do %>
+          <%= link_to @brand, method: :delete, class: "btn btn-default", data: { confirm: 'Ocultar essa marca?' } do %>
             <i class="fa fa-eye-slash"></i>
           <% end %>
         <% else %>
-          <%= link_to @brand, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Mostrar essa marca?' } do %>
+          <%= link_to @brand, method: :delete, class: "btn btn-default", data: { confirm: 'Mostrar essa marca?' } do %>
             <i class="fa fa-eye"></i>
           <% end %>
         <% end %>
+        <%= f.submit "Alterar", class: "btn btn-success pull-right" %>
+        <%= link_to 'Cancelar', brands_path, class: "btn btn-secondary pull-right" %>
       </div>
     </div>
   </div>

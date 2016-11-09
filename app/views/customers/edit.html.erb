@@ -82,17 +82,17 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="form-group">
-        <%= f.submit "Alterar", class: "btn btn-success" %>
-        <%= link_to 'Cancelar', customers_path, class: "btn btn-secondary" %>
         <% if @customer.visible %>
-          <%= link_to @customer, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Ocultar esse cliente?' } do %>
+          <%= link_to @customer, method: :delete, class: "btn btn-default", data: { confirm: 'Ocultar esse cliente?' } do %>
             <i class="fa fa-eye-slash"></i>
           <% end %>
         <% else %>
-          <%= link_to @customer, method: :delete, class: "btn btn-default pull-right", data: { confirm: 'Mostrar esse cliente?' } do %>
+          <%= link_to @customer, method: :delete, class: "btn btn-default", data: { confirm: 'Mostrar esse cliente?' } do %>
             <i class="fa fa-eye"></i>
           <% end %>
         <% end %>
+        <%= f.submit "Alterar", class: "btn btn-success pull-right" %>
+        <%= link_to 'Cancelar', customers_path, class: "btn btn-secondary pull-right" %>
       </div>
     </div>
   </div>

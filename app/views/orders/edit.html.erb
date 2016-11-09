@@ -189,11 +189,11 @@
   <div class="row hidden-print">
     <div class="col-xs-12">
       <div class="form-group">
-        <%= f.submit "Alterar", class: "btn btn-success" %>
-        <%= link_to 'Cancelar', orders_path, class: "btn btn-secondary" %>
-        <button type="button" class="btn btn-primary pull-right" ng-click="print();">
+        <button type="button" class="btn btn-primary" ng-click="print();">
           Etiqueta <i class="fa fa-print"></i>
         </button>
+        <%= f.submit "Alterar", class: "btn btn-success pull-right" %>
+        <%= link_to 'Cancelar', orders_path, class: "btn btn-secondary pull-right" %>
       </div>
     </div>
   </div>
