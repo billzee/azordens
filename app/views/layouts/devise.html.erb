@@ -18,6 +18,26 @@
           <%= image_tag 'logo.png', class: 'img-responsive' %>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 bgm-white">
+          <% flash.each do |key, msg| %>
+            <div class="alert alert-warning">
+              <a href="#" data-dismiss="alert" class="close">×</a>
+                <p><i class="fa fa-info-circle"></i> <%= msg %></p>
+            </div>
+          <% end %>
+          <% if devise_error_messages!.any? %>
+            <div class="alert alert-warning">
+              <a href="#" data-dismiss="alert" class="close">×</a>
+              <% devise_error_messages!.each do |msg| %>
+                <p><i class="fa fa-info-circle"></i> <%= msg %></p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-xs-6 col-xs-offset-4">
           <%= yield %>
