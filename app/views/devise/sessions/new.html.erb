@@ -1,5 +1,15 @@
 <div class="row">
   <div class="col-xs-8 bgm-white p-30">
+
+    <%= devise_error_messages! %>
+    <% if devise_error_messages!.present? %>
+      <div class="alert hidden-print alert-danger">
+        <% devise_error_messages.each do |msg| %>
+          <i class="fa fa-danger"></i> <%= msg %>
+        <% end %>
+      </div>
+    <% end %>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="form-group">
