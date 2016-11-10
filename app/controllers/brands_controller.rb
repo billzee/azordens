@@ -16,6 +16,7 @@ class BrandsController < ApplicationController
 
 	def create
     @brand = Brand.new(brand_params)
+		@brand.user = current_user
     if @brand.save
 			redirect_to brands_path
 			flash[:notice] = "Nova Marca registrada"

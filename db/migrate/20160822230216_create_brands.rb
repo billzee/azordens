@@ -3,6 +3,7 @@ class CreateBrands < ActiveRecord::Migration[5.0]
     create_table :brands do |t|
     	t.string :name, null: false, unique: true
       t.boolean :visible, default: true, null: false
+      t.integer :user_id, null: false
 
       t.timestamps
     end

@@ -3,6 +3,7 @@ class Equipment < ApplicationRecord
   validates :model, presence: true
   validates :brand_id, presence: true
   has_many :orders, dependent: :nullify
+  belongs_to :user
 
   def specs
     if self.brand_id.present?

@@ -6,6 +6,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     	t.text :observation, null: true
       t.string :value, null: true
       t.boolean :visible, default: true, null: false
+      t.integer :user_id, null: false
 
       t.timestamp :in_progress_at, null: true
       t.timestamp :done_at, null: true

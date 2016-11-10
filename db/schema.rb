@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20161102225519) do
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                      null: false
     t.boolean  "visible",    default: true, null: false
+    t.integer  "user_id",                   null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20161102225519) do
     t.string   "email"
     t.string   "phone"
     t.boolean  "visible",    default: true, null: false
+    t.integer  "user_id",                   null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
@@ -33,6 +35,7 @@ ActiveRecord::Schema.define(version: 20161102225519) do
     t.string   "description",                null: false
     t.string   "model",                      null: false
     t.boolean  "visible",     default: true, null: false
+    t.integer  "user_id",                    null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.integer  "brand_id"
@@ -45,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161102225519) do
     t.text     "observation",    limit: 65535
     t.string   "value"
     t.boolean  "visible",                      default: true, null: false
+    t.integer  "user_id",                                     null: false
     t.datetime "in_progress_at"
     t.datetime "done_at"
     t.datetime "delivered_at"

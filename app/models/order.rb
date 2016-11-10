@@ -6,6 +6,7 @@ class Order < ApplicationRecord
 	validates :defect, presence: true
 	validates :status, presence: true
 	validates :value, presence: true, if: :is_closing
+	belongs_to :user
 
 	def is_closing
   	if self.status === 'done' || self.status === 'delivered' || self.status === 'closed'
