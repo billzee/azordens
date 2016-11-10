@@ -12,7 +12,7 @@
 
   <body class="sessions" ng-controller="MainCtrl">
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xs-4 col-xs-offset-4 bgm-white p-30">
           <%= image_tag 'logo.png', class: 'img-responsive' %>
@@ -43,8 +43,15 @@
           <%= yield %>
         </div>
       </div>
+
+
     </div>
 
+    <div class="row">
+      <div class="col-xs-12 force-to-bottom text-right c-white">
+        Criado por <a target="_blank" href="https://www.facebook.com/zordanguilherme">Guilherme</a> <a target="_blank" href="https://www.linkedin.com/profile/view?id=AAMAABjhGysBYDFpD-63zHCC3GO0HLxYQJ2XHms&trk=hp-identity-photo">Zordan</a>
+      </div>
+    </div>
   </body>
 
 </html>
