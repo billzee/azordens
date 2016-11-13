@@ -4,9 +4,9 @@ class EquipmentsController < ApplicationController
 	def index
 		if params[:date]
       date = JSON.parse(params[:date])
-      @all_equipment = current_user.equipments.where(created_at: date["start"]..date["end"]).order :created_at
+      @all_equipment = current_user.equipment.where(created_at: date["start"]..date["end"]).order :created_at
     else
-      @all_equipment = current_user.equipments.order :created_at
+      @all_equipment = current_user.equipment.order :created_at
     end
 		respond_to do |format|
 			format.html

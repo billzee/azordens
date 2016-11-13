@@ -1,7 +1,7 @@
 /* generic classes */
 
 $black: #222;
-$orange: orange;
+$orange: #ff6600;
 $blue: #31708f;
 $green: #5cb85c;
 $red: #a94442;
@@ -35,6 +35,32 @@ $red: #a94442;
   background: -moz-linear-gradient(bottom, rgba(240, 240, 240, 0.3), rgba(255, 255, 255, 0.3)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(bottom, rgba(240, 240, 240, 0.3), rgba(255, 255, 255, 0.3)); /* Standard syntax */
   border-color: $orange !important;
+}
+
+.btn-circle {
+  width: 35px !important;
+  height: 35px !important;
+  text-align: center !important;
+  padding: 6px 0 !important;
+  font-size: 18px !important;
+  line-height: 0.428571 !important;
+  border-radius: 25px !important;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
 }
 
 .bgm-white{
@@ -110,12 +136,20 @@ body{
   margin-right: 15px;
 }
 
+.m-r-10{
+  margin-right: 10px;
+}
+
 .m-l-15{
   margin-left: 15px !important;
 }
 
 .m-20{
   margin: 20px !important;
+}
+
+.m-10{
+  margin: 10px !important;
 }
 
 .m-t-0{

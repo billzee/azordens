@@ -46,7 +46,7 @@
           <div class="form-group">
             <label>Telefone</label>
             <br>
-            {{<%= Customer.find(@order.customer_id).phone %> | tel}}
+            <%= Customer.find(@order.customer_id).phone %>
           </div>
         </div>
         <div class="col-xs-4">
