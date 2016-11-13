@@ -4,9 +4,9 @@ class EquipmentsController < ApplicationController
 	def index
 		if params[:date]
       date = JSON.parse(params[:date])
-      @all_equipment = Equipment.where(created_at: date["start"]..date["end"]).order :created_at
+      @all_equipment = current_user.equipments.where(created_at: date["start"]..date["end"]).order :created_at
     else
-      @all_equipment = Equipment.order :created_at
+      @all_equipment = current_user.equipments.order :created_at
     end
 		respond_to do |format|
 			format.html
@@ -16,6 +16,7 @@ class EquipmentsController < ApplicationController
 
 	def create
     @equipment = Equipment.new(equipment_params)
+		@equipment.user = current_user
     if @equipment.save
       redirect_to equipments_path
 			flash[:notice] = "Novo Equipamento registrado"

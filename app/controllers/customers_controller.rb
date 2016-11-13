@@ -4,9 +4,9 @@ class CustomersController < ApplicationController
   def index
     if params[:date]
       date = JSON.parse(params[:date])
-      @customers = Customer.where(created_at: date["start"]..date["end"]).order :created_at
+      @customers = current_user.customers.where(created_at: date["start"]..date["end"]).order :created_at
     else
-      @customers = Customer.order :created_at
+      @customers = current_user.customers.order :created_at
     end
     p @customers
 		respond_to do |format|
@@ -17,6 +17,7 @@ class CustomersController < ApplicationController
 
 	def create
     @customer = Customer.new(customer_params)
+    @customer.user = current_user
     if @customer.save
       redirect_to customers_path
       flash[:notice] = "Novo Cliente registrado"

@@ -4,9 +4,9 @@ class OrdersController < ApplicationController
   def index
     if params[:date]
       date = JSON.parse(params[:date])
-      @orders = Order.where(created_at: date["start"]..date["end"]).order :created_at
+      @orders = current_user.orders.where(created_at: date["start"]..date["end"]).order :created_at
     else
-      @orders = Order.order :created_at
+      @orders = current_user.orders.order :created_at
     end
 		respond_to do |format|
 			format.html
@@ -17,6 +17,7 @@ class OrdersController < ApplicationController
 	def create
     @order = Order.new(order_params)
     @order.status = :opened
+    @order.user = current_user
     if @order.save
       redirect_to edit_order_path(@order)
       flash[:notice] = "OS registrada"

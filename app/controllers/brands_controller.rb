@@ -2,11 +2,12 @@ class BrandsController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
+		p current_user
 		if params[:date]
 			date = JSON.parse(params[:date])
-			@brands = Brand.where(created_at: date["start"]..date["end"]).order :created_at
+			@brands = current_user.brands.where(created_at: date["start"]..date["end"]).order :created_at
 		else
-			@brands = Brand.order :name
+			@brands = current_user.brands.order :name
 		end
 		respond_to do |format|
 		  format.html
