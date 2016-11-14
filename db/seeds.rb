@@ -8,7 +8,13 @@
 
 users = User.create([{email: 'teste@teste.com', password: '123456789'},{email: 'admin@admin.com', password: '123456789'}])
 
-brands = Brand.create([{name:  'Samsung', user_id: 1}, {name: 'HP', user_id: 1}, {name: 'D-link', user_id: 1}, {name: 'Intel', user_id: 1}, {name: 'Corsair', user_id: 1}])
+brands = Brand.create([{name:  'Samsung', user_id: 1}, {name: 'HP', user_id: 1}, {name: 'D-link', user_id: 1}, {name: 'Intel', user_id: 1}, {name: 'Corsair', user_id: 1},
+	{name:  'AMD', user_id: 1}, {name: 'Apple', user_id: 1}, {name: 'Motorola', user_id: 1}, {name: 'LG', user_id: 1}, {name: 'PowerColor', user_id: 1},
+	{name:  'Zotac', user_id: 1}, {name: 'Intelbras', user_id: 1}, {name: 'Multilaser', user_id: 1}, {name: 'Radeon', user_id: 1}, {name: 'C3 tech', user_id: 1},
+	{name:  'TP-Link', user_id: 1}, {name: 'Lenovo', user_id: 1}, {name: 'Asus', user_id: 1}, {name: 'Gigabyte', user_id: 1}, {name: 'Kingston', user_id: 1},
+	{name:  'Zalmann', user_id: 1}, {name: 'Sony', user_id: 1}, {name: 'Positivo', user_id: 1}, {name: 'Microsoft', user_id: 1}, {name: 'Philips', user_id: 1},
+	{name:  'AOC', user_id: 1}, {name: 'Blu', user_id: 1}, {name: 'Western Digital', user_id: 1}, {name: 'Seagate', user_id: 1}
+])
 
 equipments =
 	Equipment.create([{description:  'Impressora DeskJet', model: 'd1520', brand_id: brands.second.id, user_id: 1},
