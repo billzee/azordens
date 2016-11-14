@@ -30,5 +30,5 @@ orders =
 		{defect: 'Cartuchos foram trocados, mas apenas imprime em preto-e-branco', serial_number: 'ABCDE123456789', observation: 'Bandeja de folhas quebrada', equipment_id: equipments.first.id, customer_id: customers.second.id, status: 2, user_id: 1, value: '50,00'},
 		{defect: 'Não permite que o computador faça boot', serial_number: '213456789123456789', observation: '', equipment_id: equipments.fourth.id, customer_id: customers.fifth.id, status: 3, user_id: 1, value: '110,00'},
 		{defect: 'Tela rachada', serial_number: '', observation: 'Acompanha carregador', equipment_id: equipments.fifth.id, customer_id: customers.fourth.id, status: 4, user_id: 1, value: '250,00'},
-		{defect: 'Está lento, possível ter vírus', serial_number: 'ABCSDETRE4RFFDSA', observation: 'Acompanha luva', equipment_id: equipments.third.id, customer_id: customers.second.id, status: 5, user_id: 1}
+		{defect: 'Está lento, possível ter vírus', serial_number: 'ABCSDETRE4RFFDSA', observation: 'Acompanha luva', equipment_id: equipments.third.id, customer_id: customers.second.id, status: 5, user_id: 1, visible: false}
 	])
