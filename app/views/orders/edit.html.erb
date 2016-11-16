@@ -168,9 +168,9 @@
       </ul>
       <div class="row">
         <div class="col-xs-4 pull-right">
-          <% if @order.status != 'opened' && @order.status != 'cancelled' %>
+          <% if @order.status != 'cancelled' %>
             <div class="form-group">
-              <label>Valor (R$)*</label>
+              <label>Valor (R$)<% if @order.status != 'opened' %>*<% end %></label>
               <%= f.text_field :value, class: "form-control money" %>
             </div>
           <% end %>

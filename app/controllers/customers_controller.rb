@@ -41,7 +41,7 @@ class CustomersController < ApplicationController
 		@customer = Customer.find(params[:id])
 		if @customer.update(customer_params)
 			redirect_to customers_path
-      flash[:notice] = "Equipamento alterado"
+      flash[:notice] = "Cliente alterado"
 		else
       flash[:error] = @customer.errors.full_messages
 			redirect_to edit_customer_path(@customer)

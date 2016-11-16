@@ -26,7 +26,7 @@
   <div class="row">
     <div class="col-xs-12">
         <div class="form-group <%= 'has-error has-feedback' if @customer.errors[:first_name].present? %>">
-        <label>Nome</label>
+        <label>Nome*</label>
         <%= f.text_field :first_name, class: "form-control" %>
         <% if @customer.errors[:first_name].present? %>
           <span class="form-control-feedback">
@@ -40,7 +40,7 @@
   <div class="row">
     <div class="col-xs-12">
         <div class="form-group <%= 'has-error has-feedback' if @customer.errors[:last_name].present? %>">
-        <label>Sobrenome</label>
+        <label>Sobrenome*</label>
         <%= f.text_field :last_name, class: "form-control" %>
         <% if @customer.errors[:last_name].present? %>
           <span class="form-control-feedback">
@@ -54,7 +54,7 @@
   <div class="row">
     <div class="col-xs-12">
         <div class="form-group <%= 'has-error has-feedback' if @customer.errors[:phone].present? %>">
-        <label>Telefone</label>
+        <label>Telefone*</label>
         <%= f.text_field :phone, class: "form-control", id: "phone" %>
         <% if @customer.errors[:phone].present? %>
           <span class="form-control-feedback">
@@ -68,7 +68,7 @@
   <div class="row">
     <div class="col-xs-12">
         <div class="form-group <%= 'has-error has-feedback' if @customer.errors[:email].present? %>">
-        <label>E-mail</label>
+        <label>e-mail*</label>
         <%= f.text_field :email, class: "form-control" %>
         <% if @customer.errors[:email].present? %>
           <span class="form-control-feedback">
