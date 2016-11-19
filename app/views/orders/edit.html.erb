@@ -167,6 +167,16 @@
         <% end %>
       </ul>
       <div class="row">
+        <div class="col-xs-8 pull-right">
+          <% if @order.status != 'cancelled' %>
+          <div class="form-group">
+            <label>Serviço Prestado<% if @order.status != 'opened' %>*<% end %></label>
+            <%= f.text_field :service, class: "form-control" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-xs-4 pull-right">
           <% if @order.status != 'cancelled' %>
             <div class="form-group">
@@ -176,8 +186,8 @@
           <% end %>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 
   <div class="row hidden-print">

@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20161102225519) do
     t.string   "serial_number"
     t.text     "observation",    limit: 65535
     t.string   "value"
+    t.string   "service"
     t.boolean  "visible",                      default: true, null: false
     t.integer  "user_id",                                     null: false
     t.datetime "in_progress_at"

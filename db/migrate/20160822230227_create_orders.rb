@@ -5,6 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
     	t.string :serial_number, null: true
     	t.text :observation, null: true
       t.string :value, null: true
+      t.string :service, null: true
       t.boolean :visible, default: true, null: false
       t.integer :user_id, null: false
 
