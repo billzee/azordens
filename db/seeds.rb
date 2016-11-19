@@ -24,11 +24,11 @@ equipments =
 		{description:  'Celular', model: 'Galaxy S5', brand_id: brands.first.id, user_id: 1},
 ])
 customers =
-	Customer.create([{first_name: 'João', last_name: 'Silva', email: 'joaosilva@gmail.com', phone: '5491834667', user_id: 1},
-		{first_name: 'John', last_name: 'Doe', email: 'teste@teste.com', phone: '5499999999', user_id: 1},
-		{first_name: 'Maria', last_name: 'Camargo', email: 'mariacamargo@yahoo.com', phone: '5496881001', user_id: 1},
-		{first_name: 'Guilherme', last_name: 'Zordan', email: 'guilhermezordan@outlook.com', phone: '5494095222', user_id: 1},
-		{first_name: 'Gustavo', last_name: 'Zordan', email: 'gustavo-pz@hotmail.com', phone: '5492485632', user_id: 1}
+	Customer.create([{first_name: 'João', last_name: 'Silva', email: 'joaosilva@gmail.com', phone: '(54) 99183-4667', user_id: 1},
+		{first_name: 'John', last_name: 'Doe', email: 'teste@teste.com', phone: '(54) 99999-9999', user_id: 1},
+		{first_name: 'Maria', last_name: 'Camargo', email: 'mariacamargo@yahoo.com', phone: '(54) 99688-1001', user_id: 1},
+		{first_name: 'Guilherme', last_name: 'Zordan', email: 'guilhermezordan@outlook.com', phone: '(54) 99409-5222', user_id: 1},
+		{first_name: 'Gustavo', last_name: 'Zordan', email: 'gustavo-pz@hotmail.com', phone: '(54) 99248-5632', user_id: 1}
 ])
 orders =
 	Order.create([{defect: 'Não liga, faz bip prolongado', serial_number: '156451256148912148', observation: 'Acompanha carregador', equipment_id: equipments.third.id, customer_id: customers.first.id, status: 0, user_id: 1},
