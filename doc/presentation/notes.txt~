@@ -1,0 +1,60 @@
+1 - Log in admin@admin.com
+2 - Apresente tela de dicas
+3 - Apresente ausência de registros
+4 - Faça Log out
+5 - Recupere a senha do teste@teste.com
+6 - Log in teste@teste.com
+7 - Clique no botão das dicas
+7 - Insira nova marca
+8 - Mostre paginação em marcas
+9 - Imprimir relatório de marcas
+10 - Editar um equipamento, trocar sua marca pela recém cadastrada
+11 - Mostrar filtro por período e equipamentos
+12 - Mostrar impressão de relatório com filtro de período
+13 - Criar novo cliente com campos vazios
+14 - Criar novo cliente normalmente
+15 - Ocultar cliente
+16 - Mostrar filtro por ocultados em clientes
+17 - Criar nova OS
+18 - Imprimir etiqueta
+19 - Explicar etiqueta
+20 - Alterar para em progresso
+21 - Mostrar que campos ficaram obrigatórios
+22 - Tentar trocar de status com campos incorretos
+23 - Trocar de status com campos corretos
+24 - Colocar OS até fechada (explicar cada status)
+25 - Mostrar OS fechada
+25 - Relatório administrativo
+26 - Mostrar OS cancelada
+
+
+Antes da banca o aluno deve entregar pelo Moodle o documento do projeto do sistema atualizado em PDF. Atividade disponível abaixo. 
+
+O aluno deve levar impresso para a banca uma cópia dos diagrama de casos de uso e uma cópia do diagrama de classes.
+
+A avaliação será realizada em dois momentos, sendo a nota final da disciplina determinada pela média aritmética de ambas as avaliações, sendo:
+
+Avaliação Um: avaliação realizada no decorrer da disciplina pelas cumprimento das atividades realizadas, desenvolvimento e apresentação do MVP e atividades de atualização de cronograma e atualização do repositório do projeto;
+
+Avaliação Dois: avaliação realizada por uma banca para o qual o aluno deverá apresentar o sistema no final do semestre e também deverá evidenciar domínio sobre do projeto desenvolvido e das tecnologias utilizadas;
+
+Critérios para a avaliação dois:
+
+a)      Complexidade do sistema desenvolvido;
+
+b)      Funcionalidades e usabilidade das interfaces, criatividade nas soluções encontradas;
+
+c)      Adequação da implementação aos objetivos do projeto;
+
+d)      Uso adequado da linguagem, banco de dados, tecnologias, padrões de projeto e frameworks;
+
+e)      Domínio das tecnologias e como as utilizou no desenvolvimento;
+
+f)       Capacidade de explicar os códigos desenvolvidos;
+
+g)      Apresentação.
+
+Cada avaliação será realizada em uma oportunidade única e não terá recuperação ou exame nesta disciplina, assim como, não haverá possibilidade de nova data para apresentação. 
+Cada apresentação será de 15 min, dividida em duas partes sendo:
+Parte 1 - 5 minutos - Fazer uma apresentação usando o projetor com: apresentação, objetivos do sistema, requisitos funcionais, requisitos não funcionais,
+Parte 2 - 10 minutos - Demonstração para a banca das principais funcionalidades do sistema. Neste momento a banca pode questionar.

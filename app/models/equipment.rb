@@ -14,11 +14,16 @@ class Equipment < ApplicationRecord
     end
   end
 
+  def brand
+    brand = Brand.find(self.brand_id)
+    brand.name
+  end
+
   def created_at_date_for_json
     I18n.l self.created_at, format: "%d/%m/%Y"
   end
 
   def as_json(options = {})
-    super options.merge(methods: [:created_at_date_for_json])
+    super options.merge(methods: [:created_at_date_for_json, :brand])
   end
 end

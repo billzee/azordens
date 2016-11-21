@@ -1,3 +1,33 @@
+1 - Log in admin@admin.com
+2 - Apresente tela de dicas
+3 - Apresente ausência de registros
+4 - Faça Log out
+5 - Recupere a senha do teste@teste.com
+6 - Log in teste@teste.com
+7 - Clique no botão das dicas
+7 - Insira nova marca
+8 - Mostre paginação em marcas
+9 - Imprimir relatório de marcas
+10 - Editar um equipamento, trocar sua marca pela recém cadastrada
+11 - Mostrar filtro por período e equipamentos
+12 - Mostrar impressão de relatório com filtro de período
+13 - Criar novo cliente com campos vazios
+14 - Criar novo cliente normalmente
+15 - Ocultar cliente
+16 - Mostrar filtro por ocultados em clientes
+17 - Criar nova OS
+18 - Imprimir etiqueta
+19 - Explicar etiqueta
+20 - Alterar para em progresso
+21 - Mostrar que campos ficaram obrigatórios
+22 - Tentar trocar de status com campos incorretos
+23 - Trocar de status com campos corretos
+24 - Colocar OS até fechada (explicar cada status)
+25 - Mostrar OS fechada
+25 - Relatório administrativo
+26 - Mostrar OS cancelada
+
+
 Antes da banca o aluno deve entregar pelo Moodle o documento do projeto do sistema atualizado em PDF. Atividade disponível abaixo. 
 
 O aluno deve levar impresso para a banca uma cópia dos diagrama de casos de uso e uma cópia do diagrama de classes.

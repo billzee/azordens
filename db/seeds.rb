@@ -20,8 +20,8 @@ equipments =
 	Equipment.create([{description:  'Impressora DeskJet', model: 'd1520', brand_id: brands.second.id, user_id: 1},
 		{description:  'Roteador Wireless', model: 'DSL-2740', brand_id: brands.third.id, user_id: 1},
 		{description:  'Notebook', model: 'DS1000', brand_id: brands.first.id, user_id: 1},
-		{description:  'Memória RAM', model: 'ABCDE123456789 4GB 1600MHz', brand_id: brands.fifth.id, user_id: 1},
-		{description:  'Celular', model: 'Galaxy S5', brand_id: brands.first.id, user_id: 1},
+		{description:  'Memória RAM', model: 'ABCDE123456789 4GB 1600MHz', brand_id: brands.fifth.id, user_id: 1, created_at: '08-08-2016'},
+		{description:  'Celular', model: 'Galaxy S5', brand_id: brands.first.id, user_id: 1, created_at: '08-08-2016'},
 ])
 customers =
 	Customer.create([{first_name: 'João', last_name: 'Silva', email: 'joaosilva@gmail.com', phone: '(54) 99183-4667', user_id: 1},
